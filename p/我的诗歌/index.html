@@ -142,7 +142,7 @@
         
         
         <li >
-            <a href='/%E5%85%B3%E4%BA%8E/' >
+            <a href='/%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85/' >
                 
                 
                 
@@ -155,7 +155,7 @@
 
 
                 
-                <span>关于</span>
+                <span>关于作者</span>
             </a>
         </li>
         
@@ -200,7 +200,7 @@
         
         
         <li >
-            <a href='/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/' >
+            <a href='/%E5%A5%BD%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E9%93%BE%E6%8E%A5/' >
                 
                 
                 
@@ -213,35 +213,12 @@
 
 
                 
-                <span>友情链接</span>
+                <span>好用的工具链接</span>
             </a>
         </li>
         
         <li class="menu-bottom-section">
             <ol class="menu">
-                    
-                        <li id="i18n-switch">  
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
-                                
-                                    <option value="https://xuewexin.github.io/en/" >English</option>
-                                
-                                    <option value="https://xuewexin.github.io/" selected>中文</option>
-                                
-                            </select>
-                        </li>
-                    
-                
 
                 
                     <li id="dark-mode-toggle">
@@ -323,6 +300,14 @@
     
 
     <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%96%87%E5%AD%A6%E5%88%9B%E4%BD%9C/" style="background-color: #FFB6C1; color: #fff;">
+                文学创作
+            </a>
+        
+    </header>
     
 
     <div class="article-title-wrapper">
@@ -433,21 +418,33 @@
     <footer class="article-footer">
     
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>Licensed under CC BY-NC-SA 4.0</span>
-    </section>
     </footer>
 
 
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
     
 </article>
 
@@ -614,6 +611,17 @@
         document.head.appendChild(customFont);
     }());
 </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 
+<script>
+const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    audio: [
+
+    ]
+});
+</script>
     </body>
 </html>

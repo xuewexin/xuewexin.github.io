@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="题目 题解 1.发现规律 通过我的注释，相信大家都可以看出这是一个典型的斐波那契数列\neg.\n0 1 1 2 3 5 8 13&hellip;&hellip;.\n=&gt; a ,0 ,a ,l, a+l,a+2l&hellip;..\n于此我们已知a，下面我们的目标是求l\n">
-<title>算法水题之车站问题</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="这也是我通过学习写的低级网站，让各位见笑了。\n">
+<title>关于作者</title>
 
-<link rel='canonical' href='https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/'>
+<link rel='canonical' href='https://xuewexin.github.io/%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="算法水题之车站问题">
-<meta property='og:description' content="题目 题解 1.发现规律 通过我的注释，相信大家都可以看出这是一个典型的斐波那契数列\neg.\n0 1 1 2 3 5 8 13&hellip;&hellip;.\n=&gt; a ,0 ,a ,l, a+l,a+2l&hellip;..\n于此我们已知a，下面我们的目标是求l\n">
-<meta property='og:url' content='https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/'>
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="关于作者">
+<meta property='og:description' content="这也是我通过学习写的低级网站，让各位见笑了。\n">
+<meta property='og:url' content='https://xuewexin.github.io/%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85/'>
 <meta property='og:site_name' content='等我'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-12-07T14:54:47&#43;08:00'/><meta property='article:modified_time' content='2024-12-07T14:54:47&#43;08:00'/><meta property='og:image' content='https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/1.png' />
-<meta name="twitter:title" content="算法水题之车站问题">
-<meta name="twitter:description" content="题目 题解 1.发现规律 通过我的注释，相信大家都可以看出这是一个典型的斐波那契数列\neg.\n0 1 1 2 3 5 8 13&hellip;&hellip;.\n=&gt; a ,0 ,a ,l, a+l,a+2l&hellip;..\n于此我们已知a，下面我们的目标是求l\n"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/1.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Page' />
+<meta name="twitter:title" content="关于作者">
+<meta name="twitter:description" content="这也是我通过学习写的低级网站，让各位见笑了。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -141,7 +140,7 @@
         </li>
         
         
-        <li >
+        <li  class='current' >
             <a href='/%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85/' >
                 
                 
@@ -246,81 +245,18 @@
     </ol>
 </aside>
 
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                
-    <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">目录</h2>
-        
-        <div class="widget--toc">
-            <nav id="TableOfContents">
-  <ol>
-    <li><a href="#题目">题目</a></li>
-    <li><a href="#题解">题解</a>
-      <ol>
-        <li><a href="#1发现规律">1.发现规律</a></li>
-        <li><a href="#2建设斐波那契方法运用了递归思想">2.建设斐波那契方法（运用了递归思想）</a></li>
-        <li><a href="#3计算第几站有多少人">3.计算第几站有多少人</a></li>
-      </ol>
-    </li>
-    <li><a href="#吐槽">吐槽</a></li>
-  </ol>
-</nav>
-        </div>
-    </section>
-
-            
-        
-    </aside>
-
+    
 
             <main class="main full-width">
-    <article class="has-image main-article">
+    <article class="main-article">
     <header class="article-header">
-        <div class="article-image">
-            <a href="/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/">
-                <img src="/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/1_hu8187420115907730609.png"
-                        srcset="/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/1_hu8187420115907730609.png 800w, /p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/1_hu3751465659983130373.png 1600w"
-                        width="800" 
-                        height="232" 
-                        loading="lazy"
-                        alt="Featured image of post 算法水题之车站问题" />
-                
-            </a>
-        </div>
-    
 
     <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE/" style="background-color: #8FBC8F; color: #fff;">
-                算法题目
-            </a>
-        
-            <a href="/categories/%E7%BC%96%E7%A8%8B/" style="background-color: #6495ED; color: #fff;">
-                编程
-            </a>
-        
-    </header>
     
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/">算法水题之车站问题</a>
+            <a href="/%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85/">关于作者</a>
         </h2>
     
         
@@ -331,19 +267,6 @@
     
     
     <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">2024-12-07</time>
-            </div>
         
 
         
@@ -372,80 +295,7 @@
     <section class="article-content">
     
     
-    <h2 id="题目">题目
-</h2><p><img src="/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/1.png"
-	width="1779"
-	height="517"
-	srcset="/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/1_hu14433019854502511618.png 480w, /p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/1_hu11528704179731579455.png 1024w"
-	loading="lazy"
-	
-		alt="1"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="344"
-		data-flex-basis="825px"
-	
-></p>
-<h2 id="题解">题解
-</h2><h3 id="1发现规律">1.发现规律
-</h3><p><img src="/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/2.png"
-	width="622"
-	height="867"
-	srcset="/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/2_hu3045466316737208874.png 480w, /p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/2_hu4030964906611475767.png 1024w"
-	loading="lazy"
-	
-		alt="2"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="71"
-		data-flex-basis="172px"
-	
-></p>
-<p>通过我的注释，相信大家都可以看出这是一个典型的斐波那契数列</p>
-<p>eg.</p>
-<p>0 1  1  2 3 5 8 13&hellip;&hellip;.</p>
-<p>=&gt; a ,0 ,a ,l, a+l,a+2l&hellip;..</p>
-<p>于此我们已知a，下面我们的目标是求l</p>
-<h3 id="2建设斐波那契方法运用了递归思想">2.建设斐波那契方法（运用了递归思想）
-</h3><p><img src="/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/3.png"
-	width="706"
-	height="615"
-	srcset="/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/3_hu11101061202895504137.png 480w, /p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/3_hu5708119914996156014.png 1024w"
-	loading="lazy"
-	
-		alt="3"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="114"
-		data-flex-basis="275px"
-	
-></p>
-<p>a是已知量，由此我们可以通过迭代增加l,调用函数来求l的大小</p>
-<p>n是车站的数量</p>
-<h3 id="3计算第几站有多少人">3.计算第几站有多少人
-</h3><p><img src="/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/4.png"
-	width="739"
-	height="459"
-	srcset="/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/4_hu15812332907127282249.png 480w, /p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/4_hu9883205421875881003.png 1024w"
-	loading="lazy"
-	
-		alt="4"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="161"
-		data-flex-basis="386px"
-	
-></p>
-<p>此时还有调用上面的函数求出每个车站增加的人数，最后分情况相加，与最后一战下车人数进行比较，符合条件则l的值为c</p>
-<p>n为车站的总个数</p>
-<p>x为第几个车站</p>
-<p>最后进行调用即可解题</p>
-<h2 id="吐槽">吐槽
-</h2><p>虽说这题并不难，但是浪费了我个快半个小时思考(毕竟我现在算法很菜)，所以必须单独给他出一个</p>
+    <p>这也是我通过学习写的低级网站，让各位见笑了。</p>
 
 </section>
 
@@ -486,87 +336,6 @@
     
 
     
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/1.7e0bae94a6e0070325f8b6f3e799ac66_hu17673518682342999241.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 算法普及题之一元一次方程"
-                        
-                        data-hash="md5-fguulKbgBwMl&#43;Lbz55msZg==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">算法普及题之一元一次方程</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/10.b7eaa7caf98ae516f778a949ffd7f5f6_hu12890348190940723699.jpg" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 斗地主的最最最低级的代码部分"
-                        
-                        data-hash="md5-t&#43;qnyvmK5Rb3eKlJ/9f19g==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">斗地主的最最最低级的代码部分</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/2.2d05255226c13883056864d0befd33f4_hu4348134854784529828.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 如何用hugo&#43;github搭建一个个人blog"
-                        
-                        data-hash="md5-LQUlUibBOIMFaGTQvv0z9A==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">如何用hugo&#43;github搭建一个个人blog</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
 
      
     
