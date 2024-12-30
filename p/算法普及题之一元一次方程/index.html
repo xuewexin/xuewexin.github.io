@@ -726,30 +726,6 @@
             
                 
 <article class="has-image">
-    <a href="/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/10.b7eaa7caf98ae516f778a949ffd7f5f6_hu12890348190940723699.jpg" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 斗地主的最最最低级的代码部分"
-                        
-                        data-hash="md5-t&#43;qnyvmK5Rb3eKlJ/9f19g==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">斗地主的最最最低级的代码部分</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
     <a href="/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/">
         
         
@@ -772,6 +748,30 @@
 </article>
 
             
+                
+<article class="has-image">
+    <a href="/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/10.b7eaa7caf98ae516f778a949ffd7f5f6_hu12890348190940723699.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 斗地主的最最最低级的代码部分"
+                        
+                        data-hash="md5-t&#43;qnyvmK5Rb3eKlJ/9f19g==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">斗地主的最最最低级的代码部分</h2>
+        </div>
+    </a>
+</article>
+
+            
         </div>
     </div>
 </aside>
@@ -779,46 +779,55 @@
      
     
         
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="xuewexin/xuewexin.github.io"
+    data-repo-id="R_kgDONXOLMg"
+    data-category="General"
+    data-category-id="DIC_kwDONXOLMs4ClmhO"
+    data-mapping="title"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light_high_contrast"
+    data-lang="zh-cn"
+    data-loading=""
+    crossorigin="anonymous"
+    async
+></script>
 <script>
-    window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
         }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
-<style>
-    .disqus-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
     }
-</style>
 
-<script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (typeof DISQUS == 'object') {
-            DISQUS.reset({
-                reload: true
-            });
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light_high_contrast');
+            } else {
+                setGiscusTheme('dark_high_contrast');
+            }
         }
-    })
+    })();
 </script>
 
     
@@ -940,10 +949,11 @@
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 
 <script>
-const staticDir = "https://xuewexin.github.io/" +music/;
+const staticDir = "https://xuewexin.github.io/" +'music/';
 const songs =[
     '走马-曲肖冰',
-    
+    'Over_You-Daughtry',
+    '烟花易冷-周杰伦'
 ];
 let audios =[];
 songs.forEach((item)=>{
@@ -1003,7 +1013,6 @@ const ap = new APlayer({
 <script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
 
 
-    
     <script src=https://xuewexin.github.io/js/topbar.min.js></script>
 
 
@@ -1032,16 +1041,41 @@ pjax.handleResponse = function(responseText, request, href, options) {
   }
 }
 
-document.addEventListener('pjax:send', topbar.show)
+topbar.config({
+        barColors: {
+            '0': 'rgba(255,  255, 255, 1)', 
+            '1.0': 'rgba(0, 149, 234,  1)' 
+        }
+    })
+
+document.addEventListener('pjax:send', ()=>{
+  topbar.show();
+})
 
 document.addEventListener('pjax:complete',()=>{ 
-        window.Stack.init()
-        topbar.hide
+        window.Stack.init();
+        topbar.hide();
 })
 
 
 </script>
 
 
+
+
+
+
+<style>
+    @font-face {
+      font-family: '宋';
+      src: url(https://xuewexin.github.io/font/%E5%AE%8B.ttf) format('truetype');
+    }
+  
+    :root {
+      --base-font-family: '宋';
+      --code-font-family: '宋';
+    }
+  </style>
+  
     </body>
 </html>

@@ -366,18 +366,18 @@
     <section class="article-list--compact">
         
             <article>
-    <a href="/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/">
+    <a href="/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/">
         <div class="article-details">
-            <h2 class="article-title">如何用hugo&#43;github搭建一个个人blog</h2>
+            <h2 class="article-title">斗地主的最最最低级的代码部分</h2>
             <footer class="article-time">
-                <time datetime='2024-12-02T11:54:47&#43;08:00'>2024-12-02</time>
+                <time datetime='2024-12-02T00:00:00Z'>2024-12-02</time>
             </footer>
         </div>
             <div class="article-image">
-                <img src="/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/2_hu3930974676168368963.png" 
+                <img src="/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/10_hu15391064608315964296.jpg" 
                         width="120"
                         height="120" 
-                        alt="如何用hugo&#43;github搭建一个个人blog"
+                        alt="斗地主的最最最低级的代码部分"
                         loading="lazy">
                 
             </div>
@@ -440,10 +440,11 @@
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 
 <script>
-const staticDir = "https://xuewexin.github.io/" +music/;
+const staticDir = "https://xuewexin.github.io/" +'music/';
 const songs =[
     '走马-曲肖冰',
-    
+    'Over_You-Daughtry',
+    '烟花易冷-周杰伦'
 ];
 let audios =[];
 songs.forEach((item)=>{
@@ -503,7 +504,6 @@ const ap = new APlayer({
 <script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
 
 
-    
     <script src=https://xuewexin.github.io/js/topbar.min.js></script>
 
 
@@ -532,16 +532,41 @@ pjax.handleResponse = function(responseText, request, href, options) {
   }
 }
 
-document.addEventListener('pjax:send', topbar.show)
+topbar.config({
+        barColors: {
+            '0': 'rgba(255,  255, 255, 1)', 
+            '1.0': 'rgba(0, 149, 234,  1)' 
+        }
+    })
+
+document.addEventListener('pjax:send', ()=>{
+  topbar.show();
+})
 
 document.addEventListener('pjax:complete',()=>{ 
-        window.Stack.init()
-        topbar.hide
+        window.Stack.init();
+        topbar.hide();
 })
 
 
 </script>
 
 
+
+
+
+
+<style>
+    @font-face {
+      font-family: '宋';
+      src: url(https://xuewexin.github.io/font/%E5%AE%8B.ttf) format('truetype');
+    }
+  
+    :root {
+      --base-font-family: '宋';
+      --code-font-family: '宋';
+    }
+  </style>
+  
     </body>
 </html>

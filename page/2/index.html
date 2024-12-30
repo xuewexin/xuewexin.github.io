@@ -348,13 +348,13 @@
 <article class="has-image">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/">
-                <img src="/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/2_hu4584764461193021349.png"
-                        srcset="/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/2_hu4584764461193021349.png 800w, /p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/2_hu9231858491504445593.png 1600w"
+            <a href="/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/">
+                <img src="/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/10_hu2033419675275457762.jpg"
+                        srcset="/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/10_hu2033419675275457762.jpg 800w, /p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/10_hu3095763062808413492.jpg 1600w"
                         width="800" 
-                        height="355" 
+                        height="608" 
                         loading="lazy"
-                        alt="Featured image of post 如何用hugo&#43;github搭建一个个人blog" />
+                        alt="Featured image of post 斗地主的最最最低级的代码部分" />
                 
             </a>
         </div>
@@ -373,7 +373,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/">如何用hugo&#43;github搭建一个个人blog</a>
+            <a href="/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/">斗地主的最最最低级的代码部分</a>
         </h2>
     
         
@@ -556,10 +556,11 @@
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 
 <script>
-const staticDir = "https://xuewexin.github.io/" +music/;
+const staticDir = "https://xuewexin.github.io/" +'music/';
 const songs =[
     '走马-曲肖冰',
-    
+    'Over_You-Daughtry',
+    '烟花易冷-周杰伦'
 ];
 let audios =[];
 songs.forEach((item)=>{
@@ -619,7 +620,6 @@ const ap = new APlayer({
 <script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
 
 
-    
     <script src=https://xuewexin.github.io/js/topbar.min.js></script>
 
 
@@ -648,16 +648,41 @@ pjax.handleResponse = function(responseText, request, href, options) {
   }
 }
 
-document.addEventListener('pjax:send', topbar.show)
+topbar.config({
+        barColors: {
+            '0': 'rgba(255,  255, 255, 1)', 
+            '1.0': 'rgba(0, 149, 234,  1)' 
+        }
+    })
+
+document.addEventListener('pjax:send', ()=>{
+  topbar.show();
+})
 
 document.addEventListener('pjax:complete',()=>{ 
-        window.Stack.init()
-        topbar.hide
+        window.Stack.init();
+        topbar.hide();
 })
 
 
 </script>
 
 
+
+
+
+
+<style>
+    @font-face {
+      font-family: '宋';
+      src: url(https://xuewexin.github.io/font/%E5%AE%8B.ttf) format('truetype');
+    }
+  
+    :root {
+      --base-font-family: '宋';
+      --code-font-family: '宋';
+    }
+  </style>
+  
     </body>
 </html>

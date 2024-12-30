@@ -442,10 +442,11 @@
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 
 <script>
-const staticDir = "https://xuewexin.github.io/" +music/;
+const staticDir = "https://xuewexin.github.io/" +'music/';
 const songs =[
     '走马-曲肖冰',
-    
+    'Over_You-Daughtry',
+    '烟花易冷-周杰伦'
 ];
 let audios =[];
 songs.forEach((item)=>{
@@ -505,7 +506,6 @@ const ap = new APlayer({
 <script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
 
 
-    
     <script src=https://xuewexin.github.io/js/topbar.min.js></script>
 
 
@@ -534,16 +534,41 @@ pjax.handleResponse = function(responseText, request, href, options) {
   }
 }
 
-document.addEventListener('pjax:send', topbar.show)
+topbar.config({
+        barColors: {
+            '0': 'rgba(255,  255, 255, 1)', 
+            '1.0': 'rgba(0, 149, 234,  1)' 
+        }
+    })
+
+document.addEventListener('pjax:send', ()=>{
+  topbar.show();
+})
 
 document.addEventListener('pjax:complete',()=>{ 
-        window.Stack.init()
-        topbar.hide
+        window.Stack.init();
+        topbar.hide();
 })
 
 
 </script>
 
 
+
+
+
+
+<style>
+    @font-face {
+      font-family: '宋';
+      src: url(https://xuewexin.github.io/font/%E5%AE%8B.ttf) format('truetype');
+    }
+  
+    :root {
+      --base-font-family: '宋';
+      --code-font-family: '宋';
+    }
+  </style>
+  
     </body>
 </html>
