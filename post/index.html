@@ -469,7 +469,7 @@
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 
 <script>
-const staticDir = "https://xuewexin.github.io/" ;
+const staticDir = "https://xuewexin.github.io/" +music/;
 const songs =[
     '走马-曲肖冰',
     
@@ -480,9 +480,9 @@ songs.forEach((item)=>{
       audios.push({
         name: songInfo[0],
         artist:songInfo[1],
-        url: staticDir+item+'song.mp3',
-        cover: staticDir +'cover.jpg', 
-        lrc: staticDir +'lrc.lrc'
+        url: staticDir+item+'/song.mp3',
+        cover: staticDir+item +'/cover.jpg', 
+        lrc: staticDir +item+'/lrc.lrc'
       });
 })
 
@@ -538,7 +538,7 @@ const ap = new APlayer({
 
 <script>
 var pjax = new Pjax({
-  selectors: [".main-container",".js-Pjax"]
+  selectors: [".main-container"]
 })
 
 
@@ -563,24 +563,14 @@ pjax.handleResponse = function(responseText, request, href, options) {
 
 document.addEventListener('pjax:send', topbar.show)
 
-document.addEventListener('pjax:complete', ()=>{
-        window.Stack.init();
-        topbar.hide;
+document.addEventListener('pjax:complete',()=>{ 
+        window.Stack.init()
+        topbar.hide
 })
+
+
 </script>
 
-<div class="js-Pjax">
-  <script>
-      
-      (function() {
-          let script = document.createElement('script');
-          
-           script.setAttribute('key', 'value');
-          ...
-          
-          document.querySelector('xxx').appendchild(script)
-      })(document)
-  </script>
-<div>
+
     </body>
 </html>
