@@ -388,7 +388,7 @@
             </footer>
         </div>
             <div class="article-image">
-                <img src="/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/10_hu15391064608315964296.jpg" 
+                <img src="/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-01%20130058_hu1276637549011058132.png" 
                         width="120"
                         height="120" 
                         alt="斗地主的最最最低级的代码部分"
@@ -529,7 +529,7 @@ const ap = new APlayer({
 
 <script>
 var pjax = new Pjax({
-  selectors: [".main-container"]
+  selectors: [".main-container",".js-Pjax"]
 })
 
 
@@ -570,6 +570,43 @@ document.addEventListener('pjax:complete',()=>{
 
 
 </script>
+
+
+...
+<script>
+    var pjax = new Pjax({
+        selectors: [
+            script.src =
+            ".js-Pjax"
+        ]
+    })
+</script>
+<div class="js-Pjax">
+    <script>
+        
+        (function() {
+            let script = document.createElement('script');
+            
+           script.src = "https://giscus.app/client.js";
+           script.src = "Announcements";
+            script.setAttribute(data-repo,"xuewexin/xuewexin.github.io");
+            script.setAttribute(data-repo-id,"R_kgDONXOLMg"); 
+            script.setAttribute(data-category,"Announcements");
+            script.setAttribute(data-category-id,"DIC_kwDONXOLMs4ClmhN");
+            script.setAttribute(data-mapping,"title");
+            script.setAttribute(data-strict,"0");
+            script.setAttribute(data-reactions-enabled,"1");
+            script.setAttribute(data-emit-metadata,"0");
+            script.setAttribute(data-input-position,"top");
+            script.setAttribute(data-theme,"light");
+            script.setAttribute(data-lang,"zh-CN");
+            script.async = true;
+            
+            document.querySelector('xxx').appendchild(script)
+        })(document)
+    </script>
+<div>
+
 
 
 
