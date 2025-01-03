@@ -372,7 +372,7 @@
         <guid>https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/</guid>
         <description>&lt;img src="https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/2.png" alt="Featured image of post 如何用hugo&#43;github搭建一个个人blog" /&gt;&lt;h2 id=&#34;大佬的blog展示&#34;&gt;大佬的blog展示
 &lt;/h2&gt;&lt;p&gt;（大家也可以去更nb的大佬那里学习）&lt;/p&gt;
-&lt;h6 id=&#34;llpngl&#34;&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/ll.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/ll.png&#34;
 	width=&#34;1735&#34;
 	height=&#34;997&#34;
 	srcset=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/ll_hu5244925253651732003.png 480w, https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/ll_hu14854243206525614257.png 1024w&#34;
@@ -383,8 +383,8 @@
 		data-flex-grow=&#34;174&#34;
 		data-flex-basis=&#34;417px&#34;
 	
-&gt;l
-&lt;/h6&gt;&lt;h2 id=&#34;准备工作&#34;&gt;准备工作
+&gt;l&lt;/p&gt;
+&lt;h2 id=&#34;准备工作&#34;&gt;准备工作
 &lt;/h2&gt;&lt;h3 id=&#34;11-git下载&#34;&gt;1.1 Git下载
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;前往【&lt;a class=&#34;link&#34; href=&#34;https://git-scm.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -540,8 +540,8 @@
         <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
         
         <guid>https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/</guid>
-        <description>&lt;img src="https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-01%20130058.png" alt="Featured image of post 斗地主的最最最低级的代码部分" /&gt;&lt;h2 id=&#34;1建立项目&#34;&gt;1.建立项目
-&lt;/h2&gt;&lt;h6 id=&#34;1png&#34;&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/1.png&#34;
+        <description>&lt;img src="https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-01%20130058.png" alt="Featured image of post 斗地主的最最最低级的代码部分" /&gt;&lt;h2 id=&#34;建立项目&#34;&gt;建立项目
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/1.png&#34;
 	width=&#34;1164&#34;
 	height=&#34;1056&#34;
 	srcset=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/1_hu5906218785714159300.png 480w, https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/1_hu14779658924979469722.png 1024w&#34;
@@ -552,8 +552,8 @@
 		data-flex-grow=&#34;110&#34;
 		data-flex-basis=&#34;264px&#34;
 	
-&gt;
-&lt;/h6&gt;&lt;h2 id=&#34;2创建游戏启动入口与游戏的启动页面&#34;&gt;2.创建游戏启动入口与游戏的启动页面
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;创建游戏启动入口与游戏的启动页面&#34;&gt;创建游戏启动入口与游戏的启动页面
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/2.png&#34;
 	width=&#34;381&#34;
 	height=&#34;100&#34;
@@ -566,7 +566,7 @@
 		data-flex-basis=&#34;914px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;3设定思路&#34;&gt;3.设定思路
+&lt;h2 id=&#34;设定思路&#34;&gt;设定思路
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/3.png&#34;
 	width=&#34;846&#34;
 	height=&#34;622&#34;
@@ -579,7 +579,7 @@
 		data-flex-basis=&#34;326px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;4设置两个数组进行设置卡牌&#34;&gt;4.设置两个数组进行设置卡牌
+&lt;h2 id=&#34;设置两个数组进行设置卡牌&#34;&gt;设置两个数组进行设置卡牌
 &lt;/h2&gt;&lt;p&gt;注：由于可能多次进行游戏需要将集合&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/4.png&#34;
 	width=&#34;1009&#34;
@@ -593,7 +593,7 @@
 		data-flex-basis=&#34;353px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;5设立集合存储所有卡牌&#34;&gt;5.设立集合存储所有卡牌
+&lt;h2 id=&#34;设立集合存储所有卡牌&#34;&gt;设立集合存储所有卡牌
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/5.png&#34;
 	width=&#34;972&#34;
 	height=&#34;621&#34;
@@ -606,9 +606,8 @@
 		data-flex-basis=&#34;375px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;6将棋牌打乱并发给每一个成员&#34;&gt;6.将棋牌打乱并发给每一个成员
-&lt;/h2&gt;&lt;h6 id=&#34;heading&#34;&gt;
-&lt;/h6&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/6.png&#34;
+&lt;h2 id=&#34;将棋牌打乱并发给每一个成员&#34;&gt;将棋牌打乱并发给每一个成员
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/6.png&#34;
 	width=&#34;655&#34;
 	height=&#34;676&#34;
 	srcset=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/6_hu6704581122962396091.png 480w, https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/6_hu10023698660959404377.png 1024w&#34;
@@ -620,7 +619,7 @@
 		data-flex-basis=&#34;232px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;7设置可以查看棋牌的方式&#34;&gt;7.设置可以查看棋牌的方式
+&lt;h2 id=&#34;设置可以查看棋牌的方式&#34;&gt;设置可以查看棋牌的方式
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/7.png&#34;
 	width=&#34;862&#34;
 	height=&#34;313&#34;
@@ -633,7 +632,7 @@
 		data-flex-basis=&#34;660px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;8进行棋牌到手的排序&#34;&gt;8.进行棋牌到手的排序
+&lt;h2 id=&#34;进行棋牌到手的排序&#34;&gt;进行棋牌到手的排序
 &lt;/h2&gt;&lt;p&gt;注：由于collection没法给棋牌赋值，我们调换其他集合进行操作&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/8.png&#34;
 	width=&#34;940&#34;
@@ -647,7 +646,7 @@
 		data-flex-basis=&#34;243px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;9经过各种修饰后的成果&#34;&gt;9.经过各种修饰后的成果
+&lt;h2 id=&#34;经过各种修饰后的成果&#34;&gt;经过各种修饰后的成果
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/10.jpg&#34;
 	width=&#34;1036&#34;
 	height=&#34;788&#34;
@@ -660,7 +659,7 @@
 		data-flex-basis=&#34;315px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;10总结&#34;&gt;10.总结
+&lt;h2 id=&#34;总结&#34;&gt;总结
 &lt;/h2&gt;&lt;p&gt;我知道你们可能有很多疑问，由于设置界面以及添加图片讲解有些繁琐，我回头有时间再进行补充吧。同时由于我的IO流还没学好，完整的游戏效果无法展示，等我技术更熟练后，将进行更完整的代码展示，拜拜了！！！&lt;/p&gt;
 </description>
         </item>

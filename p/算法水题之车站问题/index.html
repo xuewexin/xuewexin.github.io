@@ -866,19 +866,12 @@ document.addEventListener('pjax:complete',()=>{
 </script>
 
 
-...
-<script>
-    var pjax = new Pjax({
-        selectors: [
-            script.src =
-            ".js-Pjax"
-        ]
-    })
-</script>
+
 <div class="js-Pjax">
     <script>
         
         (function() {
+            
             let script = document.createElement('script');
             
            script.src = "https://giscus.app/client.js";
@@ -896,7 +889,8 @@ document.addEventListener('pjax:complete',()=>{
             script.setAttribute(data-lang,"zh-CN");
             script.async = true;
             
-            document.querySelector('xxx').appendchild(script)
+            document.querySelector('#script').appendchild(script)
+            a();
         })(document)
     </script>
 <div>
