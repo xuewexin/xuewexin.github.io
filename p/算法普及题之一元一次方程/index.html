@@ -1022,9 +1022,13 @@ const ap = new APlayer({
 
 
 <script>
-var pjax = new Pjax({
-  selectors: [".main-container",".js-Pjax"]
-})
+    var pjax = new Pjax({
+    selectors: [
+        ".sidebar",
+        ".main-article",
+        "js-Pjax"
+    ]
+    })
 
 
 pjax._handleResponse = pjax.handleResponse;
