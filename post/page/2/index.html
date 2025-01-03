@@ -540,9 +540,9 @@ const ap = new APlayer({
 <script>
     var pjax = new Pjax({
     selectors: [
-        ".sidebar",
-        ".main-article",
-        "js-Pjax"
+         ".main-container",
+        "js-Pjax",
+        
     ]
     })
 
@@ -609,8 +609,8 @@ document.addEventListener('pjax:complete',()=>{
             script.setAttribute(data-lang,"zh-CN");
             script.async = true;
             
-            document.querySelector('#script').appendchild(script)
-            a();
+            document.querySelector('footer').appendchild(script)
+            
         })(document)
     </script>
 <div>
