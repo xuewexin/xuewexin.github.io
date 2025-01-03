@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://xuewexin.github.io/categories/'>
 
-<link rel="stylesheet" href="/scss/style.min.7f97f91aee0e4c69e53a57e19dba48a37cd1e181c2c5577e0ce3e85204bb4c55.css"><meta property='og:title' content="Categories">
+<link rel="stylesheet" href="/scss/style.min.41fd0aa8a5dc6bc3015f8dba061e1b8a3317e0f62146b121c7bdccaf5c0a27b6.css"><meta property='og:title' content="Categories">
 <meta property='og:description' content="清风疾马又逢君">
 <meta property='og:url' content='https://xuewexin.github.io/categories/'>
 <meta property='og:site_name' content='等我'>
@@ -621,7 +621,16 @@ document.addEventListener('pjax:complete',()=>{
 
 
 
-<script src=https://xuewexin.github.io/background/sakura.js></script>
+<div id="particles-js"></div>
+
+<script src=https://xuewexin.github.io/background/particles.min.js></script>
+<script>
+  particlesJS.load('particles-js', "https://xuewexin.github.io/background/particlesjs-config.json", function() {
+    console.log('particles.js loaded - callback');
+  });
+</script>
+
+
 
 <style>
   body {
@@ -630,6 +639,19 @@ document.addEventListener('pjax:complete',()=>{
     background-attachment: fixed;
   }
 </style>
+
+
+<style>
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+</style>
+
+
 
 
 <style>

@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://xuewexin.github.io/%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85/'>
 
-<link rel="stylesheet" href="/scss/style.min.7f97f91aee0e4c69e53a57e19dba48a37cd1e181c2c5577e0ce3e85204bb4c55.css"><meta property='og:title' content="关于作者">
+<link rel="stylesheet" href="/scss/style.min.41fd0aa8a5dc6bc3015f8dba061e1b8a3317e0f62146b121c7bdccaf5c0a27b6.css"><meta property='og:title' content="关于作者">
 <meta property='og:description' content="不要急，正在更新中。。。。。\n看看天空&hellip;&hellip;\n恒荒凉的地方，但日落还行\n打铁花好看，嘻嘻\n">
 <meta property='og:url' content='https://xuewexin.github.io/%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85/'>
 <meta property='og:site_name' content='等我'>
@@ -728,7 +728,16 @@ document.addEventListener('pjax:complete',()=>{
 
 
 
-<script src=https://xuewexin.github.io/background/sakura.js></script>
+<div id="particles-js"></div>
+
+<script src=https://xuewexin.github.io/background/particles.min.js></script>
+<script>
+  particlesJS.load('particles-js', "https://xuewexin.github.io/background/particlesjs-config.json", function() {
+    console.log('particles.js loaded - callback');
+  });
+</script>
+
+
 
 <style>
   body {
@@ -737,6 +746,19 @@ document.addEventListener('pjax:complete',()=>{
     background-attachment: fixed;
   }
 </style>
+
+
+<style>
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+</style>
+
+
 
 
 <style>
