@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="清风疾马又逢君">
 <title>Pages</title>
 
 <link rel='canonical' href='https://xuewexin.github.io/page/'>
 
-<link rel="stylesheet" href="/scss/style.min.d3458a1a4811a4ec977b7667e87dff12af36b94af47f778d107aa9c6f0b34a5f.css"><meta property='og:title' content="Pages">
+<link rel="stylesheet" href="/scss/style.min.e6da98614e7c756fc3ee043baf908e3fa840b96ff5b0943ed494f340b1f966d3.css"><meta property='og:title' content="Pages">
 <meta property='og:description' content="清风疾马又逢君">
 <meta property='og:url' content='https://xuewexin.github.io/page/'>
 <meta property='og:site_name' content='等我'>
@@ -56,7 +56,7 @@
                     
                     
                         
-                        <img src="/img/avatar_hu8856951059225292331.png" width="300"
+                        <img src="/img/avatar_hu_724d2a373e61be9a.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -153,7 +153,7 @@
         
         
         <li >
-            <a href='/%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85/' >
+            <a href='/about/' >
                 
                 
                 
@@ -211,7 +211,7 @@
         
         
         <li >
-            <a href='/%E5%A5%BD%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E9%93%BE%E6%8E%A5/' >
+            <a href='/links/' >
                 
                 
                 
@@ -346,6 +346,26 @@
 
             
         
+            
+                <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title">标签云</h2>
+
+    <div class="tagCloud-tags">
+        
+    </div>
+</section>
+            
+        
     </aside>
 
 
@@ -380,7 +400,7 @@
 </article>
         
             <article>
-    <a href="/%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85/">
+    <a href="/about/">
         <div class="article-details">
             <h2 class="article-title">关于作者</h2>
             <footer class="article-time">
@@ -391,7 +411,7 @@
 </article>
         
             <article>
-    <a href="/%E5%A5%BD%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E9%93%BE%E6%8E%A5/">
+    <a href="/links/">
         <div class="article-details">
             <h2 class="article-title">好用的工具链接</h2>
             <footer class="article-time">
@@ -401,29 +421,25 @@
     </a>
 </article>
         
+            <article>
+    <a href="/search/">
+        <div class="article-details">
+            <h2 class="article-title">搜索</h2>
+            <footer class="article-time">
+                <time datetime='0001-01-01T00:00:00Z'>0001-01-01</time>
+            </footer>
+        </div>
+    </a>
+</article>
+        
     </section>
-    <nav class='pagination'>
-        
-        
-
-        
-            
-                <span class='page-link current'>1</span>
-                
-            
-            
-                    <a class='page-link' href='/page/page/2/'>2</a>
-                
-            
-    </nav>
-
 <footer class="site-footer">
     <section class="copyright">
         &copy; 
         
             2024 - 
         
-        2025 等我
+        2026 等我
     </section>
     
     <section class="powerby">
@@ -531,87 +547,78 @@ const ap = new APlayer({
 
 
 <script>
-    var pjax = new Pjax({
+var pjax = new Pjax({
     selectors: [
-         ".main-container",
-        "js-Pjax",
-        
+        ".main-container",
     ]
-    })
-
+})
 
 pjax._handleResponse = pjax.handleResponse;
 
 pjax.handleResponse = function(responseText, request, href, options) {
-  if (request.responseText.match("<html")) {
-    
-    let newDom = new DOMParser().parseFromString(responseText, 'text/html');
-            
-            let bodyClass = newDom.body.className;
-            document.body.setAttribute("class", bodyClass)
-            
-    pjax._handleResponse(responseText, request, href, options);
-    setTimeout(()=>{
-      pjax._handleResponse(responseText,request,href,options)
-    },1000)
-  } else {
-    
-  }
+    if (request.responseText.match("<html")) {
+        let newDom = new DOMParser().parseFromString(responseText, 'text/html');
+        let bodyClass = newDom.body.className;
+        document.body.setAttribute("class", bodyClass);
+        pjax._handleResponse(responseText, request, href, options);
+    }
 }
 
 topbar.config({
-        barColors: {
-            '0': 'rgba(255,  255, 255, 1)', 
-            '1.0': 'rgba(0, 149, 234,  1)' 
-        }
-    })
-
-document.addEventListener('pjax:send', ()=>{
-  topbar.show();
+    barColors: {
+        '0': 'rgba(255, 255, 255, 1)',
+        '1.0': 'rgba(0, 149, 234, 1)'
+    }
 })
 
-document.addEventListener('pjax:complete',()=>{ 
-        window.Stack.init();
-        topbar.hide();
+document.addEventListener('pjax:send', () => {
+    topbar.show();
 })
 
 
-</script>
-
-
-
-<div class="js-Pjax">
-    <script>
+function reloadGiscus() {
+    var containers = document.querySelectorAll('.giscus');
+    containers.forEach(function(div) {
         
-        (function() {
-            
-            let script = document.createElement('script');
-            
-           script.src = "https://giscus.app/client.js";
-           script.src = "Announcements";
-            script.setAttribute(data-repo,"xuewexin/xuewexin.github.io");
-            script.setAttribute(data-repo-id,"R_kgDONXOLMg"); 
-            script.setAttribute(data-category,"Announcements");
-            script.setAttribute(data-category-id,"DIC_kwDONXOLMs4ClmhN");
-            script.setAttribute(data-mapping,"title");
-            script.setAttribute(data-strict,"0");
-            script.setAttribute(data-reactions-enabled,"1");
-            script.setAttribute(data-emit-metadata,"0");
-            script.setAttribute(data-input-position,"top");
-            script.setAttribute(data-theme,"light");
-            script.setAttribute(data-lang,"zh-CN");
-            script.async = true;
-            
-            document.querySelector('footer').appendchild(script)
-            
-        })(document)
-    </script>
-<div>
+        if (div.querySelector('iframe.giscus-frame')) return;
 
+        
+        var oldScript = div.querySelector('script[src*="giscus.app"]');
+        if (oldScript) oldScript.remove();
 
+        
+        var script = document.createElement('script');
+        script.src = 'https://giscus.app/client.js';
+        script.setAttribute('data-repo', 'xuewexin/xuewexin.github.io');
+        script.setAttribute('data-repo-id', 'R_kgDONXOLMg');
+        script.setAttribute('data-category', 'Announcements');
+        script.setAttribute('data-category-id', 'DIC_kwDONXOLMs4ClmhN');
+        script.setAttribute('data-mapping', 'title');
+        script.setAttribute('data-strict', '0');
+        script.setAttribute('data-reactions-enabled', '1');
+        script.setAttribute('data-emit-metadata', '0');
+        script.setAttribute('data-input-position', 'top');
+        script.setAttribute('data-theme', document.documentElement.dataset.scheme === 'dark' ? 'dark_dimmed' : 'light');
+        script.setAttribute('data-lang', 'zh-CN');
+        script.crossOrigin = 'anonymous';
+        script.async = true;
+        div.appendChild(script);
+    });
 
+    
+    document.querySelectorAll('iframe.giscus-frame').forEach(function(frame) {
+        if (!frame.closest('.giscus')) {
+            frame.remove();
+        }
+    });
+}
 
-
+document.addEventListener('pjax:complete', () => {
+    window.Stack.init();
+    topbar.hide();
+    reloadGiscus();
+})
+</script>
 
 <div id="particles-js"></div>
 
@@ -623,6 +630,86 @@ document.addEventListener('pjax:complete',()=>{
 </script>
 
 
+<button id="back-to-top" title="回到顶部" aria-label="回到顶部">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
+<style>
+  #back-to-top {
+    position: fixed;
+    bottom: 100px;
+    right: 28px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--card-background);
+    border: 1px solid var(--card-border-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    color: var(--card-text-color-main);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity 0.28s ease, visibility 0.28s ease, transform 0.28s ease, background 0.2s ease;
+    z-index: 90;
+    outline: none;
+  }
+
+  #back-to-top:hover {
+    background: var(--tag-default-background);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.16);
+  }
+
+  #back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    #back-to-top {
+      bottom: 120px;
+      right: 16px;
+      width: 38px;
+      height: 38px;
+    }
+  }
+</style>
+
+<script>
+(function() {
+  var btn = document.getElementById('back-to-top');
+  var ticking = false;
+
+  function updateVisibility() {
+    if (window.scrollY > 400) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        updateVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
 
 <style>
   body {
@@ -631,7 +718,6 @@ document.addEventListener('pjax:complete',()=>{
     background-attachment: fixed;
   }
 </style>
-
 
 <style>
   #particles-js {
@@ -643,20 +729,17 @@ document.addEventListener('pjax:complete',()=>{
   }
 </style>
 
-
-
-
 <style>
     @font-face {
       font-family: '宋';
       src: url(https://xuewexin.github.io/font/%E5%AE%8B.ttf) format('truetype');
     }
-  
+
     :root {
       --base-font-family: '宋';
       --code-font-family: '宋';
     }
   </style>
-  
+
     </body>
 </html>
