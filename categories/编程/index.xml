@@ -8,16 +8,16 @@
         <language>en-us</language>
         <copyright>等我</copyright>
         <lastBuildDate>Wed, 18 Dec 2024 19:37:47 +0800</lastBuildDate><atom:link href="https://xuewexin.github.io/categories/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>算法普及题之一元一次方程</title>
-        <link>https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/</link>
+        <title>一元一次方程求解 — Java 正则与字符串解析</title>
+        <link>https://xuewexin.github.io/p/yiyuan-yici-fangcheng/</link>
         <pubDate>Wed, 18 Dec 2024 19:37:47 +0800</pubDate>
         
-        <guid>https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/</guid>
-        <description>&lt;img src="https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-01%20125750.png" alt="Featured image of post 算法普及题之一元一次方程" /&gt;&lt;h2 id=&#34;题目&#34;&gt;题目
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/2.png&#34;
+        <guid>https://xuewexin.github.io/p/yiyuan-yici-fangcheng/</guid>
+        <description>&lt;img src="https://xuewexin.github.io/p/yiyuan-yici-fangcheng/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-01%20125750.png" alt="Featured image of post 一元一次方程求解 — Java 正则与字符串解析" /&gt;&lt;h2 id=&#34;题目&#34;&gt;题目
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/2.png&#34;
 	width=&#34;1291&#34;
 	height=&#34;1314&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/2_hu_ba7671a138c3a918.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/2_hu_ecb25bae5a37c526.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/2_hu_ba7671a138c3a918.png 480w, https://xuewexin.github.io/p/yiyuan-yici-fangcheng/2_hu_ecb25bae5a37c526.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -34,10 +34,10 @@
 &lt;/h2&gt;&lt;p&gt;1.先用静态static固定未知数变量-&amp;gt;单个未知数因此用字符的形式&lt;/p&gt;
 &lt;p&gt;2.通过api正则表达式找出所有未知数&lt;/p&gt;
 &lt;p&gt;3.将其转为字符进行赋值&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/3.png&#34;
 	width=&#34;832&#34;
 	height=&#34;311&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/3_hu_c53b087d16ffc9e2.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/3_hu_36b50319c6c94eaf.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/3_hu_c53b087d16ffc9e2.png 480w, https://xuewexin.github.io/p/yiyuan-yici-fangcheng/3_hu_36b50319c6c94eaf.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -48,10 +48,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;4.书写方法，对等号两边的加减号进行处理&lt;/p&gt;
 &lt;p&gt;5.对于变成+号全省略不进行添加与空客添加保持一致，方便以后进行处理&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/4.png&#34;
 	width=&#34;1215&#34;
 	height=&#34;888&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/4_hu_413b4517765421ed.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/4_hu_82f51ce8a12b6e0e.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/4_hu_413b4517765421ed.png 480w, https://xuewexin.github.io/p/yiyuan-yici-fangcheng/4_hu_82f51ce8a12b6e0e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -62,10 +62,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;6.处理含有未知数的项的系数，并将其添加到变量e中&lt;/p&gt;
 &lt;p&gt;7.发现没系数的话（及系数为一，进行了隐藏），确定符号后直接对未知数系数+1或-1&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/5.png&#34;
 	width=&#34;910&#34;
 	height=&#34;525&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/5_hu_e924056e15aaf02f.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/5_hu_f8c7f44a995b8700.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/5_hu_e924056e15aaf02f.png 480w, https://xuewexin.github.io/p/yiyuan-yici-fangcheng/5_hu_f8c7f44a995b8700.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -77,10 +77,10 @@
 &lt;p&gt;8.处理完未知数后，对常数进行添加到j中&lt;/p&gt;
 &lt;p&gt;注：这里对等式最后一项进行了处理，同时每次结束刷新StringBuilder&lt;/p&gt;
 &lt;p&gt;(其实这里直接用String也可以，但是我习惯用StringBuilder进行添加)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/8.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/8.png&#34;
 	width=&#34;649&#34;
 	height=&#34;210&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/8_hu_1f372d3c09e0716a.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/8_hu_ef6e8a1e57cf0e4b.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/8_hu_1f372d3c09e0716a.png 480w, https://xuewexin.github.io/p/yiyuan-yici-fangcheng/8_hu_ef6e8a1e57cf0e4b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -90,10 +90,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;9.同时设置方法对式子进行处理，依次截取每一项&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/7.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/7.png&#34;
 	width=&#34;691&#34;
 	height=&#34;181&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/7_hu_bd6d116699265730.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/7_hu_7d6527e8a3d5c07a.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/7_hu_bd6d116699265730.png 480w, https://xuewexin.github.io/p/yiyuan-yici-fangcheng/7_hu_7d6527e8a3d5c07a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -104,10 +104,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;10.细节处理，浮点计算存在-0的情况,需要对其进行处理&lt;/p&gt;
 &lt;p&gt;（我也是不通过好多次，才慢慢发现的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/6.png&#34;
 	width=&#34;751&#34;
 	height=&#34;223&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/6_hu_488e42620131003d.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/6_hu_c30f2710fb86ca10.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/6_hu_488e42620131003d.png 480w, https://xuewexin.github.io/p/yiyuan-yici-fangcheng/6_hu_c30f2710fb86ca10.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -289,16 +289,16 @@
 </description>
         </item>
         <item>
-        <title>算法水题之车站问题</title>
-        <link>https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/</link>
+        <title>车站调度问题 — Java 字符串处理实战</title>
+        <link>https://xuewexin.github.io/p/chezhan-diaodu/</link>
         <pubDate>Sat, 07 Dec 2024 14:54:47 +0800</pubDate>
         
-        <guid>https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/</guid>
-        <description>&lt;img src="https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-01%20125956.png" alt="Featured image of post 算法水题之车站问题" /&gt;&lt;h2 id=&#34;题目&#34;&gt;题目
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/1.png&#34;
+        <guid>https://xuewexin.github.io/p/chezhan-diaodu/</guid>
+        <description>&lt;img src="https://xuewexin.github.io/p/chezhan-diaodu/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-01%20125956.png" alt="Featured image of post 车站调度问题 — Java 字符串处理实战" /&gt;&lt;h2 id=&#34;题目&#34;&gt;题目
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/chezhan-diaodu/1.png&#34;
 	width=&#34;1779&#34;
 	height=&#34;517&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/1_hu_b546ccbc904f17ad.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/1_hu_5a8a8316712e6c01.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/chezhan-diaodu/1_hu_b546ccbc904f17ad.png 480w, https://xuewexin.github.io/p/chezhan-diaodu/1_hu_5a8a8316712e6c01.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;1&#34;
@@ -311,10 +311,10 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;题解&#34;&gt;题解
 &lt;/h2&gt;&lt;h3 id=&#34;1发现规律&#34;&gt;1.发现规律
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/2.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/chezhan-diaodu/2.png&#34;
 	width=&#34;622&#34;
 	height=&#34;867&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/2_hu_aa9f452890e4b1ef.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/2_hu_28ff1ecf77ea2e40.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/chezhan-diaodu/2_hu_aa9f452890e4b1ef.png 480w, https://xuewexin.github.io/p/chezhan-diaodu/2_hu_28ff1ecf77ea2e40.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -329,10 +329,10 @@
 &lt;p&gt;=&amp;gt; a ,0 ,a ,l, a+l,a+2l&amp;hellip;..&lt;/p&gt;
 &lt;p&gt;于此我们已知a，下面我们的目标是求l&lt;/p&gt;
 &lt;h3 id=&#34;2建设斐波那契方法运用了递归思想&#34;&gt;2.建设斐波那契方法（运用了递归思想）
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/3.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/chezhan-diaodu/3.png&#34;
 	width=&#34;706&#34;
 	height=&#34;615&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/3_hu_6f837ac51fd3c61.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/3_hu_179a458e58f3b1f2.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/chezhan-diaodu/3_hu_6f837ac51fd3c61.png 480w, https://xuewexin.github.io/p/chezhan-diaodu/3_hu_179a458e58f3b1f2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -344,10 +344,10 @@
 &lt;p&gt;a是已知量，由此我们可以通过迭代增加l,调用函数来求l的大小&lt;/p&gt;
 &lt;p&gt;n是车站的数量&lt;/p&gt;
 &lt;h3 id=&#34;3计算第几站有多少人&#34;&gt;3.计算第几站有多少人
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/4.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/chezhan-diaodu/4.png&#34;
 	width=&#34;739&#34;
 	height=&#34;459&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/4_hu_e2121da3b4d3049b.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/4_hu_9b778dfd05c39fa4.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/chezhan-diaodu/4_hu_e2121da3b4d3049b.png 480w, https://xuewexin.github.io/p/chezhan-diaodu/4_hu_9b778dfd05c39fa4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -365,17 +365,17 @@
 </description>
         </item>
         <item>
-        <title>如何用hugo&#43;github搭建一个个人blog</title>
-        <link>https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/</link>
+        <title>Hugo &#43; GitHub Pages 搭建个人博客 — 从零到上线</title>
+        <link>https://xuewexin.github.io/p/hugo-github-blog/</link>
         <pubDate>Mon, 02 Dec 2024 11:54:47 +0800</pubDate>
         
-        <guid>https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/</guid>
-        <description>&lt;img src="https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/2.png" alt="Featured image of post 如何用hugo&#43;github搭建一个个人blog" /&gt;&lt;h2 id=&#34;大佬的blog展示&#34;&gt;大佬的blog展示
+        <guid>https://xuewexin.github.io/p/hugo-github-blog/</guid>
+        <description>&lt;img src="https://xuewexin.github.io/p/hugo-github-blog/2.png" alt="Featured image of post Hugo &#43; GitHub Pages 搭建个人博客 — 从零到上线" /&gt;&lt;h2 id=&#34;大佬的blog展示&#34;&gt;大佬的blog展示
 &lt;/h2&gt;&lt;p&gt;（大家也可以去更nb的大佬那里学习）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/ll.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/hugo-github-blog/ll.png&#34;
 	width=&#34;1735&#34;
 	height=&#34;997&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/ll_hu_2d55f2aff2c98107.png 480w, https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/ll_hu_46db0a91fc0587ef.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/hugo-github-blog/ll_hu_2d55f2aff2c98107.png 480w, https://xuewexin.github.io/p/hugo-github-blog/ll_hu_46db0a91fc0587ef.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -402,10 +402,10 @@
 &lt;h3 id=&#34;13-注册-github账号&#34;&gt;1.3 注册 GitHub账号
 &lt;/h3&gt;&lt;p&gt;前往GitHub：&lt;a class=&#34;link&#34; href=&#34;https://github.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GitHub&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/hugo-github-blog/1.png&#34;
 	width=&#34;1725&#34;
 	height=&#34;733&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/1_hu_926d68596fe8d7ff.png 480w, https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/1_hu_1639844ee750899d.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/hugo-github-blog/1_hu_926d68596fe8d7ff.png 480w, https://xuewexin.github.io/p/hugo-github-blog/1_hu_1639844ee750899d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -416,10 +416,10 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;搭建博客&#34;&gt;搭建博客
 &lt;/h2&gt;&lt;p&gt;1.建设两个仓库&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/hugo-github-blog/3.png&#34;
 	width=&#34;1714&#34;
 	height=&#34;201&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/3_hu_8b6547ce394e675.png 480w, https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/3_hu_6dcb3bffb1026c0.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/hugo-github-blog/3_hu_8b6547ce394e675.png 480w, https://xuewexin.github.io/p/hugo-github-blog/3_hu_6dcb3bffb1026c0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -431,10 +431,10 @@
 &lt;p&gt;2.一个主仓库以  你的GitHub账号名.github.io  命名 （主仓库）&lt;/p&gt;
 &lt;p&gt;另一个仓库以  随意名字（建议为 hugo-main） 作为子仓库用以进行仓库的自动部署&lt;/p&gt;
 &lt;h2 id=&#34;以在hugo网页上挑选自己的主题&#34;&gt;以在hugo网页上挑选自己的主题
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/4.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/hugo-github-blog/4.png&#34;
 	width=&#34;1659&#34;
 	height=&#34;876&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/4_hu_7b4e8b53b3a9ae1a.png 480w, https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/4_hu_9b26b835bdddaf91.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/hugo-github-blog/4_hu_7b4e8b53b3a9ae1a.png 480w, https://xuewexin.github.io/p/hugo-github-blog/4_hu_9b26b835bdddaf91.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -444,10 +444,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;搭建&#34;&gt;搭建
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/5.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/hugo-github-blog/5.png&#34;
 	width=&#34;1161&#34;
 	height=&#34;1048&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/5_hu_4bb344b67e64e3f6.png 480w, https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/5_hu_325ad0022a11f169.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/hugo-github-blog/5_hu_4bb344b67e64e3f6.png 480w, https://xuewexin.github.io/p/hugo-github-blog/5_hu_325ad0022a11f169.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -456,10 +456,10 @@
 		data-flex-basis=&#34;265px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/hugo-github-blog/6.png&#34;
 	width=&#34;1380&#34;
 	height=&#34;753&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/6_hu_8455432d2b4aa5b1.png 480w, https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/6_hu_db67c399e4e7093c.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/hugo-github-blog/6_hu_8455432d2b4aa5b1.png 480w, https://xuewexin.github.io/p/hugo-github-blog/6_hu_db67c399e4e7093c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -468,10 +468,10 @@
 		data-flex-basis=&#34;439px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/7.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/hugo-github-blog/7.png&#34;
 	width=&#34;1186&#34;
 	height=&#34;1279&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/7_hu_d9a5e1006a4ec42a.png 480w, https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/7_hu_317337050063e27c.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/hugo-github-blog/7_hu_d9a5e1006a4ec42a.png 480w, https://xuewexin.github.io/p/hugo-github-blog/7_hu_317337050063e27c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -484,10 +484,10 @@
 &lt;/h2&gt;&lt;p&gt;最后将你的blog上传到github上面，并在仓库里的seting找到pages 上面会自动生成你blog的专属网址&lt;/p&gt;
 &lt;h2 id=&#34;补充&#34;&gt;补充
 &lt;/h2&gt;&lt;p&gt;我省略了部分细节，需要一定的前端基础，最后感谢各位的观看，想了解更多搭建blog的内容可以在B站大学查找，拜拜了您内！！！(同时感谢倪神，要不是它，我也不会想写blog，虽然没给我什么实际帮助，但也要膜拜一下)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/IMG_20241202_110355.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/hugo-github-blog/IMG_20241202_110355.jpg&#34;
 	width=&#34;888&#34;
 	height=&#34;696&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/IMG_20241202_110355_hu_a60f5d6e912655e3.jpg 480w, https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/IMG_20241202_110355_hu_24e9a13736faf2f9.jpg 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/hugo-github-blog/IMG_20241202_110355_hu_a60f5d6e912655e3.jpg 480w, https://xuewexin.github.io/p/hugo-github-blog/IMG_20241202_110355_hu_24e9a13736faf2f9.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -496,10 +496,10 @@
 		data-flex-basis=&#34;306px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/IMG_20241202_110519.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/hugo-github-blog/IMG_20241202_110519.jpg&#34;
 	width=&#34;372&#34;
 	height=&#34;372&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/IMG_20241202_110519_hu_c1dc7aed227fe5fb.jpg 480w, https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/IMG_20241202_110519_hu_5bf0d6f7b9c5d3c7.jpg 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/hugo-github-blog/IMG_20241202_110519_hu_c1dc7aed227fe5fb.jpg 480w, https://xuewexin.github.io/p/hugo-github-blog/IMG_20241202_110519_hu_5bf0d6f7b9c5d3c7.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -508,10 +508,10 @@
 		data-flex-basis=&#34;240px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/IMG_20241202_11519.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/hugo-github-blog/IMG_20241202_11519.jpg&#34;
 	width=&#34;372&#34;
 	height=&#34;372&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/IMG_20241202_11519_hu_c1dc7aed227fe5fb.jpg 480w, https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/IMG_20241202_11519_hu_5bf0d6f7b9c5d3c7.jpg 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/hugo-github-blog/IMG_20241202_11519_hu_c1dc7aed227fe5fb.jpg 480w, https://xuewexin.github.io/p/hugo-github-blog/IMG_20241202_11519_hu_5bf0d6f7b9c5d3c7.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -520,10 +520,10 @@
 		data-flex-basis=&#34;240px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/IMG_2021202_11519.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/hugo-github-blog/IMG_2021202_11519.jpg&#34;
 	width=&#34;372&#34;
 	height=&#34;372&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/IMG_2021202_11519_hu_c1dc7aed227fe5fb.jpg 480w, https://xuewexin.github.io/p/%E5%A6%82%E4%BD%95%E7%94%A8hugo-github%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BAblog/IMG_2021202_11519_hu_5bf0d6f7b9c5d3c7.jpg 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/hugo-github-blog/IMG_2021202_11519_hu_c1dc7aed227fe5fb.jpg 480w, https://xuewexin.github.io/p/hugo-github-blog/IMG_2021202_11519_hu_5bf0d6f7b9c5d3c7.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -535,16 +535,16 @@
 </description>
         </item>
         <item>
-        <title>斗地主的最最最低级的代码部分</title>
-        <link>https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/</link>
+        <title>斗地主游戏 — Java 控制台基础实现</title>
+        <link>https://xuewexin.github.io/p/doudizhu-java/</link>
         <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/</guid>
-        <description>&lt;img src="https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-01%20130058.png" alt="Featured image of post 斗地主的最最最低级的代码部分" /&gt;&lt;h2 id=&#34;建立项目&#34;&gt;建立项目
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/1.png&#34;
+        <guid>https://xuewexin.github.io/p/doudizhu-java/</guid>
+        <description>&lt;img src="https://xuewexin.github.io/p/doudizhu-java/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-01%20130058.png" alt="Featured image of post 斗地主游戏 — Java 控制台基础实现" /&gt;&lt;h2 id=&#34;建立项目&#34;&gt;建立项目
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/doudizhu-java/1.png&#34;
 	width=&#34;1164&#34;
 	height=&#34;1056&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/1_hu_410de0201dd956b7.png 480w, https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/1_hu_41dd7971de115642.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/doudizhu-java/1_hu_410de0201dd956b7.png 480w, https://xuewexin.github.io/p/doudizhu-java/1_hu_41dd7971de115642.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -554,10 +554,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;创建游戏启动入口与游戏的启动页面&#34;&gt;创建游戏启动入口与游戏的启动页面
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/2.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/doudizhu-java/2.png&#34;
 	width=&#34;381&#34;
 	height=&#34;100&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/2_hu_636edb024d6be296.png 480w, https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/2_hu_e64605db2a06d578.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/doudizhu-java/2_hu_636edb024d6be296.png 480w, https://xuewexin.github.io/p/doudizhu-java/2_hu_e64605db2a06d578.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -567,10 +567,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;设定思路&#34;&gt;设定思路
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/3.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/doudizhu-java/3.png&#34;
 	width=&#34;846&#34;
 	height=&#34;622&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/3_hu_e73fa4f77a28c0.png 480w, https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/3_hu_d186ce6e8540d1d2.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/doudizhu-java/3_hu_e73fa4f77a28c0.png 480w, https://xuewexin.github.io/p/doudizhu-java/3_hu_d186ce6e8540d1d2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -581,10 +581,10 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;设置两个数组进行设置卡牌&#34;&gt;设置两个数组进行设置卡牌
 &lt;/h2&gt;&lt;p&gt;注：由于可能多次进行游戏需要将集合&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/doudizhu-java/4.png&#34;
 	width=&#34;1009&#34;
 	height=&#34;685&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/4_hu_2a223901e3dcfc24.png 480w, https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/4_hu_d75435ecc397dea0.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/doudizhu-java/4_hu_2a223901e3dcfc24.png 480w, https://xuewexin.github.io/p/doudizhu-java/4_hu_d75435ecc397dea0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -594,10 +594,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;设立集合存储所有卡牌&#34;&gt;设立集合存储所有卡牌
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/5.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/doudizhu-java/5.png&#34;
 	width=&#34;972&#34;
 	height=&#34;621&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/5_hu_5b0cdd0d37de61c3.png 480w, https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/5_hu_b7a9b9d4ad6ab6fa.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/doudizhu-java/5_hu_5b0cdd0d37de61c3.png 480w, https://xuewexin.github.io/p/doudizhu-java/5_hu_b7a9b9d4ad6ab6fa.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -607,10 +607,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;将棋牌打乱并发给每一个成员&#34;&gt;将棋牌打乱并发给每一个成员
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/6.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/doudizhu-java/6.png&#34;
 	width=&#34;655&#34;
 	height=&#34;676&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/6_hu_d2374ecbda897978.png 480w, https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/6_hu_1959277109ea7e66.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/doudizhu-java/6_hu_d2374ecbda897978.png 480w, https://xuewexin.github.io/p/doudizhu-java/6_hu_1959277109ea7e66.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -620,10 +620,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;设置可以查看棋牌的方式&#34;&gt;设置可以查看棋牌的方式
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/7.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/doudizhu-java/7.png&#34;
 	width=&#34;862&#34;
 	height=&#34;313&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/7_hu_933c954cd52093eb.png 480w, https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/7_hu_d66711444935656e.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/doudizhu-java/7_hu_933c954cd52093eb.png 480w, https://xuewexin.github.io/p/doudizhu-java/7_hu_d66711444935656e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -634,10 +634,10 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;进行棋牌到手的排序&#34;&gt;进行棋牌到手的排序
 &lt;/h2&gt;&lt;p&gt;注：由于collection没法给棋牌赋值，我们调换其他集合进行操作&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/8.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/doudizhu-java/8.png&#34;
 	width=&#34;940&#34;
 	height=&#34;927&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/8_hu_40c3eda305f00795.png 480w, https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/8_hu_6b4bf6bbb524f5a7.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/doudizhu-java/8_hu_40c3eda305f00795.png 480w, https://xuewexin.github.io/p/doudizhu-java/8_hu_6b4bf6bbb524f5a7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -647,10 +647,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;经过各种修饰后的成果&#34;&gt;经过各种修饰后的成果
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/10.jpg&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/doudizhu-java/10.jpg&#34;
 	width=&#34;1036&#34;
 	height=&#34;788&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/10_hu_3972ead019111464.jpg 480w, https://xuewexin.github.io/p/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%9A%84%E6%9C%80%E6%9C%80%E6%9C%80%E4%BD%8E%E7%BA%A7%E7%9A%84%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86/10_hu_bd6b0f75cd9b987e.jpg 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/doudizhu-java/10_hu_3972ead019111464.jpg 480w, https://xuewexin.github.io/p/doudizhu-java/10_hu_bd6b0f75cd9b987e.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

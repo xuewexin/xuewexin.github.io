@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>扑克牌 on 等我</title>
+        <link>https://xuewexin.github.io/tags/%E6%89%91%E5%85%8B%E7%89%8C/</link>
+        <description>Recent content in 扑克牌 on 等我</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>等我</copyright>
+        <lastBuildDate>Mon, 02 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://xuewexin.github.io/tags/%E6%89%91%E5%85%8B%E7%89%8C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>斗地主游戏 — Java 控制台基础实现</title>
+        <link>https://xuewexin.github.io/p/doudizhu-java/</link>
+        <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://xuewexin.github.io/p/doudizhu-java/</guid>
+        <description>&lt;img src="https://xuewexin.github.io/p/doudizhu-java/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-01%20130058.png" alt="Featured image of post 斗地主游戏 — Java 控制台基础实现" /&gt;&lt;h2 id=&#34;建立项目&#34;&gt;建立项目
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/doudizhu-java/1.png&#34;
+	width=&#34;1164&#34;
+	height=&#34;1056&#34;
+	srcset=&#34;https://xuewexin.github.io/p/doudizhu-java/1_hu_410de0201dd956b7.png 480w, https://xuewexin.github.io/p/doudizhu-java/1_hu_41dd7971de115642.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;110&#34;
+		data-flex-basis=&#34;264px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;创建游戏启动入口与游戏的启动页面&#34;&gt;创建游戏启动入口与游戏的启动页面
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/doudizhu-java/2.png&#34;
+	width=&#34;381&#34;
+	height=&#34;100&#34;
+	srcset=&#34;https://xuewexin.github.io/p/doudizhu-java/2_hu_636edb024d6be296.png 480w, https://xuewexin.github.io/p/doudizhu-java/2_hu_e64605db2a06d578.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;381&#34;
+		data-flex-basis=&#34;914px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;设定思路&#34;&gt;设定思路
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/doudizhu-java/3.png&#34;
+	width=&#34;846&#34;
+	height=&#34;622&#34;
+	srcset=&#34;https://xuewexin.github.io/p/doudizhu-java/3_hu_e73fa4f77a28c0.png 480w, https://xuewexin.github.io/p/doudizhu-java/3_hu_d186ce6e8540d1d2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;136&#34;
+		data-flex-basis=&#34;326px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;设置两个数组进行设置卡牌&#34;&gt;设置两个数组进行设置卡牌
+&lt;/h2&gt;&lt;p&gt;注：由于可能多次进行游戏需要将集合&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/doudizhu-java/4.png&#34;
+	width=&#34;1009&#34;
+	height=&#34;685&#34;
+	srcset=&#34;https://xuewexin.github.io/p/doudizhu-java/4_hu_2a223901e3dcfc24.png 480w, https://xuewexin.github.io/p/doudizhu-java/4_hu_d75435ecc397dea0.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;147&#34;
+		data-flex-basis=&#34;353px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;设立集合存储所有卡牌&#34;&gt;设立集合存储所有卡牌
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/doudizhu-java/5.png&#34;
+	width=&#34;972&#34;
+	height=&#34;621&#34;
+	srcset=&#34;https://xuewexin.github.io/p/doudizhu-java/5_hu_5b0cdd0d37de61c3.png 480w, https://xuewexin.github.io/p/doudizhu-java/5_hu_b7a9b9d4ad6ab6fa.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;156&#34;
+		data-flex-basis=&#34;375px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;将棋牌打乱并发给每一个成员&#34;&gt;将棋牌打乱并发给每一个成员
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/doudizhu-java/6.png&#34;
+	width=&#34;655&#34;
+	height=&#34;676&#34;
+	srcset=&#34;https://xuewexin.github.io/p/doudizhu-java/6_hu_d2374ecbda897978.png 480w, https://xuewexin.github.io/p/doudizhu-java/6_hu_1959277109ea7e66.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;96&#34;
+		data-flex-basis=&#34;232px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;设置可以查看棋牌的方式&#34;&gt;设置可以查看棋牌的方式
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/doudizhu-java/7.png&#34;
+	width=&#34;862&#34;
+	height=&#34;313&#34;
+	srcset=&#34;https://xuewexin.github.io/p/doudizhu-java/7_hu_933c954cd52093eb.png 480w, https://xuewexin.github.io/p/doudizhu-java/7_hu_d66711444935656e.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;275&#34;
+		data-flex-basis=&#34;660px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;进行棋牌到手的排序&#34;&gt;进行棋牌到手的排序
+&lt;/h2&gt;&lt;p&gt;注：由于collection没法给棋牌赋值，我们调换其他集合进行操作&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/doudizhu-java/8.png&#34;
+	width=&#34;940&#34;
+	height=&#34;927&#34;
+	srcset=&#34;https://xuewexin.github.io/p/doudizhu-java/8_hu_40c3eda305f00795.png 480w, https://xuewexin.github.io/p/doudizhu-java/8_hu_6b4bf6bbb524f5a7.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;101&#34;
+		data-flex-basis=&#34;243px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;经过各种修饰后的成果&#34;&gt;经过各种修饰后的成果
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/doudizhu-java/10.jpg&#34;
+	width=&#34;1036&#34;
+	height=&#34;788&#34;
+	srcset=&#34;https://xuewexin.github.io/p/doudizhu-java/10_hu_3972ead019111464.jpg 480w, https://xuewexin.github.io/p/doudizhu-java/10_hu_bd6b0f75cd9b987e.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;131&#34;
+		data-flex-basis=&#34;315px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结
+&lt;/h2&gt;&lt;p&gt;我知道你们可能有很多疑问，由于设置界面以及添加图片讲解有些繁琐，我回头有时间再进行补充吧。同时由于我的IO流还没学好，完整的游戏效果无法展示，等我技术更熟练后，将进行更完整的代码展示，拜拜了！！！&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

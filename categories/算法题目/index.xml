@@ -8,16 +8,16 @@
         <language>en-us</language>
         <copyright>等我</copyright>
         <lastBuildDate>Wed, 18 Dec 2024 19:37:47 +0800</lastBuildDate><atom:link href="https://xuewexin.github.io/categories/%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>算法普及题之一元一次方程</title>
-        <link>https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/</link>
+        <title>一元一次方程求解 — Java 正则与字符串解析</title>
+        <link>https://xuewexin.github.io/p/yiyuan-yici-fangcheng/</link>
         <pubDate>Wed, 18 Dec 2024 19:37:47 +0800</pubDate>
         
-        <guid>https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/</guid>
-        <description>&lt;img src="https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-01%20125750.png" alt="Featured image of post 算法普及题之一元一次方程" /&gt;&lt;h2 id=&#34;题目&#34;&gt;题目
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/2.png&#34;
+        <guid>https://xuewexin.github.io/p/yiyuan-yici-fangcheng/</guid>
+        <description>&lt;img src="https://xuewexin.github.io/p/yiyuan-yici-fangcheng/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-01%20125750.png" alt="Featured image of post 一元一次方程求解 — Java 正则与字符串解析" /&gt;&lt;h2 id=&#34;题目&#34;&gt;题目
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/2.png&#34;
 	width=&#34;1291&#34;
 	height=&#34;1314&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/2_hu_ba7671a138c3a918.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/2_hu_ecb25bae5a37c526.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/2_hu_ba7671a138c3a918.png 480w, https://xuewexin.github.io/p/yiyuan-yici-fangcheng/2_hu_ecb25bae5a37c526.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -34,10 +34,10 @@
 &lt;/h2&gt;&lt;p&gt;1.先用静态static固定未知数变量-&amp;gt;单个未知数因此用字符的形式&lt;/p&gt;
 &lt;p&gt;2.通过api正则表达式找出所有未知数&lt;/p&gt;
 &lt;p&gt;3.将其转为字符进行赋值&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/3.png&#34;
 	width=&#34;832&#34;
 	height=&#34;311&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/3_hu_c53b087d16ffc9e2.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/3_hu_36b50319c6c94eaf.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/3_hu_c53b087d16ffc9e2.png 480w, https://xuewexin.github.io/p/yiyuan-yici-fangcheng/3_hu_36b50319c6c94eaf.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -48,10 +48,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;4.书写方法，对等号两边的加减号进行处理&lt;/p&gt;
 &lt;p&gt;5.对于变成+号全省略不进行添加与空客添加保持一致，方便以后进行处理&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/4.png&#34;
 	width=&#34;1215&#34;
 	height=&#34;888&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/4_hu_413b4517765421ed.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/4_hu_82f51ce8a12b6e0e.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/4_hu_413b4517765421ed.png 480w, https://xuewexin.github.io/p/yiyuan-yici-fangcheng/4_hu_82f51ce8a12b6e0e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -62,10 +62,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;6.处理含有未知数的项的系数，并将其添加到变量e中&lt;/p&gt;
 &lt;p&gt;7.发现没系数的话（及系数为一，进行了隐藏），确定符号后直接对未知数系数+1或-1&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/5.png&#34;
 	width=&#34;910&#34;
 	height=&#34;525&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/5_hu_e924056e15aaf02f.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/5_hu_f8c7f44a995b8700.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/5_hu_e924056e15aaf02f.png 480w, https://xuewexin.github.io/p/yiyuan-yici-fangcheng/5_hu_f8c7f44a995b8700.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -77,10 +77,10 @@
 &lt;p&gt;8.处理完未知数后，对常数进行添加到j中&lt;/p&gt;
 &lt;p&gt;注：这里对等式最后一项进行了处理，同时每次结束刷新StringBuilder&lt;/p&gt;
 &lt;p&gt;(其实这里直接用String也可以，但是我习惯用StringBuilder进行添加)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/8.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/8.png&#34;
 	width=&#34;649&#34;
 	height=&#34;210&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/8_hu_1f372d3c09e0716a.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/8_hu_ef6e8a1e57cf0e4b.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/8_hu_1f372d3c09e0716a.png 480w, https://xuewexin.github.io/p/yiyuan-yici-fangcheng/8_hu_ef6e8a1e57cf0e4b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -90,10 +90,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;9.同时设置方法对式子进行处理，依次截取每一项&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/7.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/7.png&#34;
 	width=&#34;691&#34;
 	height=&#34;181&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/7_hu_bd6d116699265730.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/7_hu_7d6527e8a3d5c07a.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/7_hu_bd6d116699265730.png 480w, https://xuewexin.github.io/p/yiyuan-yici-fangcheng/7_hu_7d6527e8a3d5c07a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -104,10 +104,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;10.细节处理，浮点计算存在-0的情况,需要对其进行处理&lt;/p&gt;
 &lt;p&gt;（我也是不通过好多次，才慢慢发现的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/6.png&#34;
 	width=&#34;751&#34;
 	height=&#34;223&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/6_hu_488e42620131003d.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%99%AE%E5%8F%8A%E9%A2%98%E4%B9%8B%E4%B8%80%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B/6_hu_c30f2710fb86ca10.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/yiyuan-yici-fangcheng/6_hu_488e42620131003d.png 480w, https://xuewexin.github.io/p/yiyuan-yici-fangcheng/6_hu_c30f2710fb86ca10.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -289,16 +289,16 @@
 </description>
         </item>
         <item>
-        <title>算法水题之车站问题</title>
-        <link>https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/</link>
+        <title>车站调度问题 — Java 字符串处理实战</title>
+        <link>https://xuewexin.github.io/p/chezhan-diaodu/</link>
         <pubDate>Sat, 07 Dec 2024 14:54:47 +0800</pubDate>
         
-        <guid>https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/</guid>
-        <description>&lt;img src="https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-01%20125956.png" alt="Featured image of post 算法水题之车站问题" /&gt;&lt;h2 id=&#34;题目&#34;&gt;题目
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/1.png&#34;
+        <guid>https://xuewexin.github.io/p/chezhan-diaodu/</guid>
+        <description>&lt;img src="https://xuewexin.github.io/p/chezhan-diaodu/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-01%20125956.png" alt="Featured image of post 车站调度问题 — Java 字符串处理实战" /&gt;&lt;h2 id=&#34;题目&#34;&gt;题目
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/chezhan-diaodu/1.png&#34;
 	width=&#34;1779&#34;
 	height=&#34;517&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/1_hu_b546ccbc904f17ad.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/1_hu_5a8a8316712e6c01.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/chezhan-diaodu/1_hu_b546ccbc904f17ad.png 480w, https://xuewexin.github.io/p/chezhan-diaodu/1_hu_5a8a8316712e6c01.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;1&#34;
@@ -311,10 +311,10 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;题解&#34;&gt;题解
 &lt;/h2&gt;&lt;h3 id=&#34;1发现规律&#34;&gt;1.发现规律
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/2.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/chezhan-diaodu/2.png&#34;
 	width=&#34;622&#34;
 	height=&#34;867&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/2_hu_aa9f452890e4b1ef.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/2_hu_28ff1ecf77ea2e40.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/chezhan-diaodu/2_hu_aa9f452890e4b1ef.png 480w, https://xuewexin.github.io/p/chezhan-diaodu/2_hu_28ff1ecf77ea2e40.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -329,10 +329,10 @@
 &lt;p&gt;=&amp;gt; a ,0 ,a ,l, a+l,a+2l&amp;hellip;..&lt;/p&gt;
 &lt;p&gt;于此我们已知a，下面我们的目标是求l&lt;/p&gt;
 &lt;h3 id=&#34;2建设斐波那契方法运用了递归思想&#34;&gt;2.建设斐波那契方法（运用了递归思想）
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/3.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/chezhan-diaodu/3.png&#34;
 	width=&#34;706&#34;
 	height=&#34;615&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/3_hu_6f837ac51fd3c61.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/3_hu_179a458e58f3b1f2.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/chezhan-diaodu/3_hu_6f837ac51fd3c61.png 480w, https://xuewexin.github.io/p/chezhan-diaodu/3_hu_179a458e58f3b1f2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -344,10 +344,10 @@
 &lt;p&gt;a是已知量，由此我们可以通过迭代增加l,调用函数来求l的大小&lt;/p&gt;
 &lt;p&gt;n是车站的数量&lt;/p&gt;
 &lt;h3 id=&#34;3计算第几站有多少人&#34;&gt;3.计算第几站有多少人
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/4.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://xuewexin.github.io/p/chezhan-diaodu/4.png&#34;
 	width=&#34;739&#34;
 	height=&#34;459&#34;
-	srcset=&#34;https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/4_hu_e2121da3b4d3049b.png 480w, https://xuewexin.github.io/p/%E7%AE%97%E6%B3%95%E6%B0%B4%E9%A2%98%E4%B9%8B%E8%BD%A6%E7%AB%99%E9%97%AE%E9%A2%98/4_hu_9b778dfd05c39fa4.png 1024w&#34;
+	srcset=&#34;https://xuewexin.github.io/p/chezhan-diaodu/4_hu_e2121da3b4d3049b.png 480w, https://xuewexin.github.io/p/chezhan-diaodu/4_hu_9b778dfd05c39fa4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
