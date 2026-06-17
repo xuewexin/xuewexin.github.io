@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://xuewexin.github.io/p/doudizhu-java/'>
 
-<link rel="stylesheet" href="/scss/style.min.99387dabed5fb85e1397b1d3be6379ea19986af6cc2521540af2c479ede8d8b6.css"><meta property='og:title' content="斗地主游戏 — Java 控制台基础实现">
+<link rel="stylesheet" href="/scss/style.min.40a61d1a8b20a43e2f5f89cd313b7ffb9328b91d673a1a118f7f2bb74541fa03.css"><meta property='og:title' content="斗地主游戏 — Java 控制台基础实现">
 <meta property='og:description' content="建立项目 创建游戏启动入口与游戏的启动页面 设定思路 设置两个数组进行设置卡牌 注：由于可能多次进行游戏需要将集合\n设立集合存储所有卡牌 将棋牌打乱并发给每一个成员 设置可以查看棋牌的方式 进行棋牌到手的排序 注：由于collection没法给棋牌赋值，我们调换其他集合进行操作\n">
 <meta property='og:url' content='https://xuewexin.github.io/p/doudizhu-java/'>
 <meta property='og:site_name' content='等我'>
@@ -15,6 +15,14 @@
 <meta name="twitter:description" content="建立项目 创建游戏启动入口与游戏的启动页面 设定思路 设置两个数组进行设置卡牌 注：由于可能多次进行游戏需要将集合\n设立集合存储所有卡牌 将棋牌打乱并发给每一个成员 设置可以查看棋牌的方式 进行棋牌到手的排序 注：由于collection没法给棋牌赋值，我们调换其他集合进行操作\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://xuewexin.github.io/p/doudizhu-java/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-01%20130058.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
+
+<script>
+(function() {
+    var theme = localStorage.getItem('blog-theme') || 'glass';
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.dataset.scheme = theme === 'dark' ? 'dark' : 'light';
+})();
+</script>
 
     </head>
     <body class="
@@ -1585,52 +1593,6 @@ document.addEventListener('pjax:complete', () => {
   </svg>
 </button>
 
-<style>
-  #back-to-top {
-    position: fixed;
-    bottom: 100px;
-    right: 28px;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: var(--card-background);
-    border: 1px solid var(--card-border-color);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-    color: var(--card-text-color-main);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(12px);
-    transition: opacity 0.28s ease, visibility 0.28s ease, transform 0.28s ease, background 0.2s ease;
-    z-index: 90;
-    outline: none;
-  }
-
-  #back-to-top:hover {
-    background: var(--tag-default-background);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 14px rgba(0,0,0,0.16);
-  }
-
-  #back-to-top.visible {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  @media (max-width: 768px) {
-    #back-to-top {
-      bottom: 120px;
-      right: 16px;
-      width: 38px;
-      height: 38px;
-    }
-  }
-</style>
-
 <script>
 (function() {
   var btn = document.getElementById('back-to-top');
@@ -1660,23 +1622,8 @@ document.addEventListener('pjax:complete', () => {
 })();
 </script>
 
-<style>
-  body {
-    background: url(https://xuewexin.github.io/background/preview.jpg) no-repeat center top;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-</style>
 
-<style>
-  #particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-  }
-</style>
+<button id="theme-cycle-btn" title="点击切换主题">毛玻璃</button>
 
 <style>
     @font-face {
