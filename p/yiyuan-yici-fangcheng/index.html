@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://xuewexin.github.io/p/yiyuan-yici-fangcheng/'>
 
-<link rel="stylesheet" href="/scss/style.min.40a61d1a8b20a43e2f5f89cd313b7ffb9328b91d673a1a118f7f2bb74541fa03.css"><meta property='og:title' content="一元一次方程求解 — Java 正则与字符串解析">
+<link rel="stylesheet" href="/scss/style.min.e26e60408d5dcc86384eb2f48482576b737247d5e7a276a12bbe5a47dfa5c6a9.css"><meta property='og:title' content="一元一次方程求解 — Java 正则与字符串解析">
 <meta property='og:description' content="题目 确认思路 1.字符串输入，想找未知数的字母如a,v,b..\n2.将字符串以等号为界限作为两部分处理\n3.不要忘记打印未知数以及=号\n代码书写 1.先用静态static固定未知数变量-&gt;单个未知数因此用字符的形式\n">
 <meta property='og:url' content='https://xuewexin.github.io/p/yiyuan-yici-fangcheng/'>
 <meta property='og:site_name' content='等我'>
@@ -258,24 +258,17 @@
             <ol class="menu">
 
                 
-                    <li id="dark-mode-toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <li id="theme-cycle-btn-wrap">
+                        <a href="javascript:void(0)" id="theme-cycle-btn" title="点击切换：毛玻璃→纯白→暗夜">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
 </svg>
 
 
 
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                        <span>暗色模式</span>
+                            <span>毛玻璃</span>
+                        </a>
                     </li>
                 
             </ol>
@@ -845,6 +838,13 @@ document.addEventListener('keydown', function(e) {
     <span>微博</span>
   </button>
 
+  <button class="article-share-btn" onclick="shareToQQ()" title="QQ分享" aria-label="QQ分享">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.003 2c-2.265 0-6.29 1.364-6.29 7.325v1.195S3.55 14.96 3.55 17.474c0 .665.17 1.025.281 1.025.114 0 .902-.484 1.748-2.072 0 0-.18 2.197 1.904 3.967 0 0-1.77.495-1.77 1.182 0 .686 4.078.43 6.29 0 2.239.425 6.287.687 6.287 0 0-.688-1.768-1.182-1.768-1.182 2.085-1.77 1.905-3.967 1.905-3.967.845 1.588 1.634 2.072 1.746 2.072.111 0 .283-.36.283-1.025 0-2.514-2.166-6.954-2.166-6.954V9.325C18.29 3.364 14.268 2 12.003 2z"/>
+    </svg>
+    <span>QQ</span>
+  </button>
+
   <div class="wechat-share-popup" id="wechat-share-popup">
     <div class="wechat-share-popup-inner">
       <div class="wechat-share-qr">
@@ -1018,6 +1018,12 @@ function closeWechatShare() {
 
 function shareToWeibo() {
   var url = 'https://service.weibo.com/share/share.php?url=' + encodeURIComponent(window.location.href)
+    + '&title=' + encodeURIComponent(document.title);
+  window.open(url, '_blank', 'width=600,height=500');
+}
+
+function shareToQQ() {
+  var url = 'https://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(window.location.href)
     + '&title=' + encodeURIComponent(document.title);
   window.open(url, '_blank', 'width=600,height=500');
 }
@@ -1766,8 +1772,6 @@ document.addEventListener('pjax:complete', () => {
 })();
 </script>
 
-
-<button id="theme-cycle-btn" title="点击切换主题">毛玻璃</button>
 
 <style>
     @font-face {
