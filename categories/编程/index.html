@@ -54,7 +54,7 @@
                 <a href="/">
                 
                     
-                    
+
                     
                         
                         <img src="/img/avatar_hu_724d2a373e61be9a.png" width="300"
@@ -68,7 +68,7 @@
             </figure>
             
         
-        
+
         <div class="site-meta">
             <h1 class="site-name"><a href="/">等我</a></h1>
             <h2 class="site-description">清风疾马又逢君</h2>
@@ -76,7 +76,7 @@
     </header><ol class="menu-social">
             
                 <li>
-                    <a 
+                    <a
                         href='https://space.bilibili.com/479162227?spm_id_from=333.1228.0.0'
                         target="_blank"
                         title="Bilibili"
@@ -90,7 +90,7 @@
                 </li>
             
                 <li>
-                    <a 
+                    <a
                         href='https://github.com/xuewexin?tab=repositories'
                         target="_blank"
                         title="GitHub"
@@ -110,7 +110,7 @@
                 </li>
             
                 <li>
-                    <a 
+                    <a
                         href=''
                         target="_blank"
                         title="Twitter"
@@ -229,6 +229,21 @@
             </a>
         </li>
         
+
+        <li id="wechat-contact-btn">
+            <a href="javascript:void(0)" onclick="toggleWechatPopup()" title="加作者微信">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
+  <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
+</svg>
+
+
+
+                <span>联系作者</span>
+            </a>
+        </li>
+
         <li class="menu-bottom-section">
             <ol class="menu">
 
@@ -257,6 +272,119 @@
         </li>
     </ol>
 </aside>
+
+
+<div class="wechat-popup-overlay" id="wechat-popup-overlay" onclick="toggleWechatPopup()">
+    <div class="wechat-popup-card" onclick="event.stopPropagation()">
+        <img src="/img/wechat-qr.jpg" alt="作者微信二维码" loading="lazy">
+        <p class="wechat-popup-title">扫码添加作者微信</p>
+        <p class="wechat-popup-note">添加时请备注"博客读者"</p>
+        <button class="wechat-popup-close" onclick="toggleWechatPopup()">关闭</button>
+    </div>
+</div>
+
+<style>
+    #wechat-contact-btn a {
+        cursor: pointer;
+    }
+
+    .wechat-popup-overlay {
+        display: none;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        background: rgba(0,0,0,0.45);
+        z-index: 999;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .wechat-popup-overlay.open {
+        display: flex;
+    }
+
+    .wechat-popup-card {
+        background: #fff;
+        border-radius: 14px;
+        padding: 28px 24px 20px;
+        text-align: center;
+        box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+        max-width: 300px;
+        width: 90%;
+    }
+
+    .wechat-popup-card img {
+        width: 180px;
+        height: 180px;
+        border-radius: 10px;
+        object-fit: cover;
+        border: 1px solid #eee;
+        margin-bottom: 16px;
+    }
+
+    .wechat-popup-title {
+        font-size: 15px;
+        font-weight: 600;
+        color: #333;
+        margin: 0 0 8px 0;
+    }
+
+    .wechat-popup-note {
+        font-size: 12px;
+        color: #999;
+        margin: 0 0 16px 0;
+    }
+
+    .wechat-popup-close {
+        background: #f0f0f0;
+        border: none;
+        padding: 8px 28px;
+        border-radius: 6px;
+        font-size: 13px;
+        cursor: pointer;
+        font-family: inherit;
+    }
+
+    .wechat-popup-close:hover {
+        background: #e0e0e0;
+    }
+
+    [data-scheme="dark"] .wechat-popup-card {
+        background: #2a2a2a;
+    }
+    [data-scheme="dark"] .wechat-popup-title {
+        color: #e0e0e0;
+    }
+    [data-scheme="dark"] .wechat-popup-note {
+        color: #888;
+    }
+    [data-scheme="dark"] .wechat-popup-close {
+        background: #3a3a3a;
+        color: #e0e0e0;
+    }
+</style>
+
+<script>
+function toggleWechatPopup() {
+    var overlay = document.getElementById('wechat-popup-overlay');
+    if (overlay.classList.contains('open')) {
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+    } else {
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        var overlay = document.getElementById('wechat-popup-overlay');
+        if (overlay && overlay.classList.contains('open')) {
+            toggleWechatPopup();
+        }
+    }
+});
+</script>
 
     <aside class="sidebar right-sidebar sticky">
         
