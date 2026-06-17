@@ -83,41 +83,7 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://xuewexin.github.io/links/</guid>
-        <description>&lt;h2 id=&#34;加作者微信&#34;&gt;加作者微信
-&lt;/h2&gt;&lt;div class=&#34;wechat-card&#34;&gt;
-  &lt;img src=&#34;https://xuewexin.github.io/img/wechat-qr.jpg&#34; alt=&#34;作者微信二维码&#34; loading=&#34;lazy&#34;&gt;
-  &lt;p class=&#34;wechat-card-title&#34;&gt;扫码添加作者微信&lt;/p&gt;
-  &lt;p class=&#34;wechat-card-note&#34;&gt;添加时请备注&#34;博客读者&#34;&lt;/p&gt;
-&lt;/div&gt;
-&lt;style&gt;
-  .wechat-card {
-    text-align: center;
-    display: inline-block;
-    padding: 20px;
-    border: 1px solid var(--card-border-color, #e8e8e8);
-    border-radius: 12px;
-    background: var(--card-background, #fafafa);
-    margin: 8px 0;
-  }
-  .wechat-card img {
-    width: 180px;
-    height: 180px;
-    border-radius: 8px;
-    object-fit: cover;
-  }
-  .wechat-card-title {
-    margin: 12px 0 4px;
-    font-weight: 600;
-    font-size: 15px;
-    color: var(--card-text-color-main, #333);
-  }
-  .wechat-card-note {
-    margin: 0;
-    font-size: 12px;
-    color: var(--card-text-color-secondary, #999);
-  }
-&lt;/style&gt;
-</description>
+        <description></description>
         </item>
         <item>
         <title>搜索</title>
