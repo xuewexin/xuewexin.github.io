@@ -1,49 +1,45 @@
 {
   "particles": {
     "number": {
-      "value": 30,
+      "value": 50,
       "density": {
         "enable": true,
-        "value_area": 1000
+        "value_area": 900
       }
     },
     "color": {
-      "value": "#f3afca"
+      "value": "#a870d7"
     },
     "shape": {
       "type": "circle",
       "stroke": {
         "width": 0,
         "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
       }
     },
     "opacity": {
-      "value": 0.4,
-      "random": false,
+      "value": 0.65,
+      "random": true,
       "anim": {
-        "enable": false
+        "enable": true,
+        "speed": 0.6,
+        "opacity_min": 0.2,
+        "sync": false
       }
     },
     "size": {
-      "value": 3,
+      "value": 2.5,
       "random": true,
       "anim": {
         "enable": false
       }
     },
     "line_linked": {
-      "enable": true,
-      "distance": 60,
-      "color": "#f3afca",
-      "opacity": 0.3,
-      "width": 0.8
+      "enable": false
     },
     "move": {
       "enable": true,
-      "speed": 1.2,
+      "speed": 0.8,
       "direction": "none",
       "random": true,
       "straight": false,
@@ -58,12 +54,22 @@
     "detect_on": "window",
     "events": {
       "onhover": {
-        "enable": false
+        "enable": true,
+        "mode": "repulse"
       },
       "onclick": {
         "enable": false
       },
       "resize": true
+    },
+    "modes": {
+      "repulse": {
+        "distance": 120,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      }
     }
   },
   "retina_detect": false
