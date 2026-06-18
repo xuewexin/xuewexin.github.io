@@ -390,6 +390,12 @@
         cursor: pointer;
     }
 
+    body.popup-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+    }
+
     .wechat-popup-overlay {
         display: none;
         position: fixed;
@@ -494,12 +500,31 @@ function toggleWechatPopup() {
     var overlay = document.getElementById('wechat-popup-overlay');
     if (overlay.classList.contains('open')) {
         overlay.classList.remove('open');
-        document.body.style.overflow = '';
+        document.body.classList.remove('popup-open');
     } else {
         overlay.classList.add('open');
-        document.body.style.overflow = 'hidden';
+        document.body.classList.add('popup-open');
     }
 }
+
+
+document.addEventListener('wheel', function(e) {
+    var overlay = document.getElementById('wechat-popup-overlay');
+    if (overlay && overlay.classList.contains('open')) {
+        if (!overlay.querySelector('.wechat-popup-card').contains(e.target)) {
+            e.preventDefault();
+        }
+    }
+}, { passive: false });
+
+document.addEventListener('touchmove', function(e) {
+    var overlay = document.getElementById('wechat-popup-overlay');
+    if (overlay && overlay.classList.contains('open')) {
+        if (!overlay.querySelector('.wechat-popup-card').contains(e.target)) {
+            e.preventDefault();
+        }
+    }
+}, { passive: false });
 
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
