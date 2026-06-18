@@ -492,8 +492,10 @@ function toggleWechatPopup() {
     var overlay = document.getElementById('wechat-popup-overlay');
     if (overlay.classList.contains('open')) {
         overlay.classList.remove('open');
+        document.body.style.overflow = '';
     } else {
         overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
     }
 }
 
