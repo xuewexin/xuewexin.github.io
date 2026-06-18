@@ -1334,7 +1334,8 @@ document.addEventListener('keydown', function(e) {
   var dragging = false;
   var startX, startY, startLeft, startTop;
   var moved = false;
-  var DRAG_THRESHOLD = 5; 
+  var DRAG_THRESHOLD = 5;
+  var lastTouchEnd = 0;  
 
   function getPos(el) {
     var rect = el.getBoundingClientRect();
@@ -1375,6 +1376,12 @@ document.addEventListener('keydown', function(e) {
 
   function onStart(e) {
     if (e.target !== btn && !btn.contains(e.target)) return;
+
+    
+    if (e.type === 'mousedown' && Date.now() - lastTouchEnd < 500) {
+      return;
+    }
+
     dragging = true;
     moved = false;
     wrapper.classList.add('dragging');
@@ -1413,6 +1420,12 @@ document.addEventListener('keydown', function(e) {
 
   function onEnd(e) {
     if (!dragging) return;
+
+    
+    if (e.type === 'touchend') {
+      lastTouchEnd = Date.now();
+    }
+
     dragging = false;
     wrapper.classList.remove('dragging');
 
