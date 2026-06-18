@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://xuewexin.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%A7%A3%E6%9E%90/'>
 
-<link rel="stylesheet" href="/scss/style.min.a732327b80226d29c859b2d2fd2c185ee59b5b472e9137858438c4d1ac559705.css"><meta property='og:title' content="Tag: 字符串解析 - 等我">
+<link rel="stylesheet" href="/scss/style.min.bf920ac73acee044b5a07c8398a909fff7a9f18223b7c427b1f0394c4ccf3e14.css"><meta property='og:title' content="Tag: 字符串解析 - 等我">
 <meta property='og:description' content="清风疾马又逢君">
 <meta property='og:url' content='https://xuewexin.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%A7%A3%E6%9E%90/'>
 <meta property='og:site_name' content='等我'>
@@ -80,25 +80,38 @@
 
 <script>
 (function() {
+    var topbar = document.getElementById('mobile-topbar');
     var toggle = document.getElementById('mobile-search-toggle');
     var form = document.getElementById('mobile-search-form');
     var input = form && form.querySelector('input');
 
     if (toggle && form && input) {
+        function openSearch() {
+            form.classList.add('open');
+            topbar.classList.add('search-open');
+            setTimeout(function() { input.focus(); }, 200);
+        }
+        function closeSearch() {
+            form.classList.remove('open');
+            topbar.classList.remove('search-open');
+        }
+
         toggle.addEventListener('click', function(e) {
             e.preventDefault();
             if (form.classList.contains('open')) {
-                form.classList.remove('open');
+                closeSearch();
             } else {
-                form.classList.add('open');
-                setTimeout(function() { input.focus(); }, 200);
+                openSearch();
             }
         });
 
         
         document.addEventListener('click', function(e) {
-            if (!form.contains(e.target) && e.target !== toggle && !toggle.contains(e.target)) {
-                form.classList.remove('open');
+            if (form.classList.contains('open') &&
+                !form.contains(e.target) &&
+                e.target !== toggle &&
+                !toggle.contains(e.target)) {
+                closeSearch();
             }
         });
     }
