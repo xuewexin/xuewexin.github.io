@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://xuewexin.github.io/links/'>
 
-<link rel="stylesheet" href="/scss/style.min.8cded8734222429feb653b99dd54e7cab0257365176cc1733a9f2749b844b156.css"><meta property='og:title' content="好用的工具链接">
+<link rel="stylesheet" href="/scss/style.min.14b1f65ec40b8affdf265c7351ec89007435d8cb6675530142fbfa19204e6de9.css"><meta property='og:title' content="好用的工具链接">
 <meta property='og:description' content="提供一些好用的工具（我不会像倪神一样藏着掖着）">
 <meta property='og:url' content='https://xuewexin.github.io/links/'>
 <meta property='og:site_name' content='清风客'>
@@ -1341,6 +1341,61 @@ document.addEventListener('pjax:complete', () => {
 })();
 </script>
 
+
+
+<script>
+(function() {
+  function initWidgetCollapse() {
+    document.querySelectorAll('.right-sidebar .widget-collapsible').forEach(function(container) {
+      var btn = container.parentElement.querySelector('.widget-collapse-btn');
+      if (!btn) return;
+
+      var collapseHeight = parseInt(container.getAttribute('data-collapse-height')) || 200;
+      var content = container.firstElementChild;
+      if (!content) return;
+
+      
+      container.classList.remove('collapsed');
+      var prevMax = container.style.maxHeight;
+      container.style.maxHeight = 'none';
+      var realHeight = container.scrollHeight;
+      container.style.maxHeight = prevMax;
+
+      
+      var expandedH = Math.min(400, Math.max(collapseHeight * 2.5, realHeight + 40));
+
+      container.style.setProperty('--collapse-max-height', collapseHeight + 'px');
+      container.style.setProperty('--collapse-max-height-expanded', expandedH + 'px');
+
+      
+      container.classList.add('collapsed');
+      btn.style.display = 'block';
+      btn.classList.remove('expanded');
+      btn.querySelector('.collapse-text').textContent = '展开';
+
+      
+      btn.onclick = function(e) {
+        e.preventDefault();
+        if (container.classList.contains('collapsed')) {
+          container.classList.remove('collapsed');
+          btn.classList.add('expanded');
+          btn.querySelector('.collapse-text').textContent = '收起';
+        } else {
+          container.classList.add('collapsed');
+          btn.classList.remove('expanded');
+          btn.querySelector('.collapse-text').textContent = '展开';
+          container.scrollTop = 0;
+        }
+      };
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initWidgetCollapse);
+  document.addEventListener('pjax:complete', function() {
+    setTimeout(initWidgetCollapse, 100);
+  });
+})();
+</script>
 
 <style>
     @font-face {

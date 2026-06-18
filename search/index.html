@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://xuewexin.github.io/search/'>
 
-<link rel="stylesheet" href="/scss/style.min.8cded8734222429feb653b99dd54e7cab0257365176cc1733a9f2749b844b156.css"><meta property='og:title' content="搜索">
+<link rel="stylesheet" href="/scss/style.min.14b1f65ec40b8affdf265c7351ec89007435d8cb6675530142fbfa19204e6de9.css"><meta property='og:title' content="搜索">
 <meta property='og:description' content="">
 <meta property='og:url' content='https://xuewexin.github.io/search/'>
 <meta property='og:site_name' content='清风客'>
@@ -573,14 +573,11 @@ document.addEventListener('keydown', function(e) {
                 <a href="/tags/java/" class="search-recommend-tag tag-tag">
                     Java<span class="count">3</span>
                 </a>
-                <a href="/tags/hugo/" class="search-recommend-tag tag-tag">
-                    Hugo<span class="count">2</span>
-                </a>
                 <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="search-recommend-tag tag-tag">
                     正则表达式<span class="count">2</span>
                 </a>
-                <a href="/tags/blog/" class="search-recommend-tag tag-tag">
-                    Blog<span class="count">1</span>
+                <a href="/tags/hugo/" class="search-recommend-tag tag-tag">
+                    Hugo<span class="count">2</span>
                 </a>
                 <a href="/tags/css/" class="search-recommend-tag tag-tag">
                     CSS<span class="count">1</span>
@@ -588,17 +585,20 @@ document.addEventListener('keydown', function(e) {
                 <a href="/tags/github-pages/" class="search-recommend-tag tag-tag">
                     GitHub Pages<span class="count">1</span>
                 </a>
-                <a href="/tags/javascript/" class="search-recommend-tag tag-tag">
-                    JavaScript<span class="count">1</span>
-                </a>
                 <a href="/tags/%E5%89%8D%E7%AB%AF/" class="search-recommend-tag tag-tag">
                     前端<span class="count">1</span>
                 </a>
-                <a href="/tags/%E5%8D%9A%E5%AE%A2/" class="search-recommend-tag tag-tag">
-                    博客<span class="count">1</span>
+                <a href="/tags/%E5%BB%BA%E7%AB%99/" class="search-recommend-tag tag-tag">
+                    建站<span class="count">1</span>
                 </a>
-                <a href="/tags/%E6%8E%A7%E5%88%B6%E5%8F%B0/" class="search-recommend-tag tag-tag">
-                    控制台<span class="count">1</span>
+                <a href="/tags/%E8%AF%97%E6%AD%8C/" class="search-recommend-tag tag-tag">
+                    诗歌<span class="count">1</span>
+                </a>
+                <a href="/tags/%E6%8B%AC%E5%8F%B7%E5%8C%B9%E9%85%8D/" class="search-recommend-tag tag-tag">
+                    括号匹配<span class="count">1</span>
+                </a>
+                <a href="/tags/javascript/" class="search-recommend-tag tag-tag">
+                    JavaScript<span class="count">1</span>
                 </a>
             </div>
         </div>
@@ -951,6 +951,61 @@ document.addEventListener('pjax:complete', () => {
 })();
 </script>
 
+
+
+<script>
+(function() {
+  function initWidgetCollapse() {
+    document.querySelectorAll('.right-sidebar .widget-collapsible').forEach(function(container) {
+      var btn = container.parentElement.querySelector('.widget-collapse-btn');
+      if (!btn) return;
+
+      var collapseHeight = parseInt(container.getAttribute('data-collapse-height')) || 200;
+      var content = container.firstElementChild;
+      if (!content) return;
+
+      
+      container.classList.remove('collapsed');
+      var prevMax = container.style.maxHeight;
+      container.style.maxHeight = 'none';
+      var realHeight = container.scrollHeight;
+      container.style.maxHeight = prevMax;
+
+      
+      var expandedH = Math.min(400, Math.max(collapseHeight * 2.5, realHeight + 40));
+
+      container.style.setProperty('--collapse-max-height', collapseHeight + 'px');
+      container.style.setProperty('--collapse-max-height-expanded', expandedH + 'px');
+
+      
+      container.classList.add('collapsed');
+      btn.style.display = 'block';
+      btn.classList.remove('expanded');
+      btn.querySelector('.collapse-text').textContent = '展开';
+
+      
+      btn.onclick = function(e) {
+        e.preventDefault();
+        if (container.classList.contains('collapsed')) {
+          container.classList.remove('collapsed');
+          btn.classList.add('expanded');
+          btn.querySelector('.collapse-text').textContent = '收起';
+        } else {
+          container.classList.add('collapsed');
+          btn.classList.remove('expanded');
+          btn.querySelector('.collapse-text').textContent = '展开';
+          container.scrollTop = 0;
+        }
+      };
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initWidgetCollapse);
+  document.addEventListener('pjax:complete', function() {
+    setTimeout(initWidgetCollapse, 100);
+  });
+})();
+</script>
 
 <style>
     @font-face {

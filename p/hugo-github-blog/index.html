@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://xuewexin.github.io/p/hugo-github-blog/'>
 
-<link rel="stylesheet" href="/scss/style.min.8cded8734222429feb653b99dd54e7cab0257365176cc1733a9f2749b844b156.css"><meta property='og:title' content="Hugo + GitHub Pages 搭建个人博客 — 从零到上线">
+<link rel="stylesheet" href="/scss/style.min.14b1f65ec40b8affdf265c7351ec89007435d8cb6675530142fbfa19204e6de9.css"><meta property='og:title' content="Hugo + GitHub Pages 搭建个人博客 — 从零到上线">
 <meta property='og:description' content="大佬的blog展示 （大家也可以去更nb的大佬那里学习）\nl\n准备工作 1.1 Git下载 前往【Git官网】，下载安装程序 一直点下一步，默认安装即可 1.2 Hugo下载 前往【Hugo Github Tags】，选择对应版本下载，下载后解压即可 Windows下载版本：hugo_extended_xxxxx_windows_amd64.zip 1.3 注册 GitHub账号 前往GitHub：GitHub\n">
 <meta property='og:url' content='https://xuewexin.github.io/p/hugo-github-blog/'>
 <meta property='og:site_name' content='清风客'>
@@ -1849,6 +1849,61 @@ document.addEventListener('pjax:complete', () => {
 })();
 </script>
 
+
+
+<script>
+(function() {
+  function initWidgetCollapse() {
+    document.querySelectorAll('.right-sidebar .widget-collapsible').forEach(function(container) {
+      var btn = container.parentElement.querySelector('.widget-collapse-btn');
+      if (!btn) return;
+
+      var collapseHeight = parseInt(container.getAttribute('data-collapse-height')) || 200;
+      var content = container.firstElementChild;
+      if (!content) return;
+
+      
+      container.classList.remove('collapsed');
+      var prevMax = container.style.maxHeight;
+      container.style.maxHeight = 'none';
+      var realHeight = container.scrollHeight;
+      container.style.maxHeight = prevMax;
+
+      
+      var expandedH = Math.min(400, Math.max(collapseHeight * 2.5, realHeight + 40));
+
+      container.style.setProperty('--collapse-max-height', collapseHeight + 'px');
+      container.style.setProperty('--collapse-max-height-expanded', expandedH + 'px');
+
+      
+      container.classList.add('collapsed');
+      btn.style.display = 'block';
+      btn.classList.remove('expanded');
+      btn.querySelector('.collapse-text').textContent = '展开';
+
+      
+      btn.onclick = function(e) {
+        e.preventDefault();
+        if (container.classList.contains('collapsed')) {
+          container.classList.remove('collapsed');
+          btn.classList.add('expanded');
+          btn.querySelector('.collapse-text').textContent = '收起';
+        } else {
+          container.classList.add('collapsed');
+          btn.classList.remove('expanded');
+          btn.querySelector('.collapse-text').textContent = '展开';
+          container.scrollTop = 0;
+        }
+      };
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initWidgetCollapse);
+  document.addEventListener('pjax:complete', function() {
+    setTimeout(initWidgetCollapse, 100);
+  });
+})();
+</script>
 
 <style>
     @font-face {
