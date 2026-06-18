@@ -1095,6 +1095,7 @@ document.addEventListener('keydown', function(e) {
     transition: background 0.2s, box-shadow 0.2s;
     outline: none;
     padding: 0;
+    touch-action: none;
   }
 
   .toc-float-btn:active {
@@ -1261,7 +1262,6 @@ document.addEventListener('keydown', function(e) {
 
   function onStart(e) {
     if (e.target !== btn && !btn.contains(e.target)) return;
-    e.preventDefault();
     dragging = true;
     moved = false;
     wrapper.classList.add('dragging');
@@ -1302,6 +1302,11 @@ document.addEventListener('keydown', function(e) {
     if (!dragging) return;
     dragging = false;
     wrapper.classList.remove('dragging');
+
+    
+    if (!moved) {
+      togglePopup();
+    }
   }
 
   btn.addEventListener('touchstart', onStart, { passive: false });
@@ -1310,16 +1315,6 @@ document.addEventListener('keydown', function(e) {
   document.addEventListener('mousemove', onMove);
   document.addEventListener('touchend', onEnd);
   document.addEventListener('mouseup', onEnd);
-
-  
-  btn.addEventListener('click', function(e) {
-    if (moved) {
-      e.preventDefault();
-      e.stopPropagation();
-      return;
-    }
-    togglePopup();
-  });
 
   
   function openPopup() {
