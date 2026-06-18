@@ -376,10 +376,13 @@
 
 <div class="wechat-popup-overlay" id="wechat-popup-overlay" onclick="toggleWechatPopup()">
     <div class="wechat-popup-card" onclick="event.stopPropagation()">
+        <button class="wechat-popup-x" onclick="toggleWechatPopup()" aria-label="关闭">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
         <img src="/img/wechat-qr.jpg" alt="作者微信二维码" loading="lazy">
         <p class="wechat-popup-title">扫码添加作者微信</p>
         <p class="wechat-popup-note">添加时请备注"博客读者"</p>
-        <button class="wechat-popup-close" onclick="toggleWechatPopup()">关闭</button>
+        <p class="wechat-popup-hint">点击空白处关闭</p>
     </div>
 </div>
 
@@ -393,10 +396,11 @@
         position: fixed;
         top: 0; left: 0;
         width: 100vw; height: 100vh;
-        background: rgba(0,0,0,0.45);
+        background: rgba(0,0,0,0.5);
         z-index: 999;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
     }
 
     .wechat-popup-overlay.open {
@@ -404,13 +408,36 @@
     }
 
     .wechat-popup-card {
+        position: relative;
         background: #fff;
-        border-radius: 14px;
-        padding: 28px 24px 20px;
+        border-radius: 16px;
+        padding: 32px 24px 20px;
         text-align: center;
-        box-shadow: 0 12px 40px rgba(0,0,0,0.25);
-        max-width: 300px;
+        box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+        max-width: 320px;
         width: 90%;
+        cursor: default;
+    }
+
+    .wechat-popup-x {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: none;
+        background: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: #666;
+        transition: background 0.15s;
+    }
+    .wechat-popup-x:hover {
+        background: #e0e0e0;
+        color: #333;
     }
 
     .wechat-popup-card img {
@@ -423,30 +450,22 @@
     }
 
     .wechat-popup-title {
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 600;
         color: #333;
         margin: 0 0 8px 0;
     }
 
     .wechat-popup-note {
-        font-size: 12px;
-        color: #999;
-        margin: 0 0 16px 0;
-    }
-
-    .wechat-popup-close {
-        background: #f0f0f0;
-        border: none;
-        padding: 8px 28px;
-        border-radius: 6px;
         font-size: 13px;
-        cursor: pointer;
-        font-family: inherit;
+        color: #999;
+        margin: 0 0 6px 0;
     }
 
-    .wechat-popup-close:hover {
-        background: #e0e0e0;
+    .wechat-popup-hint {
+        font-size: 11px;
+        color: #bbb;
+        margin: 0;
     }
 
     [data-scheme="dark"] .wechat-popup-card {
@@ -458,9 +477,16 @@
     [data-scheme="dark"] .wechat-popup-note {
         color: #888;
     }
-    [data-scheme="dark"] .wechat-popup-close {
+    [data-scheme="dark"] .wechat-popup-hint {
+        color: #666;
+    }
+    [data-scheme="dark"] .wechat-popup-x {
         background: #3a3a3a;
-        color: #e0e0e0;
+        color: #999;
+    }
+    [data-scheme="dark"] .wechat-popup-x:hover {
+        background: #4a4a4a;
+        color: #ddd;
     }
 </style>
 
@@ -469,10 +495,8 @@ function toggleWechatPopup() {
     var overlay = document.getElementById('wechat-popup-overlay');
     if (overlay.classList.contains('open')) {
         overlay.classList.remove('open');
-        document.body.style.overflow = '';
     } else {
         overlay.classList.add('open');
-        document.body.style.overflow = 'hidden';
     }
 }
 
