@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://xuewexin.github.io/tags/javascript/'>
 
-<link rel="stylesheet" href="/scss/style.min.14b1f65ec40b8affdf265c7351ec89007435d8cb6675530142fbfa19204e6de9.css"><meta property='og:title' content="Tag: JavaScript - 清风客">
+<link rel="stylesheet" href="/scss/style.min.01ffed6534a96e6a1b0df705f325f6bbc92a07491a3b7f62ae51753d26ad043f.css"><meta property='og:title' content="Tag: JavaScript - 清风客">
 <meta property='og:description' content="清风疾马又逢君">
 <meta property='og:url' content='https://xuewexin.github.io/tags/javascript/'>
 <meta property='og:site_name' content='清风客'>
@@ -574,7 +574,13 @@ document.addEventListener('keydown', function(e) {
         
         
 
-        <div class="widget-collapsible" data-collapse-height="80">
+        <div class="widget-pagination-nav">
+            <button class="pagination-prev" aria-label="上一页" disabled>‹</button>
+            <span class="pagination-info"></span>
+            <button class="pagination-next" aria-label="下一页">›</button>
+        </div>
+
+        <div class="widget-paginated" data-rows-per-page="2" data-items-per-row="1">
             <div class="widget-archive--list">
                 <div class="archives-year">
                         <a href="/archives/#2026">
@@ -595,10 +601,6 @@ document.addEventListener('keydown', function(e) {
                 
             </div>
         </div>
-        <button class="widget-collapse-btn" aria-label="展开/收起">
-            <span class="collapse-text">展开</span>
-            <span class="collapse-arrow">▼</span>
-        </button>
     </section>
             
         
@@ -618,7 +620,13 @@ document.addEventListener('keydown', function(e) {
     </div>
     <h2 class="widget-title section-title">分类</h2>
 
-    <div class="widget-collapsible" data-collapse-height="70">
+    <div class="widget-pagination-nav">
+        <button class="pagination-prev" aria-label="上一页" disabled>‹</button>
+        <span class="pagination-info"></span>
+        <button class="pagination-next" aria-label="下一页">›</button>
+    </div>
+
+    <div class="widget-paginated" data-rows-per-page="2">
         <div class="tagCloud-tags">
             
                 <a href="/categories/%E7%BC%96%E7%A8%8B/" class="font_size_5">
@@ -635,11 +643,8 @@ document.addEventListener('keydown', function(e) {
             
         </div>
     </div>
-    <button class="widget-collapse-btn" aria-label="展开/收起">
-        <span class="collapse-text">展开</span>
-        <span class="collapse-arrow">▼</span>
-    </button>
 </section>
+
             
         
             
@@ -656,7 +661,13 @@ document.addEventListener('keydown', function(e) {
     </div>
     <h2 class="widget-title section-title">标签云</h2>
 
-    <div class="widget-collapsible" data-collapse-height="90">
+    <div class="widget-pagination-nav">
+        <button class="pagination-prev" aria-label="上一页" disabled>‹</button>
+        <span class="pagination-info"></span>
+        <button class="pagination-next" aria-label="下一页">›</button>
+    </div>
+
+    <div class="widget-paginated" data-rows-per-page="3">
         <div class="tagCloud-tags">
             
                 <a href="/tags/java/" class="font_size_3">
@@ -745,11 +756,8 @@ document.addEventListener('keydown', function(e) {
             
         </div>
     </div>
-    <button class="widget-collapse-btn" aria-label="展开/收起">
-        <span class="collapse-text">展开</span>
-        <span class="collapse-arrow">▼</span>
-    </button>
 </section>
+
             
         
     </aside>
@@ -979,6 +987,12 @@ document.addEventListener('pjax:complete', () => {
     window.Stack.init();
     topbar.hide();
     reloadGiscus();
+
+    
+    document.querySelectorAll('#toggle-menu.is-active').forEach(function(btn) {
+        btn.classList.remove('is-active');
+    });
+    document.body.classList.remove('show-menu');
 })
 </script>
 
@@ -998,16 +1012,28 @@ document.addEventListener('pjax:complete', () => {
   </svg>
 </button>
 
+
+<button id="back-to-bottom" title="回到底部" aria-label="回到底部">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 12 15 18 9"></polyline>
+  </svg>
+</button>
+
 <script>
 (function() {
-  var btn = document.getElementById('back-to-top');
+  var topBtn = document.getElementById('back-to-top');
+  var bottomBtn = document.getElementById('back-to-bottom');
   var ticking = false;
 
   function updateVisibility() {
-    if (window.scrollY > 400) {
-      btn.classList.add('visible');
-    } else {
-      btn.classList.remove('visible');
+    var scrolled = window.scrollY > 400;
+    var atBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 100;
+
+    if (topBtn) {
+      topBtn.classList.toggle('visible', scrolled);
+    }
+    if (bottomBtn) {
+      bottomBtn.classList.toggle('visible', scrolled && !atBottom);
     }
   }
 
@@ -1021,9 +1047,17 @@ document.addEventListener('pjax:complete', () => {
     }
   });
 
-  btn.addEventListener('click', function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  if (topBtn) {
+    topBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  if (bottomBtn) {
+    bottomBtn.addEventListener('click', function() {
+      window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+    });
+  }
 })();
 </script>
 
@@ -1031,54 +1065,133 @@ document.addEventListener('pjax:complete', () => {
 
 <script>
 (function() {
-  function initWidgetCollapse() {
-    document.querySelectorAll('.right-sidebar .widget-collapsible').forEach(function(container) {
-      var btn = container.parentElement.querySelector('.widget-collapse-btn');
-      if (!btn) return;
+  function initWidgetPagination() {
+    document.querySelectorAll('.right-sidebar .widget-paginated').forEach(function(container) {
+      if (container._paginationInited) return;
+      container._paginationInited = true;
 
-      var collapseHeight = parseInt(container.getAttribute('data-collapse-height')) || 200;
-      var content = container.firstElementChild;
-      if (!content) return;
+      var rowsPerPage = parseInt(container.getAttribute('data-rows-per-page')) || 2;
+      var itemsPerRow = parseInt(container.getAttribute('data-items-per-row')) || 0;
+      var isFixedRows = itemsPerRow > 0;
 
-      
-      container.classList.remove('collapsed');
-      var prevMax = container.style.maxHeight;
-      container.style.maxHeight = 'none';
-      var realHeight = container.scrollHeight;
-      container.style.maxHeight = prevMax;
+      var items = Array.from(container.querySelectorAll('.archives-year, .tagCloud-tags > a'));
+      if (items.length === 0) return;
 
-      
-      var expandedH = Math.min(400, Math.max(collapseHeight * 2.5, realHeight + 40));
+      var nav = container.parentElement.querySelector('.widget-pagination-nav');
+      if (!nav) return;
 
-      container.style.setProperty('--collapse-max-height', collapseHeight + 'px');
-      container.style.setProperty('--collapse-max-height-expanded', expandedH + 'px');
+      var prevBtn = nav.querySelector('.pagination-prev');
+      var nextBtn = nav.querySelector('.pagination-next');
+      var info = nav.querySelector('.pagination-info');
 
-      
-      container.classList.add('collapsed');
-      btn.style.display = 'block';
-      btn.classList.remove('expanded');
-      btn.querySelector('.collapse-text').textContent = '展开';
+      var currentPage = 0;
+      var rowGroups = [];
+      var totalPages = 1;
+      var tolerance = 4;
 
-      
-      btn.onclick = function(e) {
-        e.preventDefault();
-        if (container.classList.contains('collapsed')) {
-          container.classList.remove('collapsed');
-          btn.classList.add('expanded');
-          btn.querySelector('.collapse-text').textContent = '收起';
+      function computeRows() {
+        
+        items.forEach(function(item) { item.style.display = ''; });
+
+        if (isFixedRows) {
+          rowGroups = [];
+          for (var i = 0; i < items.length; i += itemsPerRow) {
+            rowGroups.push(items.slice(i, i + itemsPerRow));
+          }
         } else {
-          container.classList.add('collapsed');
-          btn.classList.remove('expanded');
-          btn.querySelector('.collapse-text').textContent = '展开';
-          container.scrollTop = 0;
+          var rows = [];
+          var currentRow = [];
+          var lastTop = null;
+
+          items.forEach(function(item) {
+            var top = item.getBoundingClientRect().top;
+            if (lastTop === null || Math.abs(top - lastTop) <= tolerance) {
+              currentRow.push(item);
+            } else {
+              if (currentRow.length > 0) rows.push(currentRow);
+              currentRow = [item];
+            }
+            lastTop = top;
+          });
+          if (currentRow.length > 0) rows.push(currentRow);
+          rowGroups = rows;
         }
-      };
+
+        totalPages = Math.ceil(rowGroups.length / rowsPerPage);
+        if (totalPages < 1) totalPages = 1;
+
+        if (currentPage >= totalPages) currentPage = totalPages - 1;
+        if (currentPage < 0) currentPage = 0;
+
+        showPage(currentPage);
+        updateNav();
+      }
+
+      function showPage(page) {
+        items.forEach(function(item) { item.style.display = 'none'; });
+
+        var startRow = page * rowsPerPage;
+        var endRow = Math.min(startRow + rowsPerPage, rowGroups.length);
+
+        for (var r = startRow; r < endRow; r++) {
+          rowGroups[r].forEach(function(item) {
+            item.style.display = '';
+          });
+        }
+      }
+
+      function updateNav() {
+        if (totalPages <= 1) {
+          nav.style.visibility = 'hidden';
+        } else {
+          nav.style.visibility = 'visible';
+          prevBtn.disabled = currentPage === 0;
+          nextBtn.disabled = currentPage >= totalPages - 1;
+          info.textContent = (currentPage + 1) + '/' + totalPages;
+        }
+      }
+
+      prevBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (currentPage > 0) {
+          currentPage--;
+          showPage(currentPage);
+          updateNav();
+        }
+      });
+
+      nextBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (currentPage < totalPages - 1) {
+          currentPage++;
+          showPage(currentPage);
+          updateNav();
+        }
+      });
+
+      computeRows();
+      container._recomputeRows = computeRows;
     });
   }
 
-  document.addEventListener('DOMContentLoaded', initWidgetCollapse);
+  document.addEventListener('DOMContentLoaded', initWidgetPagination);
   document.addEventListener('pjax:complete', function() {
-    setTimeout(initWidgetCollapse, 100);
+    setTimeout(initWidgetPagination, 100);
+  });
+
+  var resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      document.querySelectorAll('.right-sidebar .widget-paginated').forEach(function(container) {
+        
+        if (container._recomputeRows && !parseInt(container.getAttribute('data-items-per-row'))) {
+          container._paginationInited = false;
+          container._recomputeRows();
+          container._paginationInited = true;
+        }
+      });
+    }, 300);
   });
 })();
 </script>

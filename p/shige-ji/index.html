@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://xuewexin.github.io/p/shige-ji/'>
 
-<link rel="stylesheet" href="/scss/style.min.14b1f65ec40b8affdf265c7351ec89007435d8cb6675530142fbfa19204e6de9.css"><meta property='og:title' content="诗歌集 — 原创诗歌收录">
+<link rel="stylesheet" href="/scss/style.min.01ffed6534a96e6a1b0df705f325f6bbc92a07491a3b7f62ae51753d26ad043f.css"><meta property='og:title' content="诗歌集 — 原创诗歌收录">
 <meta property='og:description' content="注：这里收录了我的部分诗集，有请各位大佬拜读，如有用词不当之处可以向我指出\n\u200b\t我的邮箱地址是：2792893068@qq.com\n归程·归日有感 凄凄冷风浮月夜，寒寒霜冻杂冰雪。\n">
 <meta property='og:url' content='https://xuewexin.github.io/p/shige-ji/'>
 <meta property='og:site_name' content='清风客'>
@@ -990,7 +990,7 @@ document.addEventListener('keydown', function(e) {
 
 
 
-<div id="toc-float" class="toc-float">
+<div id="toc-float" class="toc-float" data-dragging="false">
   <button class="toc-float-btn" id="toc-float-btn" title="目录" aria-label="目录">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <line x1="8" y1="6" x2="21" y2="6"></line>
@@ -1002,14 +1002,14 @@ document.addEventListener('keydown', function(e) {
     </svg>
   </button>
 
-  <div class="toc-float-panel" id="toc-float-panel">
-    <div class="toc-float-header">
+  <div class="toc-float-popup" id="toc-float-popup">
+    <div class="toc-float-popup-header">
       <span>目录</span>
-      <button class="toc-float-close" id="toc-float-close" aria-label="关闭目录">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      <button class="toc-float-popup-close" id="toc-float-popup-close" aria-label="关闭目录">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
     </div>
-    <div class="toc-float-content" id="toc-float-content">
+    <div class="toc-float-popup-body" id="toc-float-popup-body">
       <nav id="TableOfContents">
   <ol>
     <li><a href="#归程归日有感">归程·归日有感</a></li>
@@ -1021,217 +1021,373 @@ document.addEventListener('keydown', function(e) {
 </nav>
     </div>
   </div>
-  <div class="toc-float-overlay" id="toc-float-overlay"></div>
 </div>
 
 <style>
+   
+  @media (min-width: 769px) {
+    .toc-float {
+      display: none !important;
+    }
+  }
+
+   
   .toc-float {
     position: fixed;
-    right: 24px;
+    right: 16px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 89;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
   }
 
   .toc-float-btn {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: var(--card-background);
     border: 1px solid var(--card-border-color);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
     color: var(--card-text-color-main);
-    cursor: pointer;
+    cursor: grab;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: background 0.2s, box-shadow 0.2s;
     outline: none;
     padding: 0;
   }
 
-  .toc-float-btn:hover {
-    background: var(--tag-default-background);
-    transform: scale(1.08);
+  .toc-float-btn:active {
+    cursor: grabbing;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.2);
   }
 
-  .toc-float-panel {
-    position: fixed;
-    right: -320px;
+  .toc-float.dragging .toc-float-btn {
+    cursor: grabbing;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.2);
+    background: var(--card-background-selected);
+  }
+
+   
+  .toc-float-popup {
+    position: absolute;
+    right: 50px;
     top: 0;
-    width: 300px;
-    height: 100vh;
+    width: 260px;
+    max-height: 360px;
     background: var(--card-background);
-    border-left: 1px solid var(--card-border-color);
-    box-shadow: -2px 0 16px rgba(0,0,0,0.1);
-    z-index: 91;
-    transition: right 0.3s ease;
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    border: 1px solid var(--card-border-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
     display: flex;
     flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(8px);
+    transition: opacity 0.22s ease, visibility 0.22s ease, transform 0.22s ease;
+    z-index: 90;
   }
 
-  .toc-float-panel.open {
-    right: 0;
+  .toc-float-popup.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
   }
 
-  .toc-float-header {
+  .toc-float-popup-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 20px;
-    border-bottom: 1px solid var(--card-border-color);
-    font-size: 15px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--card-separator-color);
+    font-size: 14px;
     font-weight: 600;
     color: var(--card-text-color-main);
     flex-shrink: 0;
   }
 
-  .toc-float-close {
+  .toc-float-popup-close {
     background: none;
     border: none;
-    color: var(--card-text-color-main);
+    color: var(--card-text-color-tertiary);
     cursor: pointer;
-    padding: 4px;
-    opacity: 0.6;
-    transition: opacity 0.2s;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: color 0.15s, background 0.15s;
   }
 
-  .toc-float-close:hover {
-    opacity: 1;
+  .toc-float-popup-close:hover {
+    color: var(--card-text-color-main);
+    background: var(--card-background-selected);
   }
 
-  .toc-float-content {
+  .toc-float-popup-body {
     flex: 1;
     overflow-y: auto;
-    padding: 12px 20px 80px 20px;
-    font-size: 14px;
+    padding: 8px 16px 12px;
+    font-size: 13px;
     line-height: 1.8;
+    overscroll-behavior: contain;
   }
 
-  .toc-float-content nav > ul {
+  .toc-float-popup-body nav > ul {
     padding-left: 0;
     list-style: none;
+    margin: 0;
   }
 
-  .toc-float-content nav li {
+  .toc-float-popup-body nav li {
     list-style: none;
+    margin: 2px 0;
   }
 
-  .toc-float-content nav a {
+  .toc-float-popup-body nav a {
     color: var(--card-text-color-main);
     text-decoration: none;
-    opacity: 0.7;
+    opacity: 0.72;
     transition: opacity 0.15s, color 0.15s;
     display: block;
-    padding: 2px 0;
+    padding: 3px 8px;
+    border-radius: 6px;
   }
 
-  .toc-float-content nav a:hover,
-  .toc-float-content nav li.active-class > a {
+  .toc-float-popup-body nav a:hover,
+  .toc-float-popup-body nav li.active-class > a {
     opacity: 1;
     color: var(--link-color);
+    background: var(--card-background-selected);
   }
 
-  .toc-float-content nav ul ul {
-    padding-left: 16px;
-    font-size: 13px;
+  .toc-float-popup-body nav ul ul {
+    padding-left: 14px;
+    font-size: 12px;
   }
 
-  .toc-float-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0,0,0,0.3);
-    z-index: 90;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.28s ease, visibility 0.28s ease;
+   
+  .toc-float.popup-left .toc-float-popup {
+    right: auto;
+    left: 50px;
+    transform: translateX(-8px);
   }
-
-  .toc-float-overlay.open {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  @media (max-width: 768px) {
-    .toc-float {
-      right: 16px;
-    }
-    .toc-float-btn {
-      width: 36px;
-      height: 36px;
-    }
-    .toc-float-panel {
-      width: 280px;
-      right: -280px;
-    }
+  .toc-float.popup-left .toc-float-popup.open {
+    transform: translateX(0);
   }
 </style>
 
 <script>
 (function() {
-  var btn = document.getElementById('toc-float-btn');
-  var panel = document.getElementById('toc-float-panel');
-  var overlay = document.getElementById('toc-float-overlay');
-  var closeBtn = document.getElementById('toc-float-close');
-  var content = document.getElementById('toc-float-content');
+  var wrapper  = document.getElementById('toc-float');
+  var btn      = document.getElementById('toc-float-btn');
+  var popup    = document.getElementById('toc-float-popup');
+  var closeBtn = document.getElementById('toc-float-popup-close');
+  var body     = document.getElementById('toc-float-popup-body');
 
-  function open() {
-    panel.classList.add('open');
-    overlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
+  if (!wrapper || !btn || !popup) return;
+
+  
+  var dragging = false;
+  var startX, startY, startLeft, startTop;
+  var moved = false;
+  var DRAG_THRESHOLD = 5; 
+
+  function getPos(el) {
+    var rect = el.getBoundingClientRect();
+    return { left: rect.left, top: rect.top };
   }
 
-  function close() {
-    panel.classList.remove('open');
-    overlay.classList.remove('open');
-    document.body.style.overflow = '';
+  function setPos(left, top) {
+    wrapper.style.right = 'auto';
+    wrapper.style.left = left + 'px';
+    wrapper.style.top = top + 'px';
+    wrapper.style.transform = 'none';
   }
 
-  btn.addEventListener('click', open);
-  closeBtn.addEventListener('click', close);
-  overlay.addEventListener('click', close);
+  
+  (function initPos() {
+    var rect = wrapper.getBoundingClientRect();
+    var left = rect.left;
+    var top = rect.top;
+    
+    wrapper.style.right = 'auto';
+    wrapper.style.left = left + 'px';
+    wrapper.style.top = top + 'px';
+    wrapper.style.transform = 'none';
+  })();
+
+  function onStart(e) {
+    if (e.target !== btn && !btn.contains(e.target)) return;
+    e.preventDefault();
+    dragging = true;
+    moved = false;
+    wrapper.classList.add('dragging');
+
+    var pos = getPos(wrapper);
+    startLeft = pos.left;
+    startTop = pos.top;
+
+    var point = e.touches ? e.touches[0] : e;
+    startX = point.clientX;
+    startY = point.clientY;
+  }
+
+  function onMove(e) {
+    if (!dragging) return;
+    e.preventDefault();
+
+    var point = e.touches ? e.touches[0] : e;
+    var dx = point.clientX - startX;
+    var dy = point.clientY - startY;
+
+    if (Math.abs(dx) > DRAG_THRESHOLD || Math.abs(dy) > DRAG_THRESHOLD) {
+      moved = true;
+    }
+
+    var newLeft = startLeft + dx;
+    var newTop = startTop + dy;
+
+    
+    var maxLeft = window.innerWidth - 48;
+    newLeft = Math.max(4, Math.min(newLeft, maxLeft));
+    newTop = Math.max(56, Math.min(newTop, window.innerHeight - 56));
+
+    setPos(newLeft, newTop);
+  }
+
+  function onEnd(e) {
+    if (!dragging) return;
+    dragging = false;
+    wrapper.classList.remove('dragging');
+  }
+
+  btn.addEventListener('touchstart', onStart, { passive: false });
+  btn.addEventListener('mousedown', onStart);
+  document.addEventListener('touchmove', onMove, { passive: false });
+  document.addEventListener('mousemove', onMove);
+  document.addEventListener('touchend', onEnd);
+  document.addEventListener('mouseup', onEnd);
+
+  
+  btn.addEventListener('click', function(e) {
+    if (moved) {
+      e.preventDefault();
+      e.stopPropagation();
+      return;
+    }
+    togglePopup();
+  });
+
+  
+  function openPopup() {
+    
+    var rect = wrapper.getBoundingClientRect();
+    var btnCenter = rect.left + rect.width / 2;
+    if (btnCenter < window.innerWidth / 2) {
+      
+      wrapper.classList.add('popup-left');
+    } else {
+      
+      wrapper.classList.remove('popup-left');
+    }
+
+    popup.classList.add('open');
+  }
+
+  function closePopup() {
+    popup.classList.remove('open');
+  }
+
+  function togglePopup() {
+    if (popup.classList.contains('open')) {
+      closePopup();
+    } else {
+      openPopup();
+    }
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      closePopup();
+    });
+  }
+
+  
+  if (body) {
+    body.addEventListener('click', function(e) {
+      var link = e.target.closest('a');
+      if (link) {
+        
+        setTimeout(closePopup, 150);
+      }
+    });
+  }
+
+  
+  document.addEventListener('click', function(e) {
+    if (popup.classList.contains('open') &&
+        !wrapper.contains(e.target)) {
+      closePopup();
+    }
+  });
+
+  
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && popup.classList.contains('open')) {
+      closePopup();
+    }
+  });
 
   
   function syncActive() {
     var sidebarToc = document.querySelector('#TableOfContents');
-    var floatToc = document.getElementById('toc-float-content');
-    if (!sidebarToc || !floatToc) return;
+    if (!sidebarToc || !body) return;
 
     var sidebarActive = sidebarToc.querySelector('.active-class');
-    var floatAll = floatToc.querySelectorAll('li');
+    var floatLinks = body.querySelectorAll('a');
 
-    floatAll.forEach(function(li) {
-      li.classList.remove('active-class');
+    floatLinks.forEach(function(a) {
+      var li = a.closest('li');
+      if (li) li.classList.remove('active-class');
     });
 
     if (sidebarActive) {
       var link = sidebarActive.querySelector('a');
       if (link) {
         var href = link.getAttribute('href');
-        var floatLink = floatToc.querySelector('a[href="' + href + '"]');
+        var floatLink = body.querySelector('a[href="' + href + '"]');
         if (floatLink) {
-          floatLink.closest('li').classList.add('active-class');
+          var li = floatLink.closest('li');
+          if (li) li.classList.add('active-class');
         }
       }
     }
   }
 
-  
   setInterval(syncActive, 800);
-
-  
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && panel.classList.contains('open')) {
-      close();
-    }
+  document.addEventListener('pjax:complete', function() {
+    setTimeout(syncActive, 200);
   });
 
   
-  document.addEventListener('pjax:complete', function() {
-    syncActive();
+  window.addEventListener('resize', function() {
+    var pos = getPos(wrapper);
+    var maxLeft = window.innerWidth - 48;
+    if (pos.left > maxLeft) {
+      setPos(maxLeft, pos.top);
+    }
+    if (pos.top > window.innerHeight - 56) {
+      setPos(pos.left, window.innerHeight - 56);
+    }
   });
 })();
 </script>
@@ -1561,6 +1717,12 @@ document.addEventListener('pjax:complete', () => {
     window.Stack.init();
     topbar.hide();
     reloadGiscus();
+
+    
+    document.querySelectorAll('#toggle-menu.is-active').forEach(function(btn) {
+        btn.classList.remove('is-active');
+    });
+    document.body.classList.remove('show-menu');
 })
 </script>
 
@@ -1580,16 +1742,28 @@ document.addEventListener('pjax:complete', () => {
   </svg>
 </button>
 
+
+<button id="back-to-bottom" title="回到底部" aria-label="回到底部">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 12 15 18 9"></polyline>
+  </svg>
+</button>
+
 <script>
 (function() {
-  var btn = document.getElementById('back-to-top');
+  var topBtn = document.getElementById('back-to-top');
+  var bottomBtn = document.getElementById('back-to-bottom');
   var ticking = false;
 
   function updateVisibility() {
-    if (window.scrollY > 400) {
-      btn.classList.add('visible');
-    } else {
-      btn.classList.remove('visible');
+    var scrolled = window.scrollY > 400;
+    var atBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 100;
+
+    if (topBtn) {
+      topBtn.classList.toggle('visible', scrolled);
+    }
+    if (bottomBtn) {
+      bottomBtn.classList.toggle('visible', scrolled && !atBottom);
     }
   }
 
@@ -1603,9 +1777,17 @@ document.addEventListener('pjax:complete', () => {
     }
   });
 
-  btn.addEventListener('click', function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  if (topBtn) {
+    topBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  if (bottomBtn) {
+    bottomBtn.addEventListener('click', function() {
+      window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+    });
+  }
 })();
 </script>
 
@@ -1613,54 +1795,133 @@ document.addEventListener('pjax:complete', () => {
 
 <script>
 (function() {
-  function initWidgetCollapse() {
-    document.querySelectorAll('.right-sidebar .widget-collapsible').forEach(function(container) {
-      var btn = container.parentElement.querySelector('.widget-collapse-btn');
-      if (!btn) return;
+  function initWidgetPagination() {
+    document.querySelectorAll('.right-sidebar .widget-paginated').forEach(function(container) {
+      if (container._paginationInited) return;
+      container._paginationInited = true;
 
-      var collapseHeight = parseInt(container.getAttribute('data-collapse-height')) || 200;
-      var content = container.firstElementChild;
-      if (!content) return;
+      var rowsPerPage = parseInt(container.getAttribute('data-rows-per-page')) || 2;
+      var itemsPerRow = parseInt(container.getAttribute('data-items-per-row')) || 0;
+      var isFixedRows = itemsPerRow > 0;
 
-      
-      container.classList.remove('collapsed');
-      var prevMax = container.style.maxHeight;
-      container.style.maxHeight = 'none';
-      var realHeight = container.scrollHeight;
-      container.style.maxHeight = prevMax;
+      var items = Array.from(container.querySelectorAll('.archives-year, .tagCloud-tags > a'));
+      if (items.length === 0) return;
 
-      
-      var expandedH = Math.min(400, Math.max(collapseHeight * 2.5, realHeight + 40));
+      var nav = container.parentElement.querySelector('.widget-pagination-nav');
+      if (!nav) return;
 
-      container.style.setProperty('--collapse-max-height', collapseHeight + 'px');
-      container.style.setProperty('--collapse-max-height-expanded', expandedH + 'px');
+      var prevBtn = nav.querySelector('.pagination-prev');
+      var nextBtn = nav.querySelector('.pagination-next');
+      var info = nav.querySelector('.pagination-info');
 
-      
-      container.classList.add('collapsed');
-      btn.style.display = 'block';
-      btn.classList.remove('expanded');
-      btn.querySelector('.collapse-text').textContent = '展开';
+      var currentPage = 0;
+      var rowGroups = [];
+      var totalPages = 1;
+      var tolerance = 4;
 
-      
-      btn.onclick = function(e) {
-        e.preventDefault();
-        if (container.classList.contains('collapsed')) {
-          container.classList.remove('collapsed');
-          btn.classList.add('expanded');
-          btn.querySelector('.collapse-text').textContent = '收起';
+      function computeRows() {
+        
+        items.forEach(function(item) { item.style.display = ''; });
+
+        if (isFixedRows) {
+          rowGroups = [];
+          for (var i = 0; i < items.length; i += itemsPerRow) {
+            rowGroups.push(items.slice(i, i + itemsPerRow));
+          }
         } else {
-          container.classList.add('collapsed');
-          btn.classList.remove('expanded');
-          btn.querySelector('.collapse-text').textContent = '展开';
-          container.scrollTop = 0;
+          var rows = [];
+          var currentRow = [];
+          var lastTop = null;
+
+          items.forEach(function(item) {
+            var top = item.getBoundingClientRect().top;
+            if (lastTop === null || Math.abs(top - lastTop) <= tolerance) {
+              currentRow.push(item);
+            } else {
+              if (currentRow.length > 0) rows.push(currentRow);
+              currentRow = [item];
+            }
+            lastTop = top;
+          });
+          if (currentRow.length > 0) rows.push(currentRow);
+          rowGroups = rows;
         }
-      };
+
+        totalPages = Math.ceil(rowGroups.length / rowsPerPage);
+        if (totalPages < 1) totalPages = 1;
+
+        if (currentPage >= totalPages) currentPage = totalPages - 1;
+        if (currentPage < 0) currentPage = 0;
+
+        showPage(currentPage);
+        updateNav();
+      }
+
+      function showPage(page) {
+        items.forEach(function(item) { item.style.display = 'none'; });
+
+        var startRow = page * rowsPerPage;
+        var endRow = Math.min(startRow + rowsPerPage, rowGroups.length);
+
+        for (var r = startRow; r < endRow; r++) {
+          rowGroups[r].forEach(function(item) {
+            item.style.display = '';
+          });
+        }
+      }
+
+      function updateNav() {
+        if (totalPages <= 1) {
+          nav.style.visibility = 'hidden';
+        } else {
+          nav.style.visibility = 'visible';
+          prevBtn.disabled = currentPage === 0;
+          nextBtn.disabled = currentPage >= totalPages - 1;
+          info.textContent = (currentPage + 1) + '/' + totalPages;
+        }
+      }
+
+      prevBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (currentPage > 0) {
+          currentPage--;
+          showPage(currentPage);
+          updateNav();
+        }
+      });
+
+      nextBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (currentPage < totalPages - 1) {
+          currentPage++;
+          showPage(currentPage);
+          updateNav();
+        }
+      });
+
+      computeRows();
+      container._recomputeRows = computeRows;
     });
   }
 
-  document.addEventListener('DOMContentLoaded', initWidgetCollapse);
+  document.addEventListener('DOMContentLoaded', initWidgetPagination);
   document.addEventListener('pjax:complete', function() {
-    setTimeout(initWidgetCollapse, 100);
+    setTimeout(initWidgetPagination, 100);
+  });
+
+  var resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      document.querySelectorAll('.right-sidebar .widget-paginated').forEach(function(container) {
+        
+        if (container._recomputeRows && !parseInt(container.getAttribute('data-items-per-row'))) {
+          container._paginationInited = false;
+          container._recomputeRows();
+          container._paginationInited = true;
+        }
+      });
+    }, 300);
   });
 })();
 </script>
