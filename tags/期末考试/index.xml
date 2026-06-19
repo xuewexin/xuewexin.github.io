@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>期末考试 on 清风客</title>
+        <link>https://xuewexin.github.io/tags/%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95/</link>
+        <description>Recent content in 期末考试 on 清风客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>等我</copyright>
+        <lastBuildDate>Fri, 19 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://xuewexin.github.io/tags/%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>软件开发框架期末复习重点（精简归纳版）</title>
+        <link>https://xuewexin.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E9%87%8D%E7%82%B9%E7%B2%BE%E7%AE%80%E5%BD%92%E7%BA%B3%E7%89%88/</link>
+        <pubDate>Fri, 19 Jun 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://xuewexin.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E9%87%8D%E7%82%B9%E7%B2%BE%E7%AE%80%E5%BD%92%E7%BA%B3%E7%89%88/</guid>
+        <description>&lt;img src="https://xuewexin.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E9%87%8D%E7%82%B9%E7%B2%BE%E7%AE%80%E5%BD%92%E7%BA%B3%E7%89%88/cover.png" alt="Featured image of post 软件开发框架期末复习重点（精简归纳版）" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;这是一份软件开发框架课程的期末复习重点，涵盖了 HTML、CSS、JavaScript 和 jQuery 四大板块的核心知识点。精简归纳，方便考前快速回顾。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;一html-核心知识点&#34;&gt;一、HTML 核心知识点
+&lt;/h2&gt;&lt;h3 id=&#34;1-图片标签-img-属性&#34;&gt;1. 图片标签 &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; 属性
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;属性&lt;/th&gt;
+					&lt;th&gt;说明&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;src&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;图片路径（URL）&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;alt&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;替代文本（图片无法显示时展示，辅助屏幕阅读器）&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;title&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;鼠标悬停时的提示文字&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;width&lt;/code&gt; / &lt;code&gt;height&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;设置图片宽高&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;border&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;边框（已不推荐，建议用 CSS）&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;2-表单-form-创建与常用控件&#34;&gt;2. 表单 &lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt; 创建与常用控件
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;控件&lt;/th&gt;
+					&lt;th&gt;说明&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;&amp;lt;input type=&amp;quot;text&amp;quot;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;单行文本输入框&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;&amp;lt;input type=&amp;quot;password&amp;quot;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;密码输入框（内容隐藏）&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;&amp;lt;input type=&amp;quot;radio&amp;quot;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;单选框（一组选一个）&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;&amp;lt;input type=&amp;quot;checkbox&amp;quot;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;复选框（一组选多个）&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;&amp;lt;input type=&amp;quot;submit&amp;quot;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;提交按钮&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;&amp;lt;input type=&amp;quot;reset&amp;quot;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;重置按钮&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;多行文本输入框&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;&amp;lt;select&amp;gt;&lt;/code&gt; + &lt;code&gt;&amp;lt;option&amp;gt;&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;下拉列表框&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;&amp;lt;button&amp;gt;&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;通用按钮（可触发 JS）&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;&amp;lt;label&amp;gt;&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;为控件提供描述标签&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;3-列表创建&#34;&gt;3. 列表创建
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;无序列表&lt;/strong&gt;：&lt;code&gt;&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;...&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&lt;/code&gt;（圆点符号）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;有序列表&lt;/strong&gt;：&lt;code&gt;&amp;lt;ol&amp;gt;&amp;lt;li&amp;gt;...&amp;lt;/li&amp;gt;&amp;lt;/ol&amp;gt;&lt;/code&gt;（数字序号）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;定义列表&lt;/strong&gt;：&lt;code&gt;&amp;lt;dl&amp;gt;&amp;lt;dt&amp;gt;术语&amp;lt;/dt&amp;gt;&amp;lt;dd&amp;gt;描述&amp;lt;/dd&amp;gt;&amp;lt;/dl&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;嵌套列表&lt;/strong&gt;：在 &lt;code&gt;&amp;lt;li&amp;gt;&lt;/code&gt; 内再嵌套 &lt;code&gt;&amp;lt;ul&amp;gt;&lt;/code&gt; 或 &lt;code&gt;&amp;lt;ol&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;二css-核心知识点&#34;&gt;二、CSS 核心知识点
+&lt;/h2&gt;&lt;h3 id=&#34;1-基础选择器&#34;&gt;1. 基础选择器
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;选择器&lt;/th&gt;
+					&lt;th&gt;语法&lt;/th&gt;
+					&lt;th&gt;说明&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;元素选择器&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;div&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;选择所有指定标签&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;类选择器&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;.className&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;选择带该类名的元素&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ID 选择器&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;#idName&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;选择唯一 ID 元素&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;通配符选择器&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;选择所有元素&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;属性选择器&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;[type=&amp;quot;text&amp;quot;]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;根据属性选择&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;伪类选择器&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;:hover&lt;/code&gt;, &lt;code&gt;:focus&lt;/code&gt;, &lt;code&gt;:first-child&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;特定状态选择&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;伪元素选择器&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;::before&lt;/code&gt;, &lt;code&gt;::after&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;创建虚拟元素&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;2-文本样式与对齐&#34;&gt;2. 文本样式与对齐
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;属性&lt;/th&gt;
+					&lt;th&gt;说明&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;font-family&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;字体&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;font-size&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;字体大小&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;color&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;文字颜色&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;font-weight&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;粗细（&lt;code&gt;normal&lt;/code&gt; / &lt;code&gt;bold&lt;/code&gt; / &lt;code&gt;100~900&lt;/code&gt;）&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;font-style&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;样式（&lt;code&gt;normal&lt;/code&gt; / &lt;code&gt;italic&lt;/code&gt;）&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;text-decoration&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;装饰（&lt;code&gt;underline&lt;/code&gt; / &lt;code&gt;overline&lt;/code&gt; 等）&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;text-align&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;水平对齐（&lt;code&gt;left&lt;/code&gt; / &lt;code&gt;right&lt;/code&gt; / &lt;code&gt;center&lt;/code&gt; / &lt;code&gt;justify&lt;/code&gt;）&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;vertical-align&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;垂直对齐（行内/表格用；块级推荐 Flexbox）&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;3-内边距与外边距&#34;&gt;3. 内边距与外边距
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;内边距&lt;/strong&gt; &lt;code&gt;padding&lt;/code&gt;：内容到边框的距离&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;外边距&lt;/strong&gt; &lt;code&gt;margin&lt;/code&gt;：元素到外部的距离&lt;/li&gt;
+&lt;li&gt;简写顺序：&lt;code&gt;上 右 下 左&lt;/code&gt;（如 &lt;code&gt;padding: 10px 20px 10px 20px&lt;/code&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-行内元素-vs-块级元素&#34;&gt;4. 行内元素 vs 块级元素
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;类型&lt;/th&gt;
+					&lt;th&gt;代表&lt;/th&gt;
+					&lt;th&gt;特点&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;行内元素&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;span&lt;/code&gt;, &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;img&lt;/code&gt;, &lt;code&gt;strong&lt;/code&gt;, &lt;code&gt;em&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;不换行，不能设宽高（替换元素除外）&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;块级元素&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;div&lt;/code&gt;, &lt;code&gt;p&lt;/code&gt;, &lt;code&gt;h1~h6&lt;/code&gt;, &lt;code&gt;ul&lt;/code&gt;, &lt;code&gt;ol&lt;/code&gt;, &lt;code&gt;li&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;独占一行，可设宽高&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;转换方式&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;display: block;&lt;/code&gt; → 行内转块&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;display: inline;&lt;/code&gt; → 块转行内&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;display: inline-block;&lt;/code&gt; → 行内块（不换行但可设宽高）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-浮动float及清除方法&#34;&gt;5. 浮动（Float）及清除方法
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;引发问题&lt;/strong&gt;：父元素高度塌陷、浮动覆盖其他内容&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;清除方案&lt;/strong&gt;（推荐度从低到高）：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;浮动元素后加空 &lt;code&gt;&amp;lt;div style=&amp;quot;clear:both;&amp;quot;&amp;gt;&lt;/code&gt; — 冗余&lt;/li&gt;
+&lt;li&gt;给父元素设固定高度 — 不灵活&lt;/li&gt;
+&lt;li&gt;父元素加 &lt;code&gt;overflow: hidden;&lt;/code&gt; — 简单但有副作用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;伪类清除法（推荐）&lt;/strong&gt;：
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;clearfix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;after&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;content&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;block&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;clear&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;both&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;6-盒子模型box-model&#34;&gt;6. 盒子模型（Box Model）
+&lt;/h3&gt;&lt;p&gt;由内到外：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;内容（content） → 内边距（padding） → 边框（border） → 外边距（margin）
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;&lt;code&gt;box-sizing&lt;/code&gt; 值&lt;/th&gt;
+					&lt;th&gt;说明&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;content-box&lt;/code&gt;（默认）&lt;/td&gt;
+					&lt;td&gt;宽高仅指内容区域&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;border-box&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;宽高包含 padding 和 border（更直观）&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;7-定位方式position&#34;&gt;7. 定位方式（Position）
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;值&lt;/th&gt;
+					&lt;th&gt;说明&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;static&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;默认，正常文档流&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;relative&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;相对自身原位置偏移，仍占文档空间&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;absolute&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;相对最近已定位祖先，脱离文档流&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;fixed&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;相对视口固定，脱离文档流&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;堆叠顺序&lt;/strong&gt;：使用 &lt;code&gt;z-index&lt;/code&gt;（数值越大越靠上）&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;三javascript-核心知识点&#34;&gt;三、JavaScript 核心知识点
+&lt;/h2&gt;&lt;h3 id=&#34;1-数据类型&#34;&gt;1. 数据类型
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;分类&lt;/th&gt;
+					&lt;th&gt;类型&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;基本类型（值类型）&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;Number&lt;/code&gt;, &lt;code&gt;String&lt;/code&gt;, &lt;code&gt;Boolean&lt;/code&gt;, &lt;code&gt;Undefined&lt;/code&gt;, &lt;code&gt;Null&lt;/code&gt;, &lt;code&gt;Symbol&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;引用类型（对象类型）&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;Object&lt;/code&gt;, &lt;code&gt;Array&lt;/code&gt;, &lt;code&gt;Function&lt;/code&gt;, &lt;code&gt;Date&lt;/code&gt;, &lt;code&gt;RegExp&lt;/code&gt; 等&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;2-常用数组操作&#34;&gt;2. 常用数组操作
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;操作&lt;/th&gt;
+					&lt;th&gt;方法&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;访问&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;arr[0]&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;修改&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;arr[0] = 新值&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;末尾添加&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;push(元素)&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;开头添加&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;unshift(元素)&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;任意位置增/删&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;splice(索引, 删除个数, 添加的元素...)&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;末尾删除&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;pop()&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;开头删除&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;shift()&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;查找索引&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;indexOf(元素)&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;遍历&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;for&lt;/code&gt; 循环 或 &lt;code&gt;forEach()&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;连接数组&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;concat(另一个数组)&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;转字符串&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;toString()&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;3-相等判断&#34;&gt;3. 相等判断
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;运算符&lt;/th&gt;
+					&lt;th&gt;说明&lt;/th&gt;
+					&lt;th&gt;示例&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;==&lt;/code&gt;（宽松相等）&lt;/td&gt;
+					&lt;td&gt;比较值，会进行类型转换&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;&amp;quot;5&amp;quot; == 5&lt;/code&gt; → &lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;===&lt;/code&gt;（严格相等）&lt;/td&gt;
+					&lt;td&gt;比较值和类型，均相同才为 &lt;code&gt;true&lt;/code&gt;（&lt;strong&gt;推荐使用&lt;/strong&gt;）&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;&amp;quot;5&amp;quot; === 5&lt;/code&gt; → &lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;4-函数定义与定时函数&#34;&gt;4. 函数定义与定时函数
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;基本写法&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;函数名&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;参数1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;参数2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// 函数体
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;定时函数&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;方法&lt;/th&gt;
+					&lt;th&gt;说明&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;setTimeout(函数, 毫秒)&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;延迟执行一次&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;setInterval(函数, 毫秒)&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;每隔指定时间重复执行&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 5 秒后执行一次
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;timer&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;setTimeout&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;执行&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 每 2 秒重复执行
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;interval&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;setInterval&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;周期执行&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;四jquery-选择器&#34;&gt;四、jQuery 选择器
+&lt;/h2&gt;&lt;h3 id=&#34;1-基本选择器&#34;&gt;1. 基本选择器
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;选择器&lt;/th&gt;
+					&lt;th&gt;说明&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;$(&amp;quot;#id&amp;quot;)&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;ID 选择&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;$(&amp;quot;.class&amp;quot;)&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;类选择&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;$(&amp;quot;element&amp;quot;)&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;标签选择&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;$(&amp;quot;*&amp;quot;)&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;全选&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;2-层次选择器&#34;&gt;2. 层次选择器
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;选择器&lt;/th&gt;
+					&lt;th&gt;说明&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;$(&amp;quot;祖先 后代&amp;quot;)&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;后代选择&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;$(&amp;quot;父 &amp;gt; 子&amp;quot;)&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;子代选择&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;$(&amp;quot;前 + 后&amp;quot;)&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;紧邻兄弟&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;$(&amp;quot;前 ~ 后面所有&amp;quot;)&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;后面所有兄弟&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;3-过滤选择器&#34;&gt;3. 过滤选择器
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;分类&lt;/th&gt;
+					&lt;th&gt;选择器&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;基本过滤&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;:first&lt;/code&gt;, &lt;code&gt;:last&lt;/code&gt;, &lt;code&gt;:even&lt;/code&gt;, &lt;code&gt;:odd&lt;/code&gt;, &lt;code&gt;:eq(index)&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;内容过滤&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;:contains(&#39;文本&#39;)&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;可见性过滤&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;:visible&lt;/code&gt;, &lt;code&gt;:hidden&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;属性过滤&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;[type=&#39;text&#39;]&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;子元素过滤&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;:nth-child(n)&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;表单过滤&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;:input&lt;/code&gt;, &lt;code&gt;:enabled&lt;/code&gt;, &lt;code&gt;:disabled&lt;/code&gt;, &lt;code&gt;:checked&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;4-属性选择器&#34;&gt;4. 属性选择器
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;选择器&lt;/th&gt;
+					&lt;th&gt;说明&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;[attribute]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;拥有该属性&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;[attribute=value]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;属性等于某值&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;[attribute!=value]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;属性不等于某值&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;[attribute^=value]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;属性以某值开头&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;[attribute$=value]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;属性以某值结尾&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;[attribute*=value]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;属性包含某值&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;板块&lt;/th&gt;
+					&lt;th&gt;核心内容&lt;/th&gt;
+					&lt;th&gt;考试重点&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;HTML&lt;/td&gt;
+					&lt;td&gt;标签属性、表单控件、列表&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; 属性、&lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt; 各类 input、列表嵌套&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;CSS&lt;/td&gt;
+					&lt;td&gt;选择器、盒模型、定位、浮动&lt;/td&gt;
+					&lt;td&gt;选择器优先级、&lt;code&gt;position&lt;/code&gt; 区别、清除浮动&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;JavaScript&lt;/td&gt;
+					&lt;td&gt;数据类型、数组操作、定时器&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;==&lt;/code&gt; vs &lt;code&gt;===&lt;/code&gt;、数组方法、&lt;code&gt;setTimeout&lt;/code&gt;/&lt;code&gt;setInterval&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;jQuery&lt;/td&gt;
+					&lt;td&gt;各类选择器&lt;/td&gt;
+					&lt;td&gt;基本/层次/过滤/属性选择器的灵活运用&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;祝考试顺利！&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

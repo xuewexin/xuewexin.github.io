@@ -1,0 +1,2718 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 这是一份软件开发框架课程的期末复习重点，涵盖了 HTML、CSS、JavaScript 和 jQuery 四大板块的核心知识点。精简归纳，方便考前快速回顾。\n一、HTML 核心知识点 1. 图片标签 &lt;img&gt; 属性 属性 说明 src 图片路径（URL） alt 替代文本（图片无法显示时展示，辅助屏幕阅读器） title 鼠标悬停时的提示文字 width / height 设置图片宽高 border 边框（已不推荐，建议用 CSS） 2. 表单 &lt;form&gt; 创建与常用控件 控件 说明 &lt;input type=&quot;text&quot;&gt; 单行文本输入框 &lt;input type=&quot;password&quot;&gt; 密码输入框（内容隐藏） &lt;input type=&quot;radio&quot;&gt; 单选框（一组选一个） &lt;input type=&quot;checkbox&quot;&gt; 复选框（一组选多个） &lt;input type=&quot;submit&quot;&gt; 提交按钮 &lt;input type=&quot;reset&quot;&gt; 重置按钮 &lt;textarea&gt; 多行文本输入框 &lt;select&gt; + &lt;option&gt; 下拉列表框 &lt;button&gt; 通用按钮（可触发 JS） &lt;label&gt; 为控件提供描述标签 3. 列表创建 无序列表：&lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt;（圆点符号） 有序列表：&lt;ol&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ol&gt;（数字序号） 定义列表：&lt;dl&gt;&lt;dt&gt;术语&lt;/dt&gt;&lt;dd&gt;描述&lt;/dd&gt;&lt;/dl&gt; 嵌套列表：在 &lt;li&gt; 内再嵌套 &lt;ul&gt; 或 &lt;ol&gt; 二、CSS 核心知识点 1. 基础选择器 选择器 语法 说明 元素选择器 div 选择所有指定标签 类选择器 .className 选择带该类名的元素 ID 选择器 #idName 选择唯一 ID 元素 通配符选择器 * 选择所有元素 属性选择器 [type=&quot;text&quot;] 根据属性选择 伪类选择器 :hover, :focus, :first-child 特定状态选择 伪元素选择器 ::before, ::after 创建虚拟元素 2. 文本样式与对齐 属性 说明 font-family 字体 font-size 字体大小 color 文字颜色 font-weight 粗细（normal / bold / 100~900） font-style 样式（normal / italic） text-decoration 装饰（underline / overline 等） text-align 水平对齐（left / right / center / justify） vertical-align 垂直对齐（行内/表格用；块级推荐 Flexbox） 3. 内边距与外边距 内边距 padding：内容到边框的距离 外边距 margin：元素到外部的距离 简写顺序：上 右 下 左（如 padding: 10px 20px 10px 20px） 4. 行内元素 vs 块级元素 类型 代表 特点 行内元素 span, a, img, strong, em 不换行，不能设宽高（替换元素除外） 块级元素 div, p, h1~h6, ul, ol, li 独占一行，可设宽高 转换方式：\n">
+<title>软件开发框架期末复习重点（精简归纳版）</title>
+
+<link rel='canonical' href='https://xuewexin.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E9%87%8D%E7%82%B9%E7%B2%BE%E7%AE%80%E5%BD%92%E7%BA%B3%E7%89%88/'>
+
+<link rel="stylesheet" href="/scss/style.min.029dd2d34092f19d13207b05f0b13c38f1f19b2d6987b3c72a2a80f3bc6f74f0.css"><meta property='og:title' content="软件开发框架期末复习重点（精简归纳版）">
+<meta property='og:description' content="前言 这是一份软件开发框架课程的期末复习重点，涵盖了 HTML、CSS、JavaScript 和 jQuery 四大板块的核心知识点。精简归纳，方便考前快速回顾。\n一、HTML 核心知识点 1. 图片标签 &lt;img&gt; 属性 属性 说明 src 图片路径（URL） alt 替代文本（图片无法显示时展示，辅助屏幕阅读器） title 鼠标悬停时的提示文字 width / height 设置图片宽高 border 边框（已不推荐，建议用 CSS） 2. 表单 &lt;form&gt; 创建与常用控件 控件 说明 &lt;input type=&quot;text&quot;&gt; 单行文本输入框 &lt;input type=&quot;password&quot;&gt; 密码输入框（内容隐藏） &lt;input type=&quot;radio&quot;&gt; 单选框（一组选一个） &lt;input type=&quot;checkbox&quot;&gt; 复选框（一组选多个） &lt;input type=&quot;submit&quot;&gt; 提交按钮 &lt;input type=&quot;reset&quot;&gt; 重置按钮 &lt;textarea&gt; 多行文本输入框 &lt;select&gt; + &lt;option&gt; 下拉列表框 &lt;button&gt; 通用按钮（可触发 JS） &lt;label&gt; 为控件提供描述标签 3. 列表创建 无序列表：&lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt;（圆点符号） 有序列表：&lt;ol&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ol&gt;（数字序号） 定义列表：&lt;dl&gt;&lt;dt&gt;术语&lt;/dt&gt;&lt;dd&gt;描述&lt;/dd&gt;&lt;/dl&gt; 嵌套列表：在 &lt;li&gt; 内再嵌套 &lt;ul&gt; 或 &lt;ol&gt; 二、CSS 核心知识点 1. 基础选择器 选择器 语法 说明 元素选择器 div 选择所有指定标签 类选择器 .className 选择带该类名的元素 ID 选择器 #idName 选择唯一 ID 元素 通配符选择器 * 选择所有元素 属性选择器 [type=&quot;text&quot;] 根据属性选择 伪类选择器 :hover, :focus, :first-child 特定状态选择 伪元素选择器 ::before, ::after 创建虚拟元素 2. 文本样式与对齐 属性 说明 font-family 字体 font-size 字体大小 color 文字颜色 font-weight 粗细（normal / bold / 100~900） font-style 样式（normal / italic） text-decoration 装饰（underline / overline 等） text-align 水平对齐（left / right / center / justify） vertical-align 垂直对齐（行内/表格用；块级推荐 Flexbox） 3. 内边距与外边距 内边距 padding：内容到边框的距离 外边距 margin：元素到外部的距离 简写顺序：上 右 下 左（如 padding: 10px 20px 10px 20px） 4. 行内元素 vs 块级元素 类型 代表 特点 行内元素 span, a, img, strong, em 不换行，不能设宽高（替换元素除外） 块级元素 div, p, h1~h6, ul, ol, li 独占一行，可设宽高 转换方式：\n">
+<meta property='og:url' content='https://xuewexin.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E9%87%8D%E7%82%B9%E7%B2%BE%E7%AE%80%E5%BD%92%E7%BA%B3%E7%89%88/'>
+<meta property='og:site_name' content='清风客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='HTML' /><meta property='article:tag' content='CSS' /><meta property='article:tag' content='JavaScript' /><meta property='article:tag' content='jQuery' /><meta property='article:tag' content='前端开发' /><meta property='article:tag' content='复习' /><meta property='article:tag' content='期末考试' /><meta property='article:published_time' content='2026-06-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-06-19T00:00:00&#43;00:00'/><meta property='og:image' content='https://xuewexin.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E9%87%8D%E7%82%B9%E7%B2%BE%E7%AE%80%E5%BD%92%E7%BA%B3%E7%89%88/cover.png' />
+<meta name="twitter:title" content="软件开发框架期末复习重点（精简归纳版）">
+<meta name="twitter:description" content="前言 这是一份软件开发框架课程的期末复习重点，涵盖了 HTML、CSS、JavaScript 和 jQuery 四大板块的核心知识点。精简归纳，方便考前快速回顾。\n一、HTML 核心知识点 1. 图片标签 &lt;img&gt; 属性 属性 说明 src 图片路径（URL） alt 替代文本（图片无法显示时展示，辅助屏幕阅读器） title 鼠标悬停时的提示文字 width / height 设置图片宽高 border 边框（已不推荐，建议用 CSS） 2. 表单 &lt;form&gt; 创建与常用控件 控件 说明 &lt;input type=&quot;text&quot;&gt; 单行文本输入框 &lt;input type=&quot;password&quot;&gt; 密码输入框（内容隐藏） &lt;input type=&quot;radio&quot;&gt; 单选框（一组选一个） &lt;input type=&quot;checkbox&quot;&gt; 复选框（一组选多个） &lt;input type=&quot;submit&quot;&gt; 提交按钮 &lt;input type=&quot;reset&quot;&gt; 重置按钮 &lt;textarea&gt; 多行文本输入框 &lt;select&gt; + &lt;option&gt; 下拉列表框 &lt;button&gt; 通用按钮（可触发 JS） &lt;label&gt; 为控件提供描述标签 3. 列表创建 无序列表：&lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt;（圆点符号） 有序列表：&lt;ol&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ol&gt;（数字序号） 定义列表：&lt;dl&gt;&lt;dt&gt;术语&lt;/dt&gt;&lt;dd&gt;描述&lt;/dd&gt;&lt;/dl&gt; 嵌套列表：在 &lt;li&gt; 内再嵌套 &lt;ul&gt; 或 &lt;ol&gt; 二、CSS 核心知识点 1. 基础选择器 选择器 语法 说明 元素选择器 div 选择所有指定标签 类选择器 .className 选择带该类名的元素 ID 选择器 #idName 选择唯一 ID 元素 通配符选择器 * 选择所有元素 属性选择器 [type=&quot;text&quot;] 根据属性选择 伪类选择器 :hover, :focus, :first-child 特定状态选择 伪元素选择器 ::before, ::after 创建虚拟元素 2. 文本样式与对齐 属性 说明 font-family 字体 font-size 字体大小 color 文字颜色 font-weight 粗细（normal / bold / 100~900） font-style 样式（normal / italic） text-decoration 装饰（underline / overline 等） text-align 水平对齐（left / right / center / justify） vertical-align 垂直对齐（行内/表格用；块级推荐 Flexbox） 3. 内边距与外边距 内边距 padding：内容到边框的距离 外边距 margin：元素到外部的距离 简写顺序：上 右 下 左（如 padding: 10px 20px 10px 20px） 4. 行内元素 vs 块级元素 类型 代表 特点 行内元素 span, a, img, strong, em 不换行，不能设宽高（替换元素除外） 块级元素 div, p, h1~h6, ul, ol, li 独占一行，可设宽高 转换方式：\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://xuewexin.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E9%87%8D%E7%82%B9%E7%B2%BE%E7%AE%80%E5%BD%92%E7%BA%B3%E7%89%88/cover.png' />
+    <link rel="shortcut icon" href="/favicon.png" />
+
+<script>
+(function() {
+    var theme = localStorage.getItem('blog-theme') || 'glass';
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.dataset.scheme = theme === 'dark' ? 'dark' : 'light';
+})();
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div id="mobile-topbar">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <span class="mobile-site-name">欢迎来到清风客的blog</span><button class="mobile-search-toggle" aria-label="搜索" id="mobile-search-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+        </button>
+        <form action="/search/" class="mobile-search-form" id="mobile-search-form">
+            <input name="keyword" required placeholder="输入关键词..." />
+            <button type="submit" aria-label="搜索">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+            </button>
+        </form></div>
+
+<script>
+(function() {
+    var topbar = document.getElementById('mobile-topbar');
+    var toggle = document.getElementById('mobile-search-toggle');
+    var form = document.getElementById('mobile-search-form');
+    var input = form && form.querySelector('input');
+
+    if (toggle && form && input) {
+        function openSearch() {
+            form.classList.add('open');
+            topbar.classList.add('search-open');
+            setTimeout(function() { input.focus(); }, 200);
+        }
+        function closeSearch() {
+            form.classList.remove('open');
+            topbar.classList.remove('search-open');
+        }
+
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (form.classList.contains('open')) {
+                closeSearch();
+            } else {
+                openSearch();
+            }
+        });
+
+        
+        document.addEventListener('click', function(e) {
+            if (form.classList.contains('open') &&
+                !form.contains(e.target) &&
+                e.target !== toggle &&
+                !toggle.contains(e.target)) {
+                closeSearch();
+            }
+        });
+    }
+})();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <div class="sidebar-profile-card">
+        <header>
+            
+                
+                <figure class="site-avatar">
+                    <a href="/">
+                    
+                        
+
+                        
+                            
+                            <img src="/img/avatar_hu_724d2a373e61be9a.png" width="300"
+                                height="300" class="site-logo" loading="lazy" alt="Avatar">
+                        
+                    
+                    </a>
+                    
+                        <span class="emoji">🍥</span>
+                    
+                </figure>
+                
+            
+
+            <div class="site-meta">
+                <h1 class="site-name"><a href="/">清风客</a></h1>
+                <h2 class="site-description">清风疾马又逢君</h2>
+            </div>
+        </header><ol class="menu-social">
+                
+                    <li>
+                        <a
+                            href='https://space.bilibili.com/479162227?spm_id_from=333.1228.0.0'
+                            target="_blank"
+                            title="Bilibili"
+                            rel="me"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-bilibili" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <rect x="4" y="6" width="16" height="12" rx="2"/>
+  <path d="M7 6v-2a1 1 0 0 1 1 -1h1a1 1 0 0 1 1 1v2" />
+  <path d="M15 6v-2a1 1 0 0 1 1 -1h1a1 1 0 0 1 1 1v2" />
+  <line x1="9" y1="11" x2="9" y2="13" />
+  <line x1="15" y1="11" x2="15" y2="13" />
+</svg>
+
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a
+                            href='https://github.com/xuewexin?tab=repositories'
+                            target="_blank"
+                            title="GitHub"
+                            rel="me"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a
+                            href='https://t.me/wait_me1966'
+                            target="_blank"
+                            title="Telegram"
+                            rel="me"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+</svg>
+
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a
+                            href='https://x.com/XiaoxiaoL66997'
+                            target="_blank"
+                            title="X"
+                            rel="me"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 4l7.733 7.733L4 20" />
+  <path d="M20 4l-8 8.533L20 20" />
+  <line x1="6" y1="4" x2="20" y2="20" />
+</svg>
+
+                            
+                        </a>
+                    </li>
+                
+            </ol></div>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于作者</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>好用的工具链接</span>
+            </a>
+        </li>
+        
+
+        <li id="wechat-contact-btn">
+            <a href="javascript:void(0)" onclick="toggleWechatPopup()" title="加作者微信">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
+  <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
+</svg>
+
+
+
+                <span>联系作者</span>
+            </a>
+        </li>
+
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="theme-cycle-btn-wrap">
+                        <a href="javascript:void(0)" id="theme-cycle-btn" title="点击切换：毛玻璃→纯白→暗夜">
+                            <svg class="theme-icon theme-icon-glass" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="4" width="16" height="16" rx="4"/>
+                                <path d="M8 4v16M4 8h4M16 4v16"/>
+                            </svg>
+                            <svg class="theme-icon theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"/>
+                                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                            </svg>
+                            <svg class="theme-icon theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                            </svg>
+                            <span>主题</span>
+                        </a>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+<div class="wechat-popup-overlay" id="wechat-popup-overlay" onclick="toggleWechatPopup()">
+    <div class="wechat-popup-card" onclick="event.stopPropagation()">
+        <button class="wechat-popup-x" onclick="toggleWechatPopup()" aria-label="关闭">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <img src="/img/wechat-qr.jpg" alt="作者微信二维码" loading="lazy">
+        <p class="wechat-popup-title">扫码添加作者微信</p>
+        <p class="wechat-popup-note">添加时请备注"博客读者"</p>
+        <p class="wechat-popup-hint">点击空白处关闭</p>
+    </div>
+</div>
+
+<style>
+    #wechat-contact-btn a {
+        cursor: pointer;
+    }
+
+    body.popup-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+    }
+
+    .wechat-popup-overlay {
+        display: none;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        background: rgba(0,0,0,0.5);
+        z-index: 999;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .wechat-popup-overlay.open {
+        display: flex;
+    }
+
+    .wechat-popup-card {
+        position: relative;
+        background: #fff;
+        border-radius: 16px;
+        padding: 32px 24px 20px;
+        text-align: center;
+        box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+        max-width: 320px;
+        width: 90%;
+        cursor: default;
+    }
+
+    .wechat-popup-x {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: none;
+        background: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: #666;
+        transition: background 0.15s;
+    }
+    .wechat-popup-x:hover {
+        background: #e0e0e0;
+        color: #333;
+    }
+
+    .wechat-popup-card img {
+        width: 180px;
+        height: 180px;
+        border-radius: 10px;
+        object-fit: cover;
+        border: 1px solid #eee;
+        margin-bottom: 16px;
+    }
+
+    .wechat-popup-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+        margin: 0 0 8px 0;
+    }
+
+    .wechat-popup-note {
+        font-size: 13px;
+        color: #999;
+        margin: 0 0 6px 0;
+    }
+
+    .wechat-popup-hint {
+        font-size: 11px;
+        color: #bbb;
+        margin: 0;
+    }
+
+    [data-scheme="dark"] .wechat-popup-card {
+        background: #2a2a2a;
+    }
+    [data-scheme="dark"] .wechat-popup-title {
+        color: #e0e0e0;
+    }
+    [data-scheme="dark"] .wechat-popup-note {
+        color: #888;
+    }
+    [data-scheme="dark"] .wechat-popup-hint {
+        color: #666;
+    }
+    [data-scheme="dark"] .wechat-popup-x {
+        background: #3a3a3a;
+        color: #999;
+    }
+    [data-scheme="dark"] .wechat-popup-x:hover {
+        background: #4a4a4a;
+        color: #ddd;
+    }
+</style>
+
+<script>
+function toggleWechatPopup() {
+    var overlay = document.getElementById('wechat-popup-overlay');
+    if (overlay.classList.contains('open')) {
+        overlay.classList.remove('open');
+        document.body.classList.remove('popup-open');
+    } else {
+        overlay.classList.add('open');
+        document.body.classList.add('popup-open');
+    }
+}
+
+
+document.addEventListener('wheel', function(e) {
+    var overlay = document.getElementById('wechat-popup-overlay');
+    if (overlay && overlay.classList.contains('open')) {
+        if (!overlay.querySelector('.wechat-popup-card').contains(e.target)) {
+            e.preventDefault();
+        }
+    }
+}, { passive: false });
+
+document.addEventListener('touchmove', function(e) {
+    var overlay = document.getElementById('wechat-popup-overlay');
+    if (overlay && overlay.classList.contains('open')) {
+        if (!overlay.querySelector('.wechat-popup-card').contains(e.target)) {
+            e.preventDefault();
+        }
+    }
+}, { passive: false });
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        var overlay = document.getElementById('wechat-popup-overlay');
+        if (overlay && overlay.classList.contains('open')) {
+            toggleWechatPopup();
+        }
+    }
+});
+</script>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#一html-核心知识点">一、HTML 核心知识点</a>
+      <ol>
+        <li><a href="#1-图片标签-img-属性">1. 图片标签 <code>&lt;img&gt;</code> 属性</a></li>
+        <li><a href="#2-表单-form-创建与常用控件">2. 表单 <code>&lt;form&gt;</code> 创建与常用控件</a></li>
+        <li><a href="#3-列表创建">3. 列表创建</a></li>
+      </ol>
+    </li>
+    <li><a href="#二css-核心知识点">二、CSS 核心知识点</a>
+      <ol>
+        <li><a href="#1-基础选择器">1. 基础选择器</a></li>
+        <li><a href="#2-文本样式与对齐">2. 文本样式与对齐</a></li>
+        <li><a href="#3-内边距与外边距">3. 内边距与外边距</a></li>
+        <li><a href="#4-行内元素-vs-块级元素">4. 行内元素 vs 块级元素</a></li>
+        <li><a href="#5-浮动float及清除方法">5. 浮动（Float）及清除方法</a></li>
+        <li><a href="#6-盒子模型box-model">6. 盒子模型（Box Model）</a></li>
+        <li><a href="#7-定位方式position">7. 定位方式（Position）</a></li>
+      </ol>
+    </li>
+    <li><a href="#三javascript-核心知识点">三、JavaScript 核心知识点</a>
+      <ol>
+        <li><a href="#1-数据类型">1. 数据类型</a></li>
+        <li><a href="#2-常用数组操作">2. 常用数组操作</a></li>
+        <li><a href="#3-相等判断">3. 相等判断</a></li>
+        <li><a href="#4-函数定义与定时函数">4. 函数定义与定时函数</a></li>
+      </ol>
+    </li>
+    <li><a href="#四jquery-选择器">四、jQuery 选择器</a>
+      <ol>
+        <li><a href="#1-基本选择器">1. 基本选择器</a></li>
+        <li><a href="#2-层次选择器">2. 层次选择器</a></li>
+        <li><a href="#3-过滤选择器">3. 过滤选择器</a></li>
+        <li><a href="#4-属性选择器">4. 属性选择器</a></li>
+      </ol>
+    </li>
+    <li><a href="#总结">总结</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E9%87%8D%E7%82%B9%E7%B2%BE%E7%AE%80%E5%BD%92%E7%BA%B3%E7%89%88/">
+                <img src="/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E9%87%8D%E7%82%B9%E7%B2%BE%E7%AE%80%E5%BD%92%E7%BA%B3%E7%89%88/cover_hu_80c30c8423b10397.png"
+                        srcset="/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E9%87%8D%E7%82%B9%E7%B2%BE%E7%AE%80%E5%BD%92%E7%BA%B3%E7%89%88/cover_hu_80c30c8423b10397.png 800w, /p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E9%87%8D%E7%82%B9%E7%B2%BE%E7%AE%80%E5%BD%92%E7%BA%B3%E7%89%88/cover_hu_de263281301fa9d5.png 1600w"
+                        width="800" 
+                        height="800" 
+                        loading="lazy"
+                        alt="Featured image of post 软件开发框架期末复习重点（精简归纳版）" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%BC%96%E7%A8%8B/" style="background-color: #6495ED; color: #fff;">
+                编程
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E9%87%8D%E7%82%B9%E7%B2%BE%E7%AE%80%E5%BD%92%E7%BA%B3%E7%89%88/">软件开发框架期末复习重点（精简归纳版）</a>
+        </h2>
+
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2026-06-19</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 5 分钟
+                </time>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                <span class="article-time--words">2088&nbsp;字
+                </span>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="前言">前言
+</h2><p>这是一份软件开发框架课程的期末复习重点，涵盖了 HTML、CSS、JavaScript 和 jQuery 四大板块的核心知识点。精简归纳，方便考前快速回顾。</p>
+<hr>
+<h2 id="一html-核心知识点">一、HTML 核心知识点
+</h2><h3 id="1-图片标签-img-属性">1. 图片标签 <code>&lt;img&gt;</code> 属性
+</h3><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>属性</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>src</code></td>
+					<td>图片路径（URL）</td>
+			</tr>
+			<tr>
+					<td><code>alt</code></td>
+					<td>替代文本（图片无法显示时展示，辅助屏幕阅读器）</td>
+			</tr>
+			<tr>
+					<td><code>title</code></td>
+					<td>鼠标悬停时的提示文字</td>
+			</tr>
+			<tr>
+					<td><code>width</code> / <code>height</code></td>
+					<td>设置图片宽高</td>
+			</tr>
+			<tr>
+					<td><code>border</code></td>
+					<td>边框（已不推荐，建议用 CSS）</td>
+			</tr>
+	</tbody>
+</table></div>
+<h3 id="2-表单-form-创建与常用控件">2. 表单 <code>&lt;form&gt;</code> 创建与常用控件
+</h3><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>控件</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>&lt;input type=&quot;text&quot;&gt;</code></td>
+					<td>单行文本输入框</td>
+			</tr>
+			<tr>
+					<td><code>&lt;input type=&quot;password&quot;&gt;</code></td>
+					<td>密码输入框（内容隐藏）</td>
+			</tr>
+			<tr>
+					<td><code>&lt;input type=&quot;radio&quot;&gt;</code></td>
+					<td>单选框（一组选一个）</td>
+			</tr>
+			<tr>
+					<td><code>&lt;input type=&quot;checkbox&quot;&gt;</code></td>
+					<td>复选框（一组选多个）</td>
+			</tr>
+			<tr>
+					<td><code>&lt;input type=&quot;submit&quot;&gt;</code></td>
+					<td>提交按钮</td>
+			</tr>
+			<tr>
+					<td><code>&lt;input type=&quot;reset&quot;&gt;</code></td>
+					<td>重置按钮</td>
+			</tr>
+			<tr>
+					<td><code>&lt;textarea&gt;</code></td>
+					<td>多行文本输入框</td>
+			</tr>
+			<tr>
+					<td><code>&lt;select&gt;</code> + <code>&lt;option&gt;</code></td>
+					<td>下拉列表框</td>
+			</tr>
+			<tr>
+					<td><code>&lt;button&gt;</code></td>
+					<td>通用按钮（可触发 JS）</td>
+			</tr>
+			<tr>
+					<td><code>&lt;label&gt;</code></td>
+					<td>为控件提供描述标签</td>
+			</tr>
+	</tbody>
+</table></div>
+<h3 id="3-列表创建">3. 列表创建
+</h3><ul>
+<li><strong>无序列表</strong>：<code>&lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt;</code>（圆点符号）</li>
+<li><strong>有序列表</strong>：<code>&lt;ol&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ol&gt;</code>（数字序号）</li>
+<li><strong>定义列表</strong>：<code>&lt;dl&gt;&lt;dt&gt;术语&lt;/dt&gt;&lt;dd&gt;描述&lt;/dd&gt;&lt;/dl&gt;</code></li>
+<li><strong>嵌套列表</strong>：在 <code>&lt;li&gt;</code> 内再嵌套 <code>&lt;ul&gt;</code> 或 <code>&lt;ol&gt;</code></li>
+</ul>
+<hr>
+<h2 id="二css-核心知识点">二、CSS 核心知识点
+</h2><h3 id="1-基础选择器">1. 基础选择器
+</h3><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>选择器</th>
+					<th>语法</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>元素选择器</td>
+					<td><code>div</code></td>
+					<td>选择所有指定标签</td>
+			</tr>
+			<tr>
+					<td>类选择器</td>
+					<td><code>.className</code></td>
+					<td>选择带该类名的元素</td>
+			</tr>
+			<tr>
+					<td>ID 选择器</td>
+					<td><code>#idName</code></td>
+					<td>选择唯一 ID 元素</td>
+			</tr>
+			<tr>
+					<td>通配符选择器</td>
+					<td><code>*</code></td>
+					<td>选择所有元素</td>
+			</tr>
+			<tr>
+					<td>属性选择器</td>
+					<td><code>[type=&quot;text&quot;]</code></td>
+					<td>根据属性选择</td>
+			</tr>
+			<tr>
+					<td>伪类选择器</td>
+					<td><code>:hover</code>, <code>:focus</code>, <code>:first-child</code></td>
+					<td>特定状态选择</td>
+			</tr>
+			<tr>
+					<td>伪元素选择器</td>
+					<td><code>::before</code>, <code>::after</code></td>
+					<td>创建虚拟元素</td>
+			</tr>
+	</tbody>
+</table></div>
+<h3 id="2-文本样式与对齐">2. 文本样式与对齐
+</h3><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>属性</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>font-family</code></td>
+					<td>字体</td>
+			</tr>
+			<tr>
+					<td><code>font-size</code></td>
+					<td>字体大小</td>
+			</tr>
+			<tr>
+					<td><code>color</code></td>
+					<td>文字颜色</td>
+			</tr>
+			<tr>
+					<td><code>font-weight</code></td>
+					<td>粗细（<code>normal</code> / <code>bold</code> / <code>100~900</code>）</td>
+			</tr>
+			<tr>
+					<td><code>font-style</code></td>
+					<td>样式（<code>normal</code> / <code>italic</code>）</td>
+			</tr>
+			<tr>
+					<td><code>text-decoration</code></td>
+					<td>装饰（<code>underline</code> / <code>overline</code> 等）</td>
+			</tr>
+			<tr>
+					<td><code>text-align</code></td>
+					<td>水平对齐（<code>left</code> / <code>right</code> / <code>center</code> / <code>justify</code>）</td>
+			</tr>
+			<tr>
+					<td><code>vertical-align</code></td>
+					<td>垂直对齐（行内/表格用；块级推荐 Flexbox）</td>
+			</tr>
+	</tbody>
+</table></div>
+<h3 id="3-内边距与外边距">3. 内边距与外边距
+</h3><ul>
+<li><strong>内边距</strong> <code>padding</code>：内容到边框的距离</li>
+<li><strong>外边距</strong> <code>margin</code>：元素到外部的距离</li>
+<li>简写顺序：<code>上 右 下 左</code>（如 <code>padding: 10px 20px 10px 20px</code>）</li>
+</ul>
+<h3 id="4-行内元素-vs-块级元素">4. 行内元素 vs 块级元素
+</h3><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>类型</th>
+					<th>代表</th>
+					<th>特点</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>行内元素</td>
+					<td><code>span</code>, <code>a</code>, <code>img</code>, <code>strong</code>, <code>em</code></td>
+					<td>不换行，不能设宽高（替换元素除外）</td>
+			</tr>
+			<tr>
+					<td>块级元素</td>
+					<td><code>div</code>, <code>p</code>, <code>h1~h6</code>, <code>ul</code>, <code>ol</code>, <code>li</code></td>
+					<td>独占一行，可设宽高</td>
+			</tr>
+	</tbody>
+</table></div>
+<p><strong>转换方式</strong>：</p>
+<ul>
+<li><code>display: block;</code> → 行内转块</li>
+<li><code>display: inline;</code> → 块转行内</li>
+<li><code>display: inline-block;</code> → 行内块（不换行但可设宽高）</li>
+</ul>
+<h3 id="5-浮动float及清除方法">5. 浮动（Float）及清除方法
+</h3><p><strong>引发问题</strong>：父元素高度塌陷、浮动覆盖其他内容</p>
+<p><strong>清除方案</strong>（推荐度从低到高）：</p>
+<ol>
+<li>浮动元素后加空 <code>&lt;div style=&quot;clear:both;&quot;&gt;</code> — 冗余</li>
+<li>给父元素设固定高度 — 不灵活</li>
+<li>父元素加 <code>overflow: hidden;</code> — 简单但有副作用</li>
+<li><strong>伪类清除法（推荐）</strong>：
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">clearfix</span><span class="p">::</span><span class="nd">after</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">content</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">clear</span><span class="p">:</span> <span class="kc">both</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h3 id="6-盒子模型box-model">6. 盒子模型（Box Model）
+</h3><p>由内到外：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">内容（content） → 内边距（padding） → 边框（border） → 外边距（margin）
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th><code>box-sizing</code> 值</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>content-box</code>（默认）</td>
+					<td>宽高仅指内容区域</td>
+			</tr>
+			<tr>
+					<td><code>border-box</code></td>
+					<td>宽高包含 padding 和 border（更直观）</td>
+			</tr>
+	</tbody>
+</table></div>
+<h3 id="7-定位方式position">7. 定位方式（Position）
+</h3><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>值</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>static</code></td>
+					<td>默认，正常文档流</td>
+			</tr>
+			<tr>
+					<td><code>relative</code></td>
+					<td>相对自身原位置偏移，仍占文档空间</td>
+			</tr>
+			<tr>
+					<td><code>absolute</code></td>
+					<td>相对最近已定位祖先，脱离文档流</td>
+			</tr>
+			<tr>
+					<td><code>fixed</code></td>
+					<td>相对视口固定，脱离文档流</td>
+			</tr>
+	</tbody>
+</table></div>
+<p><strong>堆叠顺序</strong>：使用 <code>z-index</code>（数值越大越靠上）</p>
+<hr>
+<h2 id="三javascript-核心知识点">三、JavaScript 核心知识点
+</h2><h3 id="1-数据类型">1. 数据类型
+</h3><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>分类</th>
+					<th>类型</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>基本类型（值类型）</td>
+					<td><code>Number</code>, <code>String</code>, <code>Boolean</code>, <code>Undefined</code>, <code>Null</code>, <code>Symbol</code></td>
+			</tr>
+			<tr>
+					<td>引用类型（对象类型）</td>
+					<td><code>Object</code>, <code>Array</code>, <code>Function</code>, <code>Date</code>, <code>RegExp</code> 等</td>
+			</tr>
+	</tbody>
+</table></div>
+<h3 id="2-常用数组操作">2. 常用数组操作
+</h3><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>操作</th>
+					<th>方法</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>访问</td>
+					<td><code>arr[0]</code></td>
+			</tr>
+			<tr>
+					<td>修改</td>
+					<td><code>arr[0] = 新值</code></td>
+			</tr>
+			<tr>
+					<td>末尾添加</td>
+					<td><code>push(元素)</code></td>
+			</tr>
+			<tr>
+					<td>开头添加</td>
+					<td><code>unshift(元素)</code></td>
+			</tr>
+			<tr>
+					<td>任意位置增/删</td>
+					<td><code>splice(索引, 删除个数, 添加的元素...)</code></td>
+			</tr>
+			<tr>
+					<td>末尾删除</td>
+					<td><code>pop()</code></td>
+			</tr>
+			<tr>
+					<td>开头删除</td>
+					<td><code>shift()</code></td>
+			</tr>
+			<tr>
+					<td>查找索引</td>
+					<td><code>indexOf(元素)</code></td>
+			</tr>
+			<tr>
+					<td>遍历</td>
+					<td><code>for</code> 循环 或 <code>forEach()</code></td>
+			</tr>
+			<tr>
+					<td>连接数组</td>
+					<td><code>concat(另一个数组)</code></td>
+			</tr>
+			<tr>
+					<td>转字符串</td>
+					<td><code>toString()</code></td>
+			</tr>
+	</tbody>
+</table></div>
+<h3 id="3-相等判断">3. 相等判断
+</h3><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>运算符</th>
+					<th>说明</th>
+					<th>示例</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>==</code>（宽松相等）</td>
+					<td>比较值，会进行类型转换</td>
+					<td><code>&quot;5&quot; == 5</code> → <code>true</code></td>
+			</tr>
+			<tr>
+					<td><code>===</code>（严格相等）</td>
+					<td>比较值和类型，均相同才为 <code>true</code>（<strong>推荐使用</strong>）</td>
+					<td><code>&quot;5&quot; === 5</code> → <code>false</code></td>
+			</tr>
+	</tbody>
+</table></div>
+<h3 id="4-函数定义与定时函数">4. 函数定义与定时函数
+</h3><p><strong>基本写法</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">函数名</span><span class="p">(</span><span class="nx">参数1</span><span class="p">,</span> <span class="nx">参数2</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 函数体
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>定时函数</strong>：</p>
+<div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>方法</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>setTimeout(函数, 毫秒)</code></td>
+					<td>延迟执行一次</td>
+			</tr>
+			<tr>
+					<td><code>setInterval(函数, 毫秒)</code></td>
+					<td>每隔指定时间重复执行</td>
+			</tr>
+	</tbody>
+</table></div>
+<p><strong>示例</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 5 秒后执行一次
+</span></span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">timer</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;执行&#34;</span><span class="p">);</span> <span class="p">},</span> <span class="mi">5000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 每 2 秒重复执行
+</span></span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">interval</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;周期执行&#34;</span><span class="p">);</span> <span class="p">},</span> <span class="mi">2000</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="四jquery-选择器">四、jQuery 选择器
+</h2><h3 id="1-基本选择器">1. 基本选择器
+</h3><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>选择器</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>$(&quot;#id&quot;)</code></td>
+					<td>ID 选择</td>
+			</tr>
+			<tr>
+					<td><code>$(&quot;.class&quot;)</code></td>
+					<td>类选择</td>
+			</tr>
+			<tr>
+					<td><code>$(&quot;element&quot;)</code></td>
+					<td>标签选择</td>
+			</tr>
+			<tr>
+					<td><code>$(&quot;*&quot;)</code></td>
+					<td>全选</td>
+			</tr>
+	</tbody>
+</table></div>
+<h3 id="2-层次选择器">2. 层次选择器
+</h3><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>选择器</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>$(&quot;祖先 后代&quot;)</code></td>
+					<td>后代选择</td>
+			</tr>
+			<tr>
+					<td><code>$(&quot;父 &gt; 子&quot;)</code></td>
+					<td>子代选择</td>
+			</tr>
+			<tr>
+					<td><code>$(&quot;前 + 后&quot;)</code></td>
+					<td>紧邻兄弟</td>
+			</tr>
+			<tr>
+					<td><code>$(&quot;前 ~ 后面所有&quot;)</code></td>
+					<td>后面所有兄弟</td>
+			</tr>
+	</tbody>
+</table></div>
+<h3 id="3-过滤选择器">3. 过滤选择器
+</h3><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>分类</th>
+					<th>选择器</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>基本过滤</td>
+					<td><code>:first</code>, <code>:last</code>, <code>:even</code>, <code>:odd</code>, <code>:eq(index)</code></td>
+			</tr>
+			<tr>
+					<td>内容过滤</td>
+					<td><code>:contains('文本')</code></td>
+			</tr>
+			<tr>
+					<td>可见性过滤</td>
+					<td><code>:visible</code>, <code>:hidden</code></td>
+			</tr>
+			<tr>
+					<td>属性过滤</td>
+					<td><code>[type='text']</code></td>
+			</tr>
+			<tr>
+					<td>子元素过滤</td>
+					<td><code>:nth-child(n)</code></td>
+			</tr>
+			<tr>
+					<td>表单过滤</td>
+					<td><code>:input</code>, <code>:enabled</code>, <code>:disabled</code>, <code>:checked</code></td>
+			</tr>
+	</tbody>
+</table></div>
+<h3 id="4-属性选择器">4. 属性选择器
+</h3><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>选择器</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>[attribute]</code></td>
+					<td>拥有该属性</td>
+			</tr>
+			<tr>
+					<td><code>[attribute=value]</code></td>
+					<td>属性等于某值</td>
+			</tr>
+			<tr>
+					<td><code>[attribute!=value]</code></td>
+					<td>属性不等于某值</td>
+			</tr>
+			<tr>
+					<td><code>[attribute^=value]</code></td>
+					<td>属性以某值开头</td>
+			</tr>
+			<tr>
+					<td><code>[attribute$=value]</code></td>
+					<td>属性以某值结尾</td>
+			</tr>
+			<tr>
+					<td><code>[attribute*=value]</code></td>
+					<td>属性包含某值</td>
+			</tr>
+	</tbody>
+</table></div>
+<hr>
+<h2 id="总结">总结
+</h2><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>板块</th>
+					<th>核心内容</th>
+					<th>考试重点</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>HTML</td>
+					<td>标签属性、表单控件、列表</td>
+					<td><code>&lt;img&gt;</code> 属性、<code>&lt;form&gt;</code> 各类 input、列表嵌套</td>
+			</tr>
+			<tr>
+					<td>CSS</td>
+					<td>选择器、盒模型、定位、浮动</td>
+					<td>选择器优先级、<code>position</code> 区别、清除浮动</td>
+			</tr>
+			<tr>
+					<td>JavaScript</td>
+					<td>数据类型、数组操作、定时器</td>
+					<td><code>==</code> vs <code>===</code>、数组方法、<code>setTimeout</code>/<code>setInterval</code></td>
+			</tr>
+			<tr>
+					<td>jQuery</td>
+					<td>各类选择器</td>
+					<td>基本/层次/过滤/属性选择器的灵活运用</td>
+			</tr>
+	</tbody>
+</table></div>
+<blockquote>
+<p>祝考试顺利！</p>
+</blockquote>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/html/">HTML</a>
+        
+            <a href="/tags/css/">CSS</a>
+        
+            <a href="/tags/javascript/">JavaScript</a>
+        
+            <a href="/tags/jquery/">JQuery</a>
+        
+            <a href="/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">前端开发</a>
+        
+            <a href="/tags/%E5%A4%8D%E4%B9%A0/">复习</a>
+        
+            <a href="/tags/%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95/">期末考试</a>
+        
+    </section>
+
+
+    <div class="article-share">
+  <span class="article-share-label">分享：</span>
+
+  <button class="article-share-btn" onclick="copyPageUrl(this)" title="复制链接" aria-label="复制链接">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+    </svg>
+    <span>复制链接</span>
+  </button>
+
+  <button class="article-share-btn" onclick="showWechatShare(this)" title="微信分享" aria-label="微信分享">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.952-7.062-6.122zm-2.18 2.769c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982z"/>
+    </svg>
+    <span>微信</span>
+  </button>
+
+  <button class="article-share-btn" onclick="shareToWeibo()" title="微博分享" aria-label="微博分享">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M10.098 20.323c-3.977.391-7.414-1.406-7.672-4.02-.259-2.609 2.759-5.047 6.74-5.441 3.979-.394 7.413 1.404 7.671 4.018.259 2.6-2.759 5.049-6.739 5.443zm-1.865-6.145c-2.519.142-4.136 1.535-3.61 3.079.525 1.544 2.722 2.709 5.366 2.57 2.646-.138 4.271-1.487 3.621-3.046-.653-1.558-2.851-2.746-5.377-2.603zm11.787 1.106c0-1.643-.405-2.96-1.006-3.852a11.682 11.682 0 0 1-.783-2.346c-.256-1.086-.442-2.267-.832-3.542-.49-1.597-1.357-2.911-2.5-3.817-1.106-.877-2.605-1.38-4.25-1.38-2.38 0-4.332.896-5.639 2.372-1.759 1.983-2.093 4.685-.958 6.772C5.46 11.387 6.3 12.477 7.266 13.15c.059.042.119.082.179.122-.825-.067-2.033-.17-3.228.221-1.42.466-2.441 1.428-2.805 2.668-.344 1.165-.07 2.273.813 3.29.901 1.038 2.263 1.692 3.86 1.776 2.687.14 5.224-1.005 7.248-3.048 2.043-2.063 3.195-4.92 3.195-8.034z"/>
+    </svg>
+    <span>微博</span>
+  </button>
+
+  <button class="article-share-btn" onclick="shareToQQ()" title="QQ分享" aria-label="QQ分享">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.003 2c-2.265 0-6.29 1.364-6.29 7.325v1.195S3.55 14.96 3.55 17.474c0 .665.17 1.025.281 1.025.114 0 .902-.484 1.748-2.072 0 0-.18 2.197 1.904 3.967 0 0-1.77.495-1.77 1.182 0 .686 4.078.43 6.29 0 2.239.425 6.287.687 6.287 0 0-.688-1.768-1.182-1.768-1.182 2.085-1.77 1.905-3.967 1.905-3.967.845 1.588 1.634 2.072 1.746 2.072.111 0 .283-.36.283-1.025 0-2.514-2.166-6.954-2.166-6.954V9.325C18.29 3.364 14.268 2 12.003 2z"/>
+    </svg>
+    <span>QQ</span>
+  </button>
+
+  <div class="wechat-share-popup" id="wechat-share-popup">
+    <div class="wechat-share-popup-inner">
+      <div class="wechat-share-qr">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=" alt="微信扫码分享" id="wechat-share-qr-img" loading="lazy">
+      </div>
+      <p>打开微信"扫一扫"<br>分享文章给好友</p>
+      <button class="wechat-share-close" onclick="closeWechatShare()">关闭</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .article-share {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid var(--card-border-color);
+    position: relative;
+  }
+
+  .article-share-label {
+    font-size: 13px;
+    color: var(--card-text-color-secondary);
+    margin-right: 2px;
+  }
+
+  .article-share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 6px;
+    border: 1px solid var(--card-border-color);
+    background: var(--card-background);
+    color: var(--card-text-color-main);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+    outline: none;
+    font-family: inherit;
+  }
+
+  .article-share-btn:hover {
+    background: var(--tag-default-background);
+    border-color: var(--link-color);
+  }
+
+  .article-share-btn.copied {
+    border-color: #52c41a;
+    color: #52c41a;
+  }
+
+  .wechat-share-popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.45);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wechat-share-popup.open {
+    display: flex;
+  }
+
+  .wechat-share-popup-inner {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    max-width: 280px;
+    width: 90%;
+  }
+
+  .wechat-share-qr {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 12px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .wechat-share-qr img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .wechat-share-popup-inner p {
+    font-size: 14px;
+    color: #333;
+    margin: 0 0 16px 0;
+    line-height: 1.6;
+  }
+
+  .wechat-share-close {
+    background: #f0f0f0;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .wechat-share-close:hover {
+    background: #e0e0e0;
+  }
+
+  [data-scheme="dark"] .wechat-share-popup-inner {
+    background: #2a2a2a;
+  }
+  [data-scheme="dark"] .wechat-share-popup-inner p {
+    color: #e0e0e0;
+  }
+  [data-scheme="dark"] .wechat-share-close {
+    background: #3a3a3a;
+    color: #e0e0e0;
+  }
+</style>
+
+<script>
+function copyPageUrl(btn) {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    var span = btn.querySelector('span');
+    var original = span.textContent;
+    span.textContent = '已复制 ✓';
+    btn.classList.add('copied');
+    setTimeout(function() {
+      span.textContent = original;
+      btn.classList.remove('copied');
+    }, 1800);
+  }).catch(function() {
+    var textarea = document.createElement('textarea');
+    textarea.value = window.location.href;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    var span = btn.querySelector('span');
+    var original = span.textContent;
+    span.textContent = '已复制 ✓';
+    btn.classList.add('copied');
+    setTimeout(function() {
+      span.textContent = original;
+      btn.classList.remove('copied');
+    }, 1800);
+  });
+}
+
+function showWechatShare(btn) {
+  var popup = document.getElementById('wechat-share-popup');
+  var img = document.getElementById('wechat-share-qr-img');
+  img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=' + encodeURIComponent(window.location.href);
+  popup.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeWechatShare() {
+  var popup = document.getElementById('wechat-share-popup');
+  popup.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function shareToWeibo() {
+  var url = 'https://service.weibo.com/share/share.php?url=' + encodeURIComponent(window.location.href)
+    + '&title=' + encodeURIComponent(document.title);
+  window.open(url, '_blank', 'width=600,height=500');
+}
+
+function shareToQQ() {
+  var url = 'https://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(window.location.href)
+    + '&title=' + encodeURIComponent(document.title);
+  window.open(url, '_blank', 'width=600,height=500');
+}
+
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var popup = document.getElementById('wechat-share-popup');
+    if (popup && popup.classList.contains('open')) {
+      closeWechatShare();
+    }
+  }
+});
+</script>
+
+</footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+
+
+
+
+<div id="toc-float" class="toc-float" data-dragging="false">
+  <button class="toc-float-btn" id="toc-float-btn" title="目录" aria-label="目录">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="8" y1="6" x2="21" y2="6"></line>
+      <line x1="8" y1="12" x2="21" y2="12"></line>
+      <line x1="8" y1="18" x2="21" y2="18"></line>
+      <line x1="3" y1="6" x2="3.01" y2="6"></line>
+      <line x1="3" y1="12" x2="3.01" y2="12"></line>
+      <line x1="3" y1="18" x2="3.01" y2="18"></line>
+    </svg>
+  </button>
+
+  <div class="toc-float-popup" id="toc-float-popup">
+    <div class="toc-float-popup-header">
+      <span>目录</span>
+      <button class="toc-float-popup-close" id="toc-float-popup-close" aria-label="关闭目录">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="toc-float-popup-body" id="toc-float-popup-body">
+      <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#一html-核心知识点">一、HTML 核心知识点</a>
+      <ol>
+        <li><a href="#1-图片标签-img-属性">1. 图片标签 <code>&lt;img&gt;</code> 属性</a></li>
+        <li><a href="#2-表单-form-创建与常用控件">2. 表单 <code>&lt;form&gt;</code> 创建与常用控件</a></li>
+        <li><a href="#3-列表创建">3. 列表创建</a></li>
+      </ol>
+    </li>
+    <li><a href="#二css-核心知识点">二、CSS 核心知识点</a>
+      <ol>
+        <li><a href="#1-基础选择器">1. 基础选择器</a></li>
+        <li><a href="#2-文本样式与对齐">2. 文本样式与对齐</a></li>
+        <li><a href="#3-内边距与外边距">3. 内边距与外边距</a></li>
+        <li><a href="#4-行内元素-vs-块级元素">4. 行内元素 vs 块级元素</a></li>
+        <li><a href="#5-浮动float及清除方法">5. 浮动（Float）及清除方法</a></li>
+        <li><a href="#6-盒子模型box-model">6. 盒子模型（Box Model）</a></li>
+        <li><a href="#7-定位方式position">7. 定位方式（Position）</a></li>
+      </ol>
+    </li>
+    <li><a href="#三javascript-核心知识点">三、JavaScript 核心知识点</a>
+      <ol>
+        <li><a href="#1-数据类型">1. 数据类型</a></li>
+        <li><a href="#2-常用数组操作">2. 常用数组操作</a></li>
+        <li><a href="#3-相等判断">3. 相等判断</a></li>
+        <li><a href="#4-函数定义与定时函数">4. 函数定义与定时函数</a></li>
+      </ol>
+    </li>
+    <li><a href="#四jquery-选择器">四、jQuery 选择器</a>
+      <ol>
+        <li><a href="#1-基本选择器">1. 基本选择器</a></li>
+        <li><a href="#2-层次选择器">2. 层次选择器</a></li>
+        <li><a href="#3-过滤选择器">3. 过滤选择器</a></li>
+        <li><a href="#4-属性选择器">4. 属性选择器</a></li>
+      </ol>
+    </li>
+    <li><a href="#总结">总结</a></li>
+  </ol>
+</nav>
+    </div>
+  </div>
+</div>
+
+<style>
+   
+  @media (min-width: 769px) {
+    .toc-float {
+      display: none !important;
+    }
+  }
+
+   
+  .toc-float {
+    position: fixed;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 89;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .toc-float-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--card-background);
+    border: 1px solid var(--card-border-color);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    color: var(--card-text-color-main);
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, box-shadow 0.2s;
+    outline: none;
+    padding: 0;
+    touch-action: none;
+  }
+
+  .toc-float-btn:active {
+    cursor: grabbing;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.2);
+  }
+
+  .toc-float.dragging .toc-float-btn {
+    cursor: grabbing;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.2);
+    background: var(--card-background-selected);
+  }
+
+   
+  .toc-float-popup {
+    position: absolute;
+    right: 50px;
+    top: 0;
+    width: 260px;
+    max-height: 360px;
+    background: var(--card-background);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    border: 1px solid var(--card-border-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(8px);
+    transition: opacity 0.22s ease, visibility 0.22s ease, transform 0.22s ease;
+    z-index: 90;
+  }
+
+  .toc-float-popup.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .toc-float-popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--card-separator-color);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--card-text-color-main);
+    flex-shrink: 0;
+  }
+
+  .toc-float-popup-close {
+    background: none;
+    border: none;
+    color: var(--card-text-color-tertiary);
+    cursor: pointer;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: color 0.15s, background 0.15s;
+  }
+
+  .toc-float-popup-close:hover {
+    color: var(--card-text-color-main);
+    background: var(--card-background-selected);
+  }
+
+  .toc-float-popup-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px 16px 12px;
+    font-size: 13px;
+    line-height: 1.8;
+    overscroll-behavior: contain;
+  }
+
+  .toc-float-popup-body nav > ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+  }
+
+  .toc-float-popup-body nav li {
+    list-style: none;
+    margin: 2px 0;
+  }
+
+  .toc-float-popup-body nav a {
+    color: var(--card-text-color-main);
+    text-decoration: none;
+    opacity: 0.72;
+    transition: opacity 0.15s, color 0.15s;
+    display: block;
+    padding: 3px 8px;
+    border-radius: 6px;
+  }
+
+  .toc-float-popup-body nav a:hover,
+  .toc-float-popup-body nav li.active-class > a {
+    opacity: 1;
+    color: var(--link-color);
+    background: var(--card-background-selected);
+  }
+
+  .toc-float-popup-body nav ul ul {
+    padding-left: 14px;
+    font-size: 12px;
+  }
+
+   
+  .toc-float.popup-left .toc-float-popup {
+    right: auto;
+    left: 50px;
+    transform: translateX(-8px);
+  }
+  .toc-float.popup-left .toc-float-popup.open {
+    transform: translateX(0);
+  }
+</style>
+
+<script>
+(function() {
+  var wrapper  = document.getElementById('toc-float');
+  var btn      = document.getElementById('toc-float-btn');
+  var popup    = document.getElementById('toc-float-popup');
+  var closeBtn = document.getElementById('toc-float-popup-close');
+  var body     = document.getElementById('toc-float-popup-body');
+
+  if (!wrapper || !btn || !popup) return;
+
+  
+  var dragging = false;
+  var startX, startY, startLeft, startTop;
+  var moved = false;
+  var DRAG_THRESHOLD = 5;
+  var lastTouchEnd = 0;  
+
+  function getPos(el) {
+    var rect = el.getBoundingClientRect();
+    return { left: rect.left, top: rect.top };
+  }
+
+  function setPos(left, top) {
+    wrapper.style.right = 'auto';
+    wrapper.style.left = left + 'px';
+    wrapper.style.top = top + 'px';
+    wrapper.style.transform = 'none';
+  }
+
+  
+  function initPos() {
+    var rect = wrapper.getBoundingClientRect();
+    
+    if (rect.left === 0 && rect.top === 0) {
+      
+      requestAnimationFrame(initPos);
+      return;
+    }
+    var left = rect.left;
+    var top = rect.top;
+    wrapper.style.right = 'auto';
+    wrapper.style.left = left + 'px';
+    wrapper.style.top = top + 'px';
+    wrapper.style.transform = 'none';
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      requestAnimationFrame(initPos);
+    });
+  } else {
+    requestAnimationFrame(initPos);
+  }
+
+  function onStart(e) {
+    if (e.target !== btn && !btn.contains(e.target)) return;
+
+    
+    if (e.type === 'mousedown' && Date.now() - lastTouchEnd < 500) {
+      return;
+    }
+
+    dragging = true;
+    moved = false;
+    wrapper.classList.add('dragging');
+
+    var pos = getPos(wrapper);
+    startLeft = pos.left;
+    startTop = pos.top;
+
+    var point = e.touches ? e.touches[0] : e;
+    startX = point.clientX;
+    startY = point.clientY;
+  }
+
+  function onMove(e) {
+    if (!dragging) return;
+    e.preventDefault();
+
+    var point = e.touches ? e.touches[0] : e;
+    var dx = point.clientX - startX;
+    var dy = point.clientY - startY;
+
+    if (Math.abs(dx) > DRAG_THRESHOLD || Math.abs(dy) > DRAG_THRESHOLD) {
+      moved = true;
+    }
+
+    var newLeft = startLeft + dx;
+    var newTop = startTop + dy;
+
+    
+    var maxLeft = window.innerWidth - 48;
+    newLeft = Math.max(4, Math.min(newLeft, maxLeft));
+    newTop = Math.max(56, Math.min(newTop, window.innerHeight - 56));
+
+    setPos(newLeft, newTop);
+  }
+
+  function onEnd(e) {
+    if (!dragging) return;
+
+    
+    if (e.type === 'touchend') {
+      lastTouchEnd = Date.now();
+    }
+
+    dragging = false;
+    wrapper.classList.remove('dragging');
+
+    
+    if (!moved) {
+      togglePopup();
+    }
+  }
+
+  btn.addEventListener('touchstart', onStart, { passive: false });
+  btn.addEventListener('mousedown', onStart);
+  document.addEventListener('touchmove', onMove, { passive: false });
+  document.addEventListener('mousemove', onMove);
+  document.addEventListener('touchend', onEnd);
+  document.addEventListener('mouseup', onEnd);
+
+  
+  function openPopup() {
+    
+    var rect = wrapper.getBoundingClientRect();
+    var btnCenter = rect.left + rect.width / 2;
+    if (btnCenter < window.innerWidth / 2) {
+      
+      wrapper.classList.add('popup-left');
+    } else {
+      
+      wrapper.classList.remove('popup-left');
+    }
+
+    popup.classList.add('open');
+  }
+
+  function closePopup() {
+    popup.classList.remove('open');
+  }
+
+  function togglePopup() {
+    if (popup.classList.contains('open')) {
+      closePopup();
+    } else {
+      openPopup();
+    }
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      closePopup();
+    });
+  }
+
+  
+  if (body) {
+    body.addEventListener('click', function(e) {
+      var link = e.target.closest('a');
+      if (link) {
+        
+        setTimeout(closePopup, 150);
+      }
+    });
+  }
+
+  
+  document.addEventListener('click', function(e) {
+    if (popup.classList.contains('open') &&
+        !wrapper.contains(e.target)) {
+      closePopup();
+    }
+  });
+
+  
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && popup.classList.contains('open')) {
+      closePopup();
+    }
+  });
+
+  
+  function syncActive() {
+    var sidebarToc = document.querySelector('#TableOfContents');
+    if (!sidebarToc || !body) return;
+
+    var sidebarActive = sidebarToc.querySelector('.active-class');
+    var floatLinks = body.querySelectorAll('a');
+
+    floatLinks.forEach(function(a) {
+      var li = a.closest('li');
+      if (li) li.classList.remove('active-class');
+    });
+
+    if (sidebarActive) {
+      var link = sidebarActive.querySelector('a');
+      if (link) {
+        var href = link.getAttribute('href');
+        var floatLink = body.querySelector('a[href="' + href + '"]');
+        if (floatLink) {
+          var li = floatLink.closest('li');
+          if (li) li.classList.add('active-class');
+        }
+      }
+    }
+  }
+
+  setInterval(syncActive, 800);
+  document.addEventListener('pjax:complete', function() {
+    setTimeout(syncActive, 200);
+  });
+
+  
+  window.addEventListener('resize', function() {
+    var pos = getPos(wrapper);
+    var maxLeft = window.innerWidth - 48;
+    if (pos.left > maxLeft) {
+      setPos(maxLeft, pos.top);
+    }
+    if (pos.top > window.innerHeight - 56) {
+      setPos(pos.left, window.innerHeight - 56);
+    }
+  });
+})();
+</script>
+
+
+
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/blog-customization-journey/">
+        
+        
+            <div class="article-image">
+                <img src="/p/blog-customization-journey/cover.26006bac7a5d07119e8ba3aa7840422f_hu_43831e0046b09023.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 我的博客美化与功能完善之路 — Hugo &#43; Stack 主题深度定制"
+                        data-key="blog-customization-journey" 
+                        data-hash="md5-JgBrrHpdBxGei6OqeEBCLw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">我的博客美化与功能完善之路 — Hugo &#43; Stack 主题深度定制</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/yiyuan-yici-fangcheng/">
+        
+        
+            <div class="article-image">
+                <img src="/p/yiyuan-yici-fangcheng/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-01%20125750.19d553c81c5440b33804c9c174370e00_hu_3ddabb64085ddff7.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 一元一次方程求解 — Java 正则与字符串解析"
+                        data-key="yiyuan-yici-fangcheng" 
+                        data-hash="md5-GdVTyBxUQLM4BMnBdDcOAA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">一元一次方程求解 — Java 正则与字符串解析</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/chezhan-diaodu/">
+        
+        
+            <div class="article-image">
+                <img src="/p/chezhan-diaodu/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-01%20125956.86f6ad82f878310ec921118c160980e4_hu_aae02daf6d216719.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 车站调度问题 — Java 字符串处理实战"
+                        data-key="chezhan-diaodu" 
+                        data-hash="md5-hvatgvh4MQ7JIRGMFgmA5A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">车站调度问题 — Java 字符串处理实战</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-github-blog/">
+        
+        
+            <div class="article-image">
+                <img src="/p/hugo-github-blog/2.2d05255226c13883056864d0befd33f4_hu_93a46f28a76c5f1f.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Hugo &#43; GitHub Pages 搭建个人博客 — 从零到上线"
+                        data-key="hugo-github-blog" 
+                        data-hash="md5-LQUlUibBOIMFaGTQvv0z9A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo &#43; GitHub Pages 搭建个人博客 — 从零到上线</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/doudizhu-java/">
+        
+        
+            <div class="article-image">
+                <img src="/p/doudizhu-java/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-01%20130058.e1edfd3a8373cda2597bf57701e19bae_hu_685a46c369f5ab42.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 斗地主游戏 — Java 控制台基础实现"
+                        data-key="doudizhu-java" 
+                        data-hash="md5-4e39OoNzzaJZe/V3AeGbrg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">斗地主游戏 — Java 控制台基础实现</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="giscus">
+<script src="https://giscus.app/client.js"
+        data-repo="xuewexin/xuewexin.github.io"
+        data-repo-id="R_kgDONXOLMg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDONXOLMs4ClmhN"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (e.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2026 等我
+    </section>
+    
+    <section class="powerby">
+        
+            5201314 <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<div id="aplayer"></div>
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+<script>
+const staticDir = "https://xuewexin.github.io/" +'music/';
+const songs =[
+    '走马-曲肖冰',
+    'OverYou-Daughtry',
+    '烟花易冷-周杰伦',
+    '牵手-苏芮',
+    '一笑江湖-闻人听書',
+    '循迹-王子健',
+    '琥珀-简单对话ALittle Conversation',
+    '柏林之声-晓雁'
+];
+let audios =[];
+songs.forEach((item)=>{
+      const songInfo =item.split('-');
+      audios.push({
+        name: songInfo[0],
+        artist:songInfo[1],
+        url: staticDir+item+'/song.mp3',
+        cover: staticDir+item +'/cover.jpg', 
+        lrc: staticDir +item+'/lrc.lrc'
+      });
+})
+
+
+const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    fixed: true,
+    listMaxHeight: '90px',
+    lrcType: 3,
+    audio: audios
+});
+
+
+
+
+     window.onbeforeunload = () => {
+        
+        const playInfo = {
+            index: ap.list.index,
+            currentTime: ap.audio.currentTime,
+            paused: ap.paused
+        };
+        localStorage.setItem("playInfo", JSON.stringify(playInfo));
+    };
+
+    
+
+    window.onload = () => {
+        
+        const playInfo = JSON.parse(localStorage.getItem("playInfo"));
+        if (!playInfo) {
+            return;
+        }
+        
+        ap.list.switch(playInfo.index);
+        
+        setTimeout(() => {
+            
+            ap.seek(playInfo.currentTime);
+            
+            if (!playInfo.paused) {
+                ap.play()
+            }
+        }, 500);
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
+
+
+    <script src=https://xuewexin.github.io/js/topbar.min.js></script>
+
+
+<script>
+var pjax = new Pjax({
+    selectors: [
+        ".main-container",
+    ]
+})
+
+pjax._handleResponse = pjax.handleResponse;
+
+pjax.handleResponse = function(responseText, request, href, options) {
+    if (request.responseText.match("<html")) {
+        let newDom = new DOMParser().parseFromString(responseText, 'text/html');
+        let bodyClass = newDom.body.className;
+        document.body.setAttribute("class", bodyClass);
+        pjax._handleResponse(responseText, request, href, options);
+    }
+}
+
+topbar.config({
+    barColors: {
+        '0': 'rgba(255, 255, 255, 1)',
+        '1.0': 'rgba(0, 149, 234, 1)'
+    }
+})
+
+document.addEventListener('pjax:send', () => {
+    topbar.show();
+})
+
+
+function reloadGiscus() {
+    var containers = document.querySelectorAll('.giscus');
+    containers.forEach(function(div) {
+        
+        if (div.querySelector('iframe.giscus-frame')) return;
+
+        
+        var oldScript = div.querySelector('script[src*="giscus.app"]');
+        if (oldScript) oldScript.remove();
+
+        
+        var script = document.createElement('script');
+        script.src = 'https://giscus.app/client.js';
+        script.setAttribute('data-repo', 'xuewexin/xuewexin.github.io');
+        script.setAttribute('data-repo-id', 'R_kgDONXOLMg');
+        script.setAttribute('data-category', 'Announcements');
+        script.setAttribute('data-category-id', 'DIC_kwDONXOLMs4ClmhN');
+        script.setAttribute('data-mapping', 'pathname');
+        script.setAttribute('data-strict', '0');
+        script.setAttribute('data-reactions-enabled', '1');
+        script.setAttribute('data-emit-metadata', '0');
+        script.setAttribute('data-input-position', 'top');
+        script.setAttribute('data-theme', document.documentElement.dataset.scheme === 'dark' ? 'dark_dimmed' : 'light');
+        script.setAttribute('data-lang', 'zh-CN');
+        script.crossOrigin = 'anonymous';
+        script.async = true;
+        div.appendChild(script);
+    });
+
+    
+    document.querySelectorAll('iframe.giscus-frame').forEach(function(frame) {
+        if (!frame.closest('.giscus')) {
+            frame.remove();
+        }
+    });
+}
+
+document.addEventListener('pjax:complete', () => {
+    window.Stack.init();
+    topbar.hide();
+    reloadGiscus();
+
+    
+    document.querySelectorAll('#toggle-menu.is-active').forEach(function(btn) {
+        btn.classList.remove('is-active');
+    });
+    document.body.classList.remove('show-menu');
+})
+</script>
+
+
+
+<button id="back-to-top" title="回到顶部" aria-label="回到顶部">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
+
+<button id="back-to-bottom" title="回到底部" aria-label="回到底部">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 12 15 18 9"></polyline>
+  </svg>
+</button>
+
+<script>
+(function() {
+  var topBtn = document.getElementById('back-to-top');
+  var bottomBtn = document.getElementById('back-to-bottom');
+  var ticking = false;
+
+  function updateVisibility() {
+    var scrolled = window.scrollY > 400;
+    var atBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 100;
+
+    if (topBtn) {
+      topBtn.classList.toggle('visible', scrolled);
+    }
+    if (bottomBtn) {
+      bottomBtn.classList.toggle('visible', scrolled && !atBottom);
+    }
+  }
+
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        updateVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  if (topBtn) {
+    topBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  if (bottomBtn) {
+    bottomBtn.addEventListener('click', function() {
+      window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+    });
+  }
+})();
+</script>
+
+
+
+<script>
+(function() {
+  function initWidgetPagination() {
+    document.querySelectorAll('.right-sidebar .widget-paginated').forEach(function(container) {
+      if (container._paginationInited) return;
+      container._paginationInited = true;
+
+      var rowsPerPage = parseInt(container.getAttribute('data-rows-per-page')) || 2;
+      var itemsPerRow = parseInt(container.getAttribute('data-items-per-row')) || 0;
+      var isFixedRows = itemsPerRow > 0;
+
+      var items = Array.from(container.querySelectorAll('.archives-year, .tagCloud-tags > a'));
+      if (items.length === 0) return;
+
+      var nav = container.parentElement.querySelector('.widget-pagination-nav');
+      if (!nav) return;
+
+      var prevBtn = nav.querySelector('.pagination-prev');
+      var nextBtn = nav.querySelector('.pagination-next');
+      var info = nav.querySelector('.pagination-info');
+
+      var currentPage = 0;
+      var rowGroups = [];
+      var totalPages = 1;
+      var tolerance = 4;
+
+      function computeRows() {
+        
+        items.forEach(function(item) { item.style.display = ''; });
+
+        if (isFixedRows) {
+          rowGroups = [];
+          for (var i = 0; i < items.length; i += itemsPerRow) {
+            rowGroups.push(items.slice(i, i + itemsPerRow));
+          }
+        } else {
+          var rows = [];
+          var currentRow = [];
+          var lastTop = null;
+
+          items.forEach(function(item) {
+            var top = item.getBoundingClientRect().top;
+            if (lastTop === null || Math.abs(top - lastTop) <= tolerance) {
+              currentRow.push(item);
+            } else {
+              if (currentRow.length > 0) rows.push(currentRow);
+              currentRow = [item];
+            }
+            lastTop = top;
+          });
+          if (currentRow.length > 0) rows.push(currentRow);
+          rowGroups = rows;
+        }
+
+        totalPages = Math.ceil(rowGroups.length / rowsPerPage);
+        if (totalPages < 1) totalPages = 1;
+
+        if (currentPage >= totalPages) currentPage = totalPages - 1;
+        if (currentPage < 0) currentPage = 0;
+
+        showPage(currentPage);
+        updateNav();
+      }
+
+      function showPage(page) {
+        items.forEach(function(item) { item.style.display = 'none'; });
+
+        var startRow = page * rowsPerPage;
+        var endRow = Math.min(startRow + rowsPerPage, rowGroups.length);
+
+        for (var r = startRow; r < endRow; r++) {
+          rowGroups[r].forEach(function(item) {
+            item.style.display = '';
+          });
+        }
+      }
+
+      function updateNav() {
+        if (totalPages <= 1) {
+          nav.style.visibility = 'hidden';
+        } else {
+          nav.style.visibility = 'visible';
+          prevBtn.disabled = currentPage === 0;
+          nextBtn.disabled = currentPage >= totalPages - 1;
+          info.textContent = (currentPage + 1) + '/' + totalPages;
+        }
+      }
+
+      prevBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (currentPage > 0) {
+          currentPage--;
+          showPage(currentPage);
+          updateNav();
+        }
+      });
+
+      nextBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (currentPage < totalPages - 1) {
+          currentPage++;
+          showPage(currentPage);
+          updateNav();
+        }
+      });
+
+      computeRows();
+      container._recomputeRows = computeRows;
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initWidgetPagination);
+  document.addEventListener('pjax:complete', function() {
+    setTimeout(initWidgetPagination, 100);
+  });
+
+  var resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      document.querySelectorAll('.right-sidebar .widget-paginated').forEach(function(container) {
+        
+        if (container._recomputeRows && !parseInt(container.getAttribute('data-items-per-row'))) {
+          container._paginationInited = false;
+          container._recomputeRows();
+          container._paginationInited = true;
+        }
+      });
+    }, 300);
+  });
+})();
+</script>
+
+<style>
+    @font-face {
+      font-family: '宋';
+      src: url(https://xuewexin.github.io/font/%E5%AE%8B.ttf) format('truetype');
+    }
+
+    :root {
+      --base-font-family: '宋';
+      --code-font-family: '宋';
+    }
+  </style>
+
+    </body>
+</html>
