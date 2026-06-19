@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://xuewexin.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E9%87%8D%E7%82%B9%E7%B2%BE%E7%AE%80%E5%BD%92%E7%BA%B3%E7%89%88/'>
 
-<link rel="stylesheet" href="/scss/style.min.5c4c687a67adcffff4811e615028ab7b73900a7d7b0d81f38c2cfd9cb053e95c.css"><meta property='og:title' content="软件开发框架期末复习重点（精简归纳版）">
+<link rel="stylesheet" href="/scss/style.min.4854f87c10b927a6331b5509dddf2d9aa62efff8a026543e76e693b0aaacd785.css"><meta property='og:title' content="软件开发框架期末复习重点（精简归纳版）">
 <meta property='og:description' content="前言 这是一份软件开发框架课程的期末复习重点，涵盖了 HTML、CSS、JavaScript 和 jQuery 四大板块的核心知识点。精简归纳，方便考前快速回顾。\n一、HTML 核心知识点 1. 图片标签 &lt;img&gt; 属性 属性 说明 src 图片路径（URL） alt 替代文本（图片无法显示时展示，辅助屏幕阅读器） title 鼠标悬停时的提示文字 width / height 设置图片宽高 border 边框（已不推荐，建议用 CSS） 2. 表单 &lt;form&gt; 创建与常用控件 控件 说明 &lt;input type=&quot;text&quot;&gt; 单行文本输入框 &lt;input type=&quot;password&quot;&gt; 密码输入框（内容隐藏） &lt;input type=&quot;radio&quot;&gt; 单选框（一组选一个） &lt;input type=&quot;checkbox&quot;&gt; 复选框（一组选多个） &lt;input type=&quot;submit&quot;&gt; 提交按钮 &lt;input type=&quot;reset&quot;&gt; 重置按钮 &lt;textarea&gt; 多行文本输入框 &lt;select&gt; + &lt;option&gt; 下拉列表框 &lt;button&gt; 通用按钮（可触发 JS） &lt;label&gt; 为控件提供描述标签 3. 列表创建 无序列表：&lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt;（圆点符号） 有序列表：&lt;ol&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ol&gt;（数字序号） 定义列表：&lt;dl&gt;&lt;dt&gt;术语&lt;/dt&gt;&lt;dd&gt;描述&lt;/dd&gt;&lt;/dl&gt; 嵌套列表：在 &lt;li&gt; 内再嵌套 &lt;ul&gt; 或 &lt;ol&gt; 二、CSS 核心知识点 1. 基础选择器 选择器 语法 说明 元素选择器 div 选择所有指定标签 类选择器 .className 选择带该类名的元素 ID 选择器 #idName 选择唯一 ID 元素 通配符选择器 * 选择所有元素 属性选择器 [type=&quot;text&quot;] 根据属性选择 伪类选择器 :hover, :focus, :first-child 特定状态选择 伪元素选择器 ::before, ::after 创建虚拟元素 2. 文本样式与对齐 属性 说明 font-family 字体 font-size 字体大小 color 文字颜色 font-weight 粗细（normal / bold / 100~900） font-style 样式（normal / italic） text-decoration 装饰（underline / overline 等） text-align 水平对齐（left / right / center / justify） vertical-align 垂直对齐（行内/表格用；块级推荐 Flexbox） 3. 内边距与外边距 内边距 padding：内容到边框的距离 外边距 margin：元素到外部的距离 简写顺序：上 右 下 左（如 padding: 10px 20px 10px 20px） 4. 行内元素 vs 块级元素 类型 代表 特点 行内元素 span, a, img, strong, em 不换行，不能设宽高（替换元素除外） 块级元素 div, p, h1~h6, ul, ol, li 独占一行，可设宽高 转换方式：\n">
 <meta property='og:url' content='https://xuewexin.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E9%87%8D%E7%82%B9%E7%B2%BE%E7%AE%80%E5%BD%92%E7%BA%B3%E7%89%88/'>
 <meta property='og:site_name' content='清风客'>
@@ -2676,7 +2676,8 @@ document.addEventListener('pjax:complete', () => {
       });
 
       computeRows();
-      container.style.visibility = 'visible';
+      container.style.maxHeight = 'none';
+      container.style.overflow = '';
       container._recomputeRows = computeRows;
     });
   }
@@ -2694,9 +2695,11 @@ document.addEventListener('pjax:complete', () => {
         
         if (container._recomputeRows && !parseInt(container.getAttribute('data-items-per-row'))) {
           container._paginationInited = false;
-          container.style.visibility = 'hidden';
+          container.style.maxHeight = container.getAttribute('data-rows-per-page') === '3' ? '130px' : '86px';
+          container.style.overflow = 'hidden';
           container._recomputeRows();
-          container.style.visibility = 'visible';
+          container.style.maxHeight = 'none';
+          container.style.overflow = '';
           container._paginationInited = true;
         }
       });

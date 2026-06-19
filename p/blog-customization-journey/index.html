@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://xuewexin.github.io/p/blog-customization-journey/'>
 
-<link rel="stylesheet" href="/scss/style.min.5c4c687a67adcffff4811e615028ab7b73900a7d7b0d81f38c2cfd9cb053e95c.css"><meta property='og:title' content="我的博客美化与功能完善之路 — Hugo + Stack 主题深度定制">
+<link rel="stylesheet" href="/scss/style.min.4854f87c10b927a6331b5509dddf2d9aa62efff8a026543e76e693b0aaacd785.css"><meta property='og:title' content="我的博客美化与功能完善之路 — Hugo + Stack 主题深度定制">
 <meta property='og:description' content="前言 从零搭建一个个人博客其实不难——Hugo 一条命令就能生成一个站点。但要让博客真正有&quot;自己的味道&quot;，就得花不少心思了。\n我的博客从去年冬天开始搭建，这半年多来陆陆续续加了各种功能和美化，踩了不少坑，也学到了很多东西。这篇文章就来记录一下我是怎么一步一步把这个博客折腾成现在这个样子的。\n">
 <meta property='og:url' content='https://xuewexin.github.io/p/blog-customization-journey/'>
 <meta property='og:site_name' content='清风客'>
@@ -2404,7 +2404,8 @@ document.addEventListener('pjax:complete', () => {
       });
 
       computeRows();
-      container.style.visibility = 'visible';
+      container.style.maxHeight = 'none';
+      container.style.overflow = '';
       container._recomputeRows = computeRows;
     });
   }
@@ -2422,9 +2423,11 @@ document.addEventListener('pjax:complete', () => {
         
         if (container._recomputeRows && !parseInt(container.getAttribute('data-items-per-row'))) {
           container._paginationInited = false;
-          container.style.visibility = 'hidden';
+          container.style.maxHeight = container.getAttribute('data-rows-per-page') === '3' ? '130px' : '86px';
+          container.style.overflow = 'hidden';
           container._recomputeRows();
-          container.style.visibility = 'visible';
+          container.style.maxHeight = 'none';
+          container.style.overflow = '';
           container._paginationInited = true;
         }
       });

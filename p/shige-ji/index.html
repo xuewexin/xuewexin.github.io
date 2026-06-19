@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://xuewexin.github.io/p/shige-ji/'>
 
-<link rel="stylesheet" href="/scss/style.min.5c4c687a67adcffff4811e615028ab7b73900a7d7b0d81f38c2cfd9cb053e95c.css"><meta property='og:title' content="诗歌集 — 原创诗歌收录">
+<link rel="stylesheet" href="/scss/style.min.4854f87c10b927a6331b5509dddf2d9aa62efff8a026543e76e693b0aaacd785.css"><meta property='og:title' content="诗歌集 — 原创诗歌收录">
 <meta property='og:description' content="注：这里收录了我的部分诗集，有请各位大佬拜读，如有用词不当之处可以向我指出\n\u200b\t我的邮箱地址是：2792893068@qq.com\n归程·归日有感 凄凄冷风浮月夜，寒寒霜冻杂冰雪。\n">
 <meta property='og:url' content='https://xuewexin.github.io/p/shige-ji/'>
 <meta property='og:site_name' content='清风客'>
@@ -1913,7 +1913,8 @@ document.addEventListener('pjax:complete', () => {
       });
 
       computeRows();
-      container.style.visibility = 'visible';
+      container.style.maxHeight = 'none';
+      container.style.overflow = '';
       container._recomputeRows = computeRows;
     });
   }
@@ -1931,9 +1932,11 @@ document.addEventListener('pjax:complete', () => {
         
         if (container._recomputeRows && !parseInt(container.getAttribute('data-items-per-row'))) {
           container._paginationInited = false;
-          container.style.visibility = 'hidden';
+          container.style.maxHeight = container.getAttribute('data-rows-per-page') === '3' ? '130px' : '86px';
+          container.style.overflow = 'hidden';
           container._recomputeRows();
-          container.style.visibility = 'visible';
+          container.style.maxHeight = 'none';
+          container.style.overflow = '';
           container._paginationInited = true;
         }
       });

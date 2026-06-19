@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://xuewexin.github.io/p/hugo-github-blog/'>
 
-<link rel="stylesheet" href="/scss/style.min.5c4c687a67adcffff4811e615028ab7b73900a7d7b0d81f38c2cfd9cb053e95c.css"><meta property='og:title' content="Hugo + GitHub Pages 搭建个人博客 — 从零到上线">
+<link rel="stylesheet" href="/scss/style.min.4854f87c10b927a6331b5509dddf2d9aa62efff8a026543e76e693b0aaacd785.css"><meta property='og:title' content="Hugo + GitHub Pages 搭建个人博客 — 从零到上线">
 <meta property='og:description' content="大佬的blog展示 （大家也可以去更nb的大佬那里学习）\nl\n准备工作 1.1 Git下载 前往【Git官网】，下载安装程序 一直点下一步，默认安装即可 1.2 Hugo下载 前往【Hugo Github Tags】，选择对应版本下载，下载后解压即可 Windows下载版本：hugo_extended_xxxxx_windows_amd64.zip 1.3 注册 GitHub账号 前往GitHub：GitHub\n">
 <meta property='og:url' content='https://xuewexin.github.io/p/hugo-github-blog/'>
 <meta property='og:site_name' content='清风客'>
@@ -2177,7 +2177,8 @@ document.addEventListener('pjax:complete', () => {
       });
 
       computeRows();
-      container.style.visibility = 'visible';
+      container.style.maxHeight = 'none';
+      container.style.overflow = '';
       container._recomputeRows = computeRows;
     });
   }
@@ -2195,9 +2196,11 @@ document.addEventListener('pjax:complete', () => {
         
         if (container._recomputeRows && !parseInt(container.getAttribute('data-items-per-row'))) {
           container._paginationInited = false;
-          container.style.visibility = 'hidden';
+          container.style.maxHeight = container.getAttribute('data-rows-per-page') === '3' ? '130px' : '86px';
+          container.style.overflow = 'hidden';
           container._recomputeRows();
-          container.style.visibility = 'visible';
+          container.style.maxHeight = 'none';
+          container.style.overflow = '';
           container._paginationInited = true;
         }
       });

@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://xuewexin.github.io/p/chezhan-diaodu/'>
 
-<link rel="stylesheet" href="/scss/style.min.5c4c687a67adcffff4811e615028ab7b73900a7d7b0d81f38c2cfd9cb053e95c.css"><meta property='og:title' content="车站调度问题 — Java 字符串处理实战">
+<link rel="stylesheet" href="/scss/style.min.4854f87c10b927a6331b5509dddf2d9aa62efff8a026543e76e693b0aaacd785.css"><meta property='og:title' content="车站调度问题 — Java 字符串处理实战">
 <meta property='og:description' content="题目 题解 1.发现规律 通过我的注释，相信大家都可以看出这是一个典型的斐波那契数列\neg.\n0 1 1 2 3 5 8 13&hellip;&hellip;.\n=&gt; a ,0 ,a ,l, a+l,a+2l&hellip;..\n于此我们已知a，下面我们的目标是求l\n">
 <meta property='og:url' content='https://xuewexin.github.io/p/chezhan-diaodu/'>
 <meta property='og:site_name' content='清风客'>
@@ -2077,7 +2077,8 @@ document.addEventListener('pjax:complete', () => {
       });
 
       computeRows();
-      container.style.visibility = 'visible';
+      container.style.maxHeight = 'none';
+      container.style.overflow = '';
       container._recomputeRows = computeRows;
     });
   }
@@ -2095,9 +2096,11 @@ document.addEventListener('pjax:complete', () => {
         
         if (container._recomputeRows && !parseInt(container.getAttribute('data-items-per-row'))) {
           container._paginationInited = false;
-          container.style.visibility = 'hidden';
+          container.style.maxHeight = container.getAttribute('data-rows-per-page') === '3' ? '130px' : '86px';
+          container.style.overflow = 'hidden';
           container._recomputeRows();
-          container.style.visibility = 'visible';
+          container.style.maxHeight = 'none';
+          container.style.overflow = '';
           container._paginationInited = true;
         }
       });

@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://xuewexin.github.io/tags/%E5%9B%9E%E6%BA%AF%E6%B3%95/'>
 
-<link rel="stylesheet" href="/scss/style.min.5c4c687a67adcffff4811e615028ab7b73900a7d7b0d81f38c2cfd9cb053e95c.css"><meta property='og:title' content="Tag: 回溯法 - 清风客">
+<link rel="stylesheet" href="/scss/style.min.4854f87c10b927a6331b5509dddf2d9aa62efff8a026543e76e693b0aaacd785.css"><meta property='og:title' content="Tag: 回溯法 - 清风客">
 <meta property='og:description' content="清风疾马又逢君">
 <meta property='og:url' content='https://xuewexin.github.io/tags/%E5%9B%9E%E6%BA%AF%E6%B3%95/'>
 <meta property='og:site_name' content='清风客'>
@@ -1198,7 +1198,8 @@ document.addEventListener('pjax:complete', () => {
       });
 
       computeRows();
-      container.style.visibility = 'visible';
+      container.style.maxHeight = 'none';
+      container.style.overflow = '';
       container._recomputeRows = computeRows;
     });
   }
@@ -1216,9 +1217,11 @@ document.addEventListener('pjax:complete', () => {
         
         if (container._recomputeRows && !parseInt(container.getAttribute('data-items-per-row'))) {
           container._paginationInited = false;
-          container.style.visibility = 'hidden';
+          container.style.maxHeight = container.getAttribute('data-rows-per-page') === '3' ? '130px' : '86px';
+          container.style.overflow = 'hidden';
           container._recomputeRows();
-          container.style.visibility = 'visible';
+          container.style.maxHeight = 'none';
+          container.style.overflow = '';
           container._paginationInited = true;
         }
       });
