@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://xuewexin.github.io/tags/javascript/'>
 
-<link rel="stylesheet" href="/scss/style.min.029dd2d34092f19d13207b05f0b13c38f1f19b2d6987b3c72a2a80f3bc6f74f0.css"><meta property='og:title' content="Tag: JavaScript - 清风客">
+<link rel="stylesheet" href="/scss/style.min.5c4c687a67adcffff4811e615028ab7b73900a7d7b0d81f38c2cfd9cb053e95c.css"><meta property='og:title' content="Tag: JavaScript - 清风客">
 <meta property='og:description' content="清风疾马又逢君">
 <meta property='og:url' content='https://xuewexin.github.io/tags/javascript/'>
 <meta property='og:site_name' content='清风客'>
@@ -1218,6 +1218,7 @@ document.addEventListener('pjax:complete', () => {
       });
 
       computeRows();
+      container.style.visibility = 'visible';
       container._recomputeRows = computeRows;
     });
   }
@@ -1235,7 +1236,9 @@ document.addEventListener('pjax:complete', () => {
         
         if (container._recomputeRows && !parseInt(container.getAttribute('data-items-per-row'))) {
           container._paginationInited = false;
+          container.style.visibility = 'hidden';
           container._recomputeRows();
+          container.style.visibility = 'visible';
           container._paginationInited = true;
         }
       });

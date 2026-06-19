@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://xuewexin.github.io/search/'>
 
-<link rel="stylesheet" href="/scss/style.min.029dd2d34092f19d13207b05f0b13c38f1f19b2d6987b3c72a2a80f3bc6f74f0.css"><meta property='og:title' content="搜索">
+<link rel="stylesheet" href="/scss/style.min.5c4c687a67adcffff4811e615028ab7b73900a7d7b0d81f38c2cfd9cb053e95c.css"><meta property='og:title' content="搜索">
 <meta property='og:description' content="">
 <meta property='og:url' content='https://xuewexin.github.io/search/'>
 <meta property='og:site_name' content='清风客'>
@@ -573,32 +573,32 @@ document.addEventListener('keydown', function(e) {
                 <a href="/tags/java/" class="search-recommend-tag tag-tag">
                     Java<span class="count">3</span>
                 </a>
-                <a href="/tags/javascript/" class="search-recommend-tag tag-tag">
-                    JavaScript<span class="count">2</span>
-                </a>
-                <a href="/tags/%E5%A4%8D%E4%B9%A0/" class="search-recommend-tag tag-tag">
-                    复习<span class="count">2</span>
-                </a>
                 <a href="/tags/hugo/" class="search-recommend-tag tag-tag">
                     Hugo<span class="count">2</span>
-                </a>
-                <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="search-recommend-tag tag-tag">
-                    正则表达式<span class="count">2</span>
                 </a>
                 <a href="/tags/css/" class="search-recommend-tag tag-tag">
                     CSS<span class="count">2</span>
                 </a>
-                <a href="/tags/blog/" class="search-recommend-tag tag-tag">
-                    Blog<span class="count">1</span>
+                <a href="/tags/%E5%A4%8D%E4%B9%A0/" class="search-recommend-tag tag-tag">
+                    复习<span class="count">2</span>
                 </a>
-                <a href="/tags/%E6%8B%AC%E5%8F%B7%E5%8C%B9%E9%85%8D/" class="search-recommend-tag tag-tag">
-                    括号匹配<span class="count">1</span>
+                <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="search-recommend-tag tag-tag">
+                    正则表达式<span class="count">2</span>
                 </a>
-                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="search-recommend-tag tag-tag">
-                    数据结构<span class="count">1</span>
+                <a href="/tags/javascript/" class="search-recommend-tag tag-tag">
+                    JavaScript<span class="count">2</span>
                 </a>
-                <a href="/tags/%E5%88%86%E6%B2%BB%E6%B3%95/" class="search-recommend-tag tag-tag">
-                    分治法<span class="count">1</span>
+                <a href="/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" class="search-recommend-tag tag-tag">
+                    前端开发<span class="count">1</span>
+                </a>
+                <a href="/tags/%E6%95%B0%E5%AD%A6/" class="search-recommend-tag tag-tag">
+                    数学<span class="count">1</span>
+                </a>
+                <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="search-recommend-tag tag-tag">
+                    动态规划<span class="count">1</span>
+                </a>
+                <a href="/tags/%E6%89%91%E5%85%8B%E7%89%8C/" class="search-recommend-tag tag-tag">
+                    扑克牌<span class="count">1</span>
                 </a>
             </div>
         </div>
@@ -1078,6 +1078,7 @@ document.addEventListener('pjax:complete', () => {
       });
 
       computeRows();
+      container.style.visibility = 'visible';
       container._recomputeRows = computeRows;
     });
   }
@@ -1095,7 +1096,9 @@ document.addEventListener('pjax:complete', () => {
         
         if (container._recomputeRows && !parseInt(container.getAttribute('data-items-per-row'))) {
           container._paginationInited = false;
+          container.style.visibility = 'hidden';
           container._recomputeRows();
+          container.style.visibility = 'visible';
           container._paginationInited = true;
         }
       });

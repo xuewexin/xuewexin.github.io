@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://xuewexin.github.io/about/'>
 
-<link rel="stylesheet" href="/scss/style.min.029dd2d34092f19d13207b05f0b13c38f1f19b2d6987b3c72a2a80f3bc6f74f0.css"><meta property='og:title' content="关于作者">
+<link rel="stylesheet" href="/scss/style.min.5c4c687a67adcffff4811e615028ab7b73900a7d7b0d81f38c2cfd9cb053e95c.css"><meta property='og:title' content="关于作者">
 <meta property='og:description' content="不要急，正在更新中。。。。。\n看看天空&hellip;&hellip;\n恒荒凉的地方，但日落还行\n打铁花好看，嘻嘻\n">
 <meta property='og:url' content='https://xuewexin.github.io/about/'>
 <meta property='og:site_name' content='清风客'>
@@ -1418,6 +1418,7 @@ document.addEventListener('pjax:complete', () => {
       });
 
       computeRows();
+      container.style.visibility = 'visible';
       container._recomputeRows = computeRows;
     });
   }
@@ -1435,7 +1436,9 @@ document.addEventListener('pjax:complete', () => {
         
         if (container._recomputeRows && !parseInt(container.getAttribute('data-items-per-row'))) {
           container._paginationInited = false;
+          container.style.visibility = 'hidden';
           container._recomputeRows();
+          container.style.visibility = 'visible';
           container._paginationInited = true;
         }
       });
